@@ -6,28 +6,28 @@ import { Observable, of } from 'rxjs'
 export interface MockBalanceInfoProps {
   _balance$?: Observable<BalanceInfo>
   collateralBalance?: BigNumber
-  ethBalance?: BigNumber
-  daiBalance?: BigNumber
+  vlxBalance?: BigNumber
+  usdvBalance?: BigNumber
   address?: string | undefined
 }
 
 const defaultCollateralBalance = new BigNumber('300')
-const defaultEthBalance = new BigNumber('20')
-const defaultDaiBalance = new BigNumber('1000')
+const defaultVlxBalance = new BigNumber('20')
+const defaultUsdvBalance = new BigNumber('1000')
 
 export function mockBalanceInfo$({
   _balance$,
   collateralBalance = defaultCollateralBalance,
-  ethBalance = defaultEthBalance,
-  daiBalance = defaultDaiBalance,
+  vlxBalance = defaultVlxBalance,
+  usdvBalance = defaultUsdvBalance,
   address = '0xVaultController',
 }: MockBalanceInfoProps): Observable<BalanceInfo> {
   return (
     _balance$ ||
     of({
       collateralBalance: address ? collateralBalance : zero,
-      ethBalance: address ? ethBalance : zero,
-      daiBalance: address ? daiBalance : zero,
+      vlxBalance: address ? vlxBalance : zero,
+      usdvBalance: address ? usdvBalance : zero,
     })
   )
 }

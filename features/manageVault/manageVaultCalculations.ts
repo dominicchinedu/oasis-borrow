@@ -21,8 +21,8 @@ export interface ManageVaultCalculations {
   maxGenerateAmountAtCurrentPrice: BigNumber
   maxGenerateAmountAtNextPrice: BigNumber
   maxPaybackAmount: BigNumber
-  daiYieldFromTotalCollateral: BigNumber
-  daiYieldFromTotalCollateralAtNextPrice: BigNumber
+  usdvYieldFromTotalCollateral: BigNumber
+  usdvYieldFromTotalCollateralAtNextPrice: BigNumber
   afterDebt: BigNumber
   afterLiquidationPrice: BigNumber
   afterCollateralizationRatio: BigNumber
@@ -57,8 +57,8 @@ export const defaultManageVaultCalculations: ManageVaultCalculations = {
   afterBackingCollateralAtNextPrice: zero,
   afterLockedCollateral: zero,
   afterCollateralBalance: zero,
-  daiYieldFromTotalCollateral: zero,
-  daiYieldFromTotalCollateralAtNextPrice: zero,
+  usdvYieldFromTotalCollateral: zero,
+  usdvYieldFromTotalCollateralAtNextPrice: zero,
   shouldPaybackAll: false,
 }
 
@@ -70,13 +70,13 @@ function determineShouldPaybackAll({
   paybackAmount,
   debt,
   debtOffset,
-  daiBalance,
+  usdvBalance,
 }: Pick<ManageVaultState, 'paybackAmount'> &
   Pick<Vault, 'debt' | 'debtOffset'> &
-  Pick<BalanceInfo, 'daiBalance'>): boolean {
+  Pick<BalanceInfo, 'usdvBalance'>): boolean {
   return (
     debt.gt(zero) &&
-    daiBalance.gte(debt.plus(debtOffset)) &&
+    usdvBalance.gte(debt.plus(debtOffset)) &&
     !!(paybackAmount && paybackAmount.plus(PAYBACK_ALL_BOUND).gte(debt) && !paybackAmount.gt(debt))
   )
 }
@@ -102,7 +102,7 @@ function calculateAfterLockedCollateral({
 
 /*
  * Should return the expected debt in the vault on the basis of the amount of
- * dai the user is generating or paying back. Must return a non-negative value
+ * usdv the user is generating or paying back. Must return a non-negative value
  *
  * If the shouldPaybackAll flag is true than we assume that the debt after
  * the transaction will be 0
@@ -127,7 +127,7 @@ function calculateAfterDebt({
 
 /*
  * Should return the minimum amount of collateral necessary to back the
- * expected debt in the vault on the basis of the amount of dai the user is
+ * expected debt in the vault on the basis of the amount of usdv the user is
  * generating or paying back
  *
  */
@@ -144,7 +144,7 @@ function calculateAfterBackingCollateral({
 /*
  * Should return the maximum amount of collateral that can be possibly
  * withdrawn given the amount of collateral being deposited or withdrawn and
- * the amount of dai being generated or payed back. It should return a
+ * the amount of usdv being generated or payed back. It should return a
  * non-negative value
  */
 function calculateAfterFreeCollateral({
@@ -208,10 +208,10 @@ function calculateAfterIlkDebtAvailable({
 }
 
 /*
- * Should return the amount of dai that can be generated given the amount of
+ * Should return the amount of usdv that can be generated given the amount of
  * potential collateral and debt in the vault
  */
-function calculateDaiYieldFromCollateral({
+function calculateUsdvYieldFromCollateral({
   debt,
   liquidationRatio,
   generateAmount,
@@ -225,11 +225,11 @@ function calculateDaiYieldFromCollateral({
     price: BigNumber
     collateral: BigNumber
   }) {
-  const daiYield = collateral.times(price).div(liquidationRatio).minus(debt)
+  const usdvYield = collateral.times(price).div(liquidationRatio).minus(debt)
 
-  if (!daiYield.gt(zero)) return zero
+  if (!usdvYield.gt(zero)) return zero
 
-  if (daiYield.gt(ilkDebtAvailable)) {
+  if (usdvYield.gt(ilkDebtAvailable)) {
     return calculateAfterIlkDebtAvailable({
       generateAmount,
       paybackAmount,
@@ -237,11 +237,11 @@ function calculateDaiYieldFromCollateral({
     })
   }
 
-  return daiYield
+  return usdvYield
 }
 
 /*
- * Should return the maximum amount of dai that can be generated in context
+ * Should return the maximum amount of usdv that can be generated in context
  * of what collateral currently exists and is being deposited aswell as the
  * debt already existng in the vault.
  *
@@ -267,7 +267,7 @@ function calculateMaxGenerateAmount({
     depositAmount,
   })
 
-  return calculateDaiYieldFromCollateral({
+  return calculateUsdvYieldFromCollateral({
     ilkDebtAvailable,
     collateral: afterLockedCollateral,
     price,
@@ -283,7 +283,7 @@ export function applyManageVaultCalculations(state: ManageVaultState): ManageVau
     generateAmount,
     withdrawAmount,
     paybackAmount,
-    balanceInfo: { collateralBalance, daiBalance },
+    balanceInfo: { collateralBalance, usdvBalance },
     ilkData: { liquidationRatio, ilkDebtAvailable },
     priceInfo: { currentCollateralPrice, nextCollateralPrice },
     vault: { lockedCollateral, debt, debtOffset },
@@ -292,7 +292,7 @@ export function applyManageVaultCalculations(state: ManageVaultState): ManageVau
   const shouldPaybackAll = determineShouldPaybackAll({
     paybackAmount,
     debt,
-    daiBalance,
+    usdvBalance: usdvBalance,
     debtOffset,
   })
   const afterLockedCollateral = calculateAfterLockedCollateral({
@@ -355,7 +355,7 @@ export function applyManageVaultCalculations(state: ManageVaultState): ManageVau
   const maxDepositAmount = collateralBalance
   const maxDepositAmountUSD = collateralBalance.times(currentCollateralPrice)
 
-  const daiYieldFromTotalCollateral = calculateDaiYieldFromCollateral({
+  const usdvYieldFromTotalCollateral = calculateUsdvYieldFromCollateral({
     ilkDebtAvailable,
     collateral: afterLockedCollateral,
     price: currentCollateralPrice,
@@ -365,7 +365,7 @@ export function applyManageVaultCalculations(state: ManageVaultState): ManageVau
     paybackAmount,
   })
 
-  const daiYieldFromTotalCollateralAtNextPrice = calculateDaiYieldFromCollateral({
+  const usdvYieldFromTotalCollateralAtNextPrice = calculateUsdvYieldFromCollateral({
     ilkDebtAvailable,
     collateral: afterLockedCollateral,
     price: nextCollateralPrice,
@@ -400,7 +400,7 @@ export function applyManageVaultCalculations(state: ManageVaultState): ManageVau
     maxGenerateAmountAtNextPrice,
   )
 
-  const maxPaybackAmount = daiBalance.lt(debt) ? daiBalance : debt
+  const maxPaybackAmount = usdvBalance.lt(debt) ? usdvBalance : debt
 
   const afterCollateralizationRatio =
     afterLockedCollateralUSD.gt(zero) && afterDebt.gt(zero)
@@ -445,8 +445,8 @@ export function applyManageVaultCalculations(state: ManageVaultState): ManageVau
     afterDebt,
     afterCollateralBalance,
     maxPaybackAmount,
-    daiYieldFromTotalCollateral,
-    daiYieldFromTotalCollateralAtNextPrice,
+    usdvYieldFromTotalCollateral,
+    usdvYieldFromTotalCollateralAtNextPrice,
     shouldPaybackAll,
   }
 }

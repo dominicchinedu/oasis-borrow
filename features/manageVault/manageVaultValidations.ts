@@ -7,18 +7,18 @@ export type ManageVaultErrorMessage =
   | 'depositAmountExceedsCollateralBalance'
   | 'withdrawAmountExceedsFreeCollateral'
   | 'withdrawAmountExceedsFreeCollateralAtNextPrice'
-  | 'generateAmountExceedsDaiYieldFromTotalCollateral'
-  | 'generateAmountExceedsDaiYieldFromTotalCollateralAtNextPrice'
+  | 'generateAmountExceedsUsdvYieldFromTotalCollateral'
+  | 'generateAmountExceedsUsdvYieldFromTotalCollateralAtNextPrice'
   | 'generateAmountExceedsDebtCeiling'
   | 'generateAmountLessThanDebtFloor'
-  | 'paybackAmountExceedsDaiBalance'
+  | 'paybackAmountExceedsUsdvBalance'
   | 'paybackAmountExceedsVaultDebt'
   | 'debtWillBeLessThanDebtFloor'
   | 'customCollateralAllowanceAmountExceedsMaxUint256'
   | 'customCollateralAllowanceAmountLessThanDepositAmount'
-  | 'customDaiAllowanceAmountExceedsMaxUint256'
-  | 'customDaiAllowanceAmountLessThanPaybackAmount'
-  | 'depositingAllEthBalance'
+  | 'customUsdvAllowanceAmountExceedsMaxUint256'
+  | 'customUsdvAllowanceAmountLessThanPaybackAmount'
+  | 'depositingAllVlxBalance'
   | 'ledgerWalletContractDataDisabled'
   | 'withdrawCollateralOnVaultUnderDebtFloor'
   | 'depositCollateralOnVaultUnderDebtFloor'
@@ -36,19 +36,19 @@ export function validateErrors(state: ManageVaultState): ManageVaultState {
     stage,
     withdrawAmountExceedsFreeCollateral,
     withdrawAmountExceedsFreeCollateralAtNextPrice,
-    generateAmountExceedsDaiYieldFromTotalCollateral,
-    generateAmountExceedsDaiYieldFromTotalCollateralAtNextPrice,
+    generateAmountExceedsUsdvYieldFromTotalCollateral,
+    generateAmountExceedsUsdvYieldFromTotalCollateralAtNextPrice,
     generateAmountLessThanDebtFloor,
     debtWillBeLessThanDebtFloor,
     isEditingStage,
     customCollateralAllowanceAmountExceedsMaxUint256,
     customCollateralAllowanceAmountLessThanDepositAmount,
-    customDaiAllowanceAmountExceedsMaxUint256,
-    customDaiAllowanceAmountLessThanPaybackAmount,
+    customUsdvAllowanceAmountExceedsMaxUint256,
+    customUsdvAllowanceAmountLessThanPaybackAmount,
     depositAmountExceedsCollateralBalance,
-    depositingAllEthBalance,
+    depositingAllVlxBalance,
     generateAmountExceedsDebtCeiling,
-    paybackAmountExceedsDaiBalance,
+    paybackAmountExceedsUsdvBalance,
     paybackAmountExceedsVaultDebt,
     withdrawCollateralOnVaultUnderDebtFloor,
     depositCollateralOnVaultUnderDebtFloor,
@@ -69,12 +69,12 @@ export function validateErrors(state: ManageVaultState): ManageVaultState {
       errorMessages.push('withdrawAmountExceedsFreeCollateralAtNextPrice')
     }
 
-    if (generateAmountExceedsDaiYieldFromTotalCollateral) {
-      errorMessages.push('generateAmountExceedsDaiYieldFromTotalCollateral')
+    if (generateAmountExceedsUsdvYieldFromTotalCollateral) {
+      errorMessages.push('generateAmountExceedsUsdvYieldFromTotalCollateral')
     }
 
-    if (generateAmountExceedsDaiYieldFromTotalCollateralAtNextPrice) {
-      errorMessages.push('generateAmountExceedsDaiYieldFromTotalCollateralAtNextPrice')
+    if (generateAmountExceedsUsdvYieldFromTotalCollateralAtNextPrice) {
+      errorMessages.push('generateAmountExceedsUsdvYieldFromTotalCollateralAtNextPrice')
     }
 
     if (generateAmountExceedsDebtCeiling) {
@@ -85,16 +85,16 @@ export function validateErrors(state: ManageVaultState): ManageVaultState {
       errorMessages.push('generateAmountLessThanDebtFloor')
     }
 
-    if (paybackAmountExceedsDaiBalance) {
-      errorMessages.push('paybackAmountExceedsDaiBalance')
+    if (paybackAmountExceedsUsdvBalance) {
+      errorMessages.push('paybackAmountExceedsUsdvBalance')
     }
 
     if (paybackAmountExceedsVaultDebt) {
       errorMessages.push('paybackAmountExceedsVaultDebt')
     }
 
-    if (depositingAllEthBalance) {
-      errorMessages.push('depositingAllEthBalance')
+    if (depositingAllVlxBalance) {
+      errorMessages.push('depositingAllVlxBalance')
     }
 
     if (debtWillBeLessThanDebtFloor) {
@@ -118,22 +118,22 @@ export function validateErrors(state: ManageVaultState): ManageVaultState {
     }
   }
 
-  if (stage === 'daiAllowanceWaitingForConfirmation') {
-    if (customDaiAllowanceAmountExceedsMaxUint256) {
-      errorMessages.push('customDaiAllowanceAmountExceedsMaxUint256')
+  if (stage === 'usdvAllowanceWaitingForConfirmation') {
+    if (customUsdvAllowanceAmountExceedsMaxUint256) {
+      errorMessages.push('customUsdvAllowanceAmountExceedsMaxUint256')
     }
-    if (customDaiAllowanceAmountLessThanPaybackAmount) {
-      errorMessages.push('customDaiAllowanceAmountLessThanPaybackAmount')
+    if (customUsdvAllowanceAmountLessThanPaybackAmount) {
+      errorMessages.push('customUsdvAllowanceAmountLessThanPaybackAmount')
     }
   }
 
   if (
     stage === 'manageFailure' ||
     stage === 'proxyFailure' ||
-    stage === 'daiAllowanceFailure' ||
+    stage === 'usdvAllowanceFailure' ||
     stage === 'collateralAllowanceFailure'
   ) {
-    if (state.txError?.name === 'EthAppPleaseEnableContractData') {
+    if (state.txError?.name === 'VlxAppPleaseEnableContractData') {
       errorMessages.push('ledgerWalletContractDataDisabled')
     }
   }

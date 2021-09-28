@@ -79,7 +79,7 @@ export function OpenVaultEditing(props: OpenVaultState) {
             <Text pr={1}>
               {t('manage-vault.action-option', {
                 action: t('vault-actions.generate'),
-                token: 'DAI',
+                token: 'USDV',
               })}
             </Text>
           </Button>
@@ -89,7 +89,7 @@ export function OpenVaultEditing(props: OpenVaultState) {
           <VaultActionInput
             action="Generate"
             amount={generateAmount}
-            token={'DAI'}
+            token={'USDV'}
             showMax={true}
             maxAmount={maxGenerateAmount}
             maxAmountLabel={'Max'}

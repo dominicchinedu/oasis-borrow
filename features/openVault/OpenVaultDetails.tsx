@@ -50,12 +50,12 @@ export function VaultDetailsTable({
         sx={{ border: 'light', borderRadius: 'medium', p: [3, 4] }}
       >
         <VaultDetailsTableItem
-          label={t('system.vault-dai-debt')}
+          label={t('system.vault-usdv-debt')}
           value={
             <>
               {formatCryptoBalance(generateAmount || zero)}
               <Text sx={{ display: 'inline', ml: 2, fontWeight: 'semiBold' }} variant="paragraph3">
-                DAI
+                USDV
               </Text>
             </>
           }

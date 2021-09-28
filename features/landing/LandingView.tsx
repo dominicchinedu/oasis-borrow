@@ -59,7 +59,7 @@ const ilksColumns: ColumnDef<IlkWithBalance, IlksFilterState>[] = [
     cell: ({ ilk }) => <Text>{ilk}</Text>,
   },
   {
-    headerLabel: 'system.dai-available',
+    headerLabel: 'system.usdv-available',
     header: ({ label, ...filters }) => (
       <TableSortHeader sx={{ ml: 'auto' }} filters={filters} sortBy="ilkDebtAvailable">
         {label}
@@ -113,7 +113,7 @@ const ilksColumns: ColumnDef<IlkWithBalance, IlksFilterState>[] = [
               sx={{ width: '100%', maxWidth: ['100%', '150px'] }}
             >
               <Text>
-                <Trans i18nKey="no-dai" />
+                <Trans i18nKey="no-usdv" />
               </Text>
             </Button>
           )}
@@ -175,7 +175,7 @@ export function Hero({ sx, isConnected }: { sx?: SxStyleProp; isConnected: boole
   )
 }
 
-function LandingCard({ href, cardKey }: { href: string; cardKey: 'dai' | 'faq' }) {
+function LandingCard({ href, cardKey }: { href: string; cardKey: 'usdv' | 'faq' }) {
   const { t } = useTranslation()
 
   return (
@@ -209,7 +209,7 @@ function LandingCards() {
         py: 4,
       }}
     >
-      <LandingCard href={`${apiHost}/daiwallet`} cardKey="dai" />
+      <LandingCard href={`${apiHost}/usdvwallet`} cardKey="usdv" />
       <LandingCard href="/support" cardKey="faq" />
     </Grid>
   )

@@ -5,24 +5,24 @@ import { ManageVaultChange, ManageVaultState } from './manageVault'
 
 export const allowanceDefaults: Partial<ManageVaultState> = {
   collateralAllowanceAmount: maxUint256,
-  daiAllowanceAmount: maxUint256,
+  usdvAllowanceAmount: maxUint256,
 }
 
-interface DaiAllowanceChange {
-  kind: 'daiAllowance'
-  daiAllowanceAmount?: BigNumber
+interface UsdvAllowanceChange {
+  kind: 'usdvAllowance'
+  usdvAllowanceAmount?: BigNumber
 }
 
-interface DaiAllowanceUnlimitedChange {
-  kind: 'daiAllowanceUnlimited'
+interface UsdvAllowanceUnlimitedChange {
+  kind: 'usdvAllowanceUnlimited'
 }
 
-interface DaiAllowancePaybackChange {
-  kind: 'daiAllowanceAsPaybackAmount'
+interface UsdvAllowancePaybackChange {
+  kind: 'usdvAllowanceAsPaybackAmount'
 }
 
-interface DaiAllowanceReset {
-  kind: 'daiAllowanceReset'
+interface UsdvAllowanceReset {
+  kind: 'usdvAllowanceReset'
 }
 
 interface CollateralAllowanceChange {
@@ -43,10 +43,10 @@ interface CollateralAllowanceReset {
 }
 
 export type ManageVaultAllowanceChange =
-  | DaiAllowanceChange
-  | DaiAllowanceUnlimitedChange
-  | DaiAllowancePaybackChange
-  | DaiAllowanceReset
+  | UsdvAllowanceChange
+  | UsdvAllowanceUnlimitedChange
+  | UsdvAllowancePaybackChange
+  | UsdvAllowanceReset
   | CollateralAllowanceChange
   | CollateralAllowanceUnlimitedChange
   | CollateralAllowanceDepositChange
@@ -89,39 +89,39 @@ export function applyManageVaultAllowance(
     }
   }
 
-  if (change.kind === 'daiAllowance') {
-    const { daiAllowanceAmount } = change
+  if (change.kind === 'usdvAllowance') {
+    const { usdvAllowanceAmount } = change
     return {
       ...state,
-      daiAllowanceAmount,
+      usdvAllowanceAmount,
     }
   }
 
-  if (change.kind === 'daiAllowanceAsPaybackAmount') {
+  if (change.kind === 'usdvAllowanceAsPaybackAmount') {
     const {
       paybackAmount,
       vault: { debtOffset },
     } = state
     return {
       ...state,
-      selectedDaiAllowanceRadio: 'paybackAmount',
-      daiAllowanceAmount: paybackAmount!.plus(debtOffset),
+      selectedUsdvAllowanceRadio: 'paybackAmount',
+      usdvAllowanceAmount: paybackAmount!.plus(debtOffset),
     }
   }
 
-  if (change.kind === 'daiAllowanceUnlimited') {
+  if (change.kind === 'usdvAllowanceUnlimited') {
     return {
       ...state,
-      selectedDaiAllowanceRadio: 'unlimited',
-      daiAllowanceAmount: maxUint256,
+      selectedUsdvAllowanceRadio: 'unlimited',
+      usdvAllowanceAmount: maxUint256,
     }
   }
 
-  if (change.kind === 'daiAllowanceReset') {
+  if (change.kind === 'usdvAllowanceReset') {
     return {
       ...state,
-      selectedDaiAllowanceRadio: 'custom',
-      daiAllowanceAmount: undefined,
+      selectedUsdvAllowanceRadio: 'custom',
+      usdvAllowanceAmount: undefined,
     }
   }
 

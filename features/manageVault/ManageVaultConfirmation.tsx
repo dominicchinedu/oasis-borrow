@@ -30,8 +30,8 @@ export function ManageVaultConfirmation(state: ManageVaultState) {
   const afterBalance = formatCryptoBalance(afterCollateralBalance)
   const depositCollateral = formatCryptoBalance(depositAmount || zero)
   const withdrawingCollateral = formatCryptoBalance(withdrawAmount || zero)
-  const daiToBeGenerated = formatCryptoBalance(generateAmount || zero)
-  const daiPayingBack = formatCryptoBalance(paybackAmount || zero)
+  const usdvToBeGenerated = formatCryptoBalance(generateAmount || zero)
+  const usdvPayingBack = formatCryptoBalance(paybackAmount || zero)
 
   const afterCollRatio = afterCollateralizationRatio.eq(zero)
     ? '--'
@@ -58,10 +58,10 @@ export function ManageVaultConfirmation(state: ManageVaultState) {
         )}
         <Details.Item label={t('remaining-in-wallet')} value={`${afterBalance} ${token}`} />
         {generateAmount?.gt(zero) && (
-          <Details.Item label={t('dai-being-generated')} value={`${daiToBeGenerated} DAI`} />
+          <Details.Item label={t('usdv-being-generated')} value={`${usdvToBeGenerated} USDV`} />
         )}
         {paybackAmount?.gt(zero) && (
-          <Details.Item label={t('dai-paying-back-label')} value={`${daiPayingBack} DAI`} />
+          <Details.Item label={t('usdv-paying-back-label')} value={`${usdvPayingBack} USDV`} />
         )}
         <Details.Item
           label={t('system.collateral-ratio')}

@@ -39,19 +39,19 @@ export const DepositAmountExceedsCollateralBalance = openVaultStory({
 
 export const DepositingAllEthBalance = openVaultStory({
   title:
-    'Error occurs when a user opening an ETH vault tries to deposit all their ETH into the vault',
+    'Error occurs when a user opening an VLX vault tries to deposit all their VLX into the vault',
   balanceInfo: {
     collateralBalance: new BigNumber('100'),
   },
-  ilk: 'ETH-A',
+  ilk: 'VLX-A',
   proxyAddress,
 })({
   depositAmount: new BigNumber('100'),
 })
 
-export const GenerateAmountExceedsDaiYieldFromDepositingCollateral = openVaultStory({
+export const GenerateAmountExceedsUsdvYieldFromDepositingCollateral = openVaultStory({
   title:
-    'Amount of dai user is attempting to generate exceeds the maximum amount of DAI that can be generated given the liquidation ratio of 150% in this case',
+    'Amount of usdv user is attempting to generate exceeds the maximum amount of USDV that can be generated given the liquidation ratio of 150% in this case',
   proxyAddress,
   priceInfo: { collateralPrice: new BigNumber('2000') },
 })({
@@ -59,9 +59,9 @@ export const GenerateAmountExceedsDaiYieldFromDepositingCollateral = openVaultSt
   generateAmount: new BigNumber('200000.01'),
 })
 
-export const GenerateAmountExceedsDaiYieldFromDepositingCollateralAtNextPrice = openVaultStory({
+export const GenerateAmountExceedsUsdvYieldFromDepositingCollateralAtNextPrice = openVaultStory({
   title:
-    'Amount of dai user is attempting to generate exceeds the maximum amount of DAI that can be generated at next price update, the user could proceed with this transaction but is inadvised as they would be subject to liquidations on next price update',
+    'Amount of usdv user is attempting to generate exceeds the maximum amount of USDV that can be generated at next price update, the user could proceed with this transaction but is inadvised as they would be subject to liquidations on next price update',
   proxyAddress,
   priceInfo: {
     collateralPrice: new BigNumber('2000'),
@@ -74,7 +74,7 @@ export const GenerateAmountExceedsDaiYieldFromDepositingCollateralAtNextPrice = 
 
 export const GenerateAmountExceedsDebtCeiling = openVaultStory({
   title:
-    'Amount of dai user is trying to generate exceeds the amount of dai available for that ilk',
+    'Amount of usdv user is trying to generate exceeds the amount of usdv available for that ilk',
   proxyAddress,
   ilkData: {
     ilkDebt: new BigNumber('10000'),
@@ -87,7 +87,7 @@ export const GenerateAmountExceedsDebtCeiling = openVaultStory({
 
 export const GenerateAmountLessThanDebtFloor = openVaultStory({
   title:
-    'Error is shown when a user is generating an amount of DAI that would cause the debt outstanding in the vault to be less than the dust limit/debt floor.',
+    'Error is shown when a user is generating an amount of USDV that would cause the debt outstanding in the vault to be less than the dust limit/debt floor.',
   ilkData: { debtFloor: new BigNumber('2000') },
   proxyAddress,
 })({
@@ -97,7 +97,7 @@ export const GenerateAmountLessThanDebtFloor = openVaultStory({
 
 export const CustomAllowanceEmpty = openVaultStory({
   title: 'Error should block user if the allowance they wish to set is zero',
-  balanceInfo: { daiBalance: new BigNumber('10000') },
+  balanceInfo: { usdvBalance: new BigNumber('10000') },
   proxyAddress,
 })({
   stage: 'allowanceWaitingForConfirmation',
@@ -108,7 +108,7 @@ export const CustomAllowanceEmpty = openVaultStory({
 
 export const CustomAllowanceAmountGreaterThanMaxUint256 = openVaultStory({
   title: 'Error should block user if the allowance they wish to set a value above maxUint256',
-  balanceInfo: { daiBalance: new BigNumber('10000') },
+  balanceInfo: { usdvBalance: new BigNumber('10000') },
   proxyAddress,
 })({
   stage: 'allowanceWaitingForConfirmation',
@@ -119,7 +119,7 @@ export const CustomAllowanceAmountGreaterThanMaxUint256 = openVaultStory({
 
 export const CustomAllowanceAmountLessThanDepositAmount = openVaultStory({
   title: 'Error should block user if the allowance they wish to set a value above maxUint256',
-  balanceInfo: { daiBalance: new BigNumber('10000') },
+  balanceInfo: { usdvBalance: new BigNumber('10000') },
   proxyAddress,
 })({
   stage: 'allowanceWaitingForConfirmation',

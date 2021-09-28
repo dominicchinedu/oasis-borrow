@@ -33,7 +33,7 @@ export type ManageVaultTransitionChange =
       kind: 'regressCollateralAllowance'
     }
   | {
-      kind: 'regressDaiAllowance'
+      kind: 'regressUsdvAllowance'
     }
 
 export function applyManageVaultTransition(
@@ -43,7 +43,7 @@ export function applyManageVaultTransition(
   if (change.kind === 'toggleEditing') {
     const { stage } = state
     const currentEditing = stage
-    const otherEditing = (['collateralEditing', 'daiEditing'] as ManageVaultEditingStage[]).find(
+    const otherEditing = (['collateralEditing', 'usdvEditing'] as ManageVaultEditingStage[]).find(
       (editingStage) => editingStage !== currentEditing,
     ) as ManageVaultEditingStage
     return {
@@ -77,17 +77,17 @@ export function applyManageVaultTransition(
     }
   }
 
-  if (change.kind === 'regressDaiAllowance') {
+  if (change.kind === 'regressUsdvAllowance') {
     const { originalEditingStage, stage } = state
 
     return {
       ...state,
-      ...(stage === 'daiAllowanceFailure'
-        ? { stage: 'daiAllowanceWaitingForConfirmation' }
+      ...(stage === 'usdvAllowanceFailure'
+        ? { stage: 'usdvAllowanceWaitingForConfirmation' }
         : {
             stage: originalEditingStage,
-            daiAllowanceAmount: maxUint256,
-            selectedDaiAllowanceRadio: 'unlimited',
+            usdvAllowanceAmount: maxUint256,
+          selectedUsdvAllowanceRadio: 'unlimited',
           }),
     }
   }
@@ -108,7 +108,7 @@ export function applyManageVaultTransition(
       depositAmount,
       paybackAmount,
       collateralAllowance,
-      daiAllowance,
+      usdvAllowance,
       vault: { token, debtOffset },
     } = state
     const canProgress = !errorMessages.length
@@ -120,13 +120,13 @@ export function applyManageVaultTransition(
     const depositAmountLessThanCollateralAllowance =
       collateralAllowance && depositAmount && collateralAllowance.gte(depositAmount)
 
-    const paybackAmountLessThanDaiAllowance =
-      daiAllowance && paybackAmount && daiAllowance.gte(paybackAmount.plus(debtOffset))
+    const paybackAmountLessThanUsdvAllowance =
+      usdvAllowance && paybackAmount && usdvAllowance.gte(paybackAmount.plus(debtOffset))
 
     const hasCollateralAllowance =
-      token === 'ETH' ? true : depositAmountLessThanCollateralAllowance || isDepositZero
+      token === 'VLX' ? true : depositAmountLessThanCollateralAllowance || isDepositZero
 
-    const hasDaiAllowance = paybackAmountLessThanDaiAllowance || isPaybackZero
+    const hasUsdvAllowance = paybackAmountLessThanUsdvAllowance || isPaybackZero
 
     if (canProgress) {
       if (!hasProxy) {
@@ -135,8 +135,8 @@ export function applyManageVaultTransition(
       if (!hasCollateralAllowance) {
         return { ...state, stage: 'collateralAllowanceWaitingForConfirmation' }
       }
-      if (!hasDaiAllowance) {
-        return { ...state, stage: 'daiAllowanceWaitingForConfirmation' }
+      if (!hasUsdvAllowance) {
+        return { ...state, stage: 'usdvAllowanceWaitingForConfirmation' }
       }
       return { ...state, stage: 'manageWaitingForConfirmation' }
     }
@@ -148,7 +148,7 @@ export function applyManageVaultTransition(
       depositAmount,
       paybackAmount,
       collateralAllowance,
-      daiAllowance,
+      usdvAllowance,
       vault: { token, debtOffset },
     } = state
     const isDepositZero = depositAmount ? depositAmount.eq(zero) : true
@@ -156,17 +156,17 @@ export function applyManageVaultTransition(
 
     const depositAmountLessThanCollateralAllowance =
       collateralAllowance && depositAmount && collateralAllowance.gte(depositAmount)
-    const paybackAmountLessThanDaiAllowance =
-      daiAllowance && paybackAmount && daiAllowance.gte(paybackAmount.plus(debtOffset))
+    const paybackAmountLessThanUsdvAllowance =
+      usdvAllowance && paybackAmount && usdvAllowance.gte(paybackAmount.plus(debtOffset))
     const hasCollateralAllowance =
-      token === 'ETH' ? true : depositAmountLessThanCollateralAllowance || isDepositZero
-    const hasDaiAllowance = paybackAmountLessThanDaiAllowance || isPaybackZero
+      token === 'VLX' ? true : depositAmountLessThanCollateralAllowance || isDepositZero
+    const hasUsdvAllowance = paybackAmountLessThanUsdvAllowance || isPaybackZero
 
     if (!hasCollateralAllowance) {
       return { ...state, stage: 'collateralAllowanceWaitingForConfirmation' }
     }
-    if (!hasDaiAllowance) {
-      return { ...state, stage: 'daiAllowanceWaitingForConfirmation' }
+    if (!hasUsdvAllowance) {
+      return { ...state, stage: 'usdvAllowanceWaitingForConfirmation' }
     }
     return { ...state, stage: originalEditingStage }
   }
@@ -175,16 +175,16 @@ export function applyManageVaultTransition(
     const {
       originalEditingStage,
       paybackAmount,
-      daiAllowance,
+      usdvAllowance,
       vault: { debtOffset },
     } = state
     const isPaybackZero = paybackAmount ? paybackAmount.eq(zero) : true
-    const paybackAmountLessThanDaiAllowance =
-      daiAllowance && paybackAmount && daiAllowance.gte(paybackAmount.plus(debtOffset))
-    const hasDaiAllowance = paybackAmountLessThanDaiAllowance || isPaybackZero
+    const paybackAmountLessThanUsdvAllowance =
+      usdvAllowance && paybackAmount && usdvAllowance.gte(paybackAmount.plus(debtOffset))
+    const hasUsdvAllowance = paybackAmountLessThanUsdvAllowance || isPaybackZero
 
-    if (!hasDaiAllowance) {
-      return { ...state, stage: 'daiAllowanceWaitingForConfirmation' }
+    if (!hasUsdvAllowance) {
+      return { ...state, stage: 'usdvAllowanceWaitingForConfirmation' }
     }
     return { ...state, stage: originalEditingStage }
   }

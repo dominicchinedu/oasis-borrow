@@ -58,8 +58,8 @@ export async function getConnector(
       })
       const connectorChainId = Number.parseInt((await connector.getChainId()) as string)
       if (network !== connectorChainId) {
-        alert('Browser ethereum provider and URL network param do not match!')
-        throw new Error('Browser ethereum provider and URL network param do not match!')
+        alert('Browser velas provider and URL network param do not match!')
+        throw new Error('Browser velas provider and URL network param do not match!')
       }
       return connector
     }
@@ -408,6 +408,7 @@ export function ConnectWallet() {
                     : connectionKind === 'ledger'
                     ? () => setConnectingLedger(true)
                     : connect(web3Context, connectionKind, getNetworkId()),
+		    //: connect(web3Context, connectionKind, 111),
                 missingInjectedWallet,
               }}
             />
@@ -415,7 +416,7 @@ export function ConnectWallet() {
         })}
         <Box sx={{ mt: 4 }}>
           <Text sx={{ fontWeight: 'semiBold', mb: 2 }} variant="paragraph2">
-            {t('new-to-ethereum')}
+            {t('new-to-velas')}
           </Text>
           <AppLink
             sx={{
@@ -501,6 +502,7 @@ export function disconnect(web3Context: Web3Context | undefined) {
 
 async function connectReadonly(web3Context: Web3ContextNotConnected) {
   web3Context.connect(await getConnector('network', getNetworkId()), 'network')
+  // web3Context.connect(await getConnector('network', 111), 'network')
 }
 
 export function WithConnection({ children }: WithChildren) {
@@ -514,6 +516,7 @@ export function WithConnection({ children }: WithChildren) {
   }, [web3Context?.status])
 
   useEffect(() => autoConnect(web3Context$, getNetworkId(), connectReadonly), [])
+  // useEffect(() => autoConnect(web3Context$, 111, connectReadonly), [])
 
   return children
 }

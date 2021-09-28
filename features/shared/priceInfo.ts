@@ -5,27 +5,27 @@ import { map, shareReplay, switchMap } from 'rxjs/operators'
 
 export interface PriceInfo {
   currentCollateralPrice: BigNumber
-  currentEthPrice: BigNumber
+  currentVlxPrice: BigNumber
   nextCollateralPrice: BigNumber
-  nextEthPrice: BigNumber
+  nextVlxPrice: BigNumber
 
   dateLastCollateralPrice?: Date
   dateNextCollateralPrice?: Date
-  dateLastEthPrice?: Date
-  dateNextEthPrice?: Date
+  dateLastVlxPrice?: Date
+  dateNextVlxPrice?: Date
 
   isStaticCollateralPrice: boolean
-  isStaticEthPrice: boolean
+  isStaticVlxPrice: boolean
 
   collateralPricePercentageChange: BigNumber
-  ethPricePercentageChange: BigNumber
+  vlxPricePercentageChange: BigNumber
 }
 
 export function createPriceInfo$(
   oraclePriceData$: (token: string) => Observable<OraclePriceData>,
   token: string,
 ): Observable<PriceInfo> {
-  return combineLatest(oraclePriceData$(token), oraclePriceData$('ETH')).pipe(
+  return combineLatest(oraclePriceData$(token), oraclePriceData$('VLX')).pipe(
     switchMap(
       ([
         {
@@ -37,30 +37,30 @@ export function createPriceInfo$(
           percentageChange: collateralPricePercentageChange,
         },
         {
-          currentPrice: currentEthPrice,
-          nextPrice: nextEthPrice,
-          isStaticPrice: isStaticEthPrice,
-          currentPriceUpdate: dateLastEthPrice,
-          nextPriceUpdate: dateNextEthPrice,
-          percentageChange: ethPricePercentageChange,
+          currentPrice: currentVlxPrice,
+          nextPrice: nextVlxPrice,
+          isStaticPrice: isStaticVlxPrice,
+          currentPriceUpdate: dateLastVlxPrice,
+          nextPriceUpdate: dateNextVlxPrice,
+          percentageChange: vlxPricePercentageChange,
         },
       ]) =>
         of({
           currentCollateralPrice,
-          currentEthPrice,
+          currentVlxPrice,
           nextCollateralPrice,
-          nextEthPrice,
+          nextVlxPrice,
 
           dateLastCollateralPrice,
           dateNextCollateralPrice,
-          dateLastEthPrice,
-          dateNextEthPrice,
+          dateLastVlxPrice,
+          dateNextVlxPrice,
 
           isStaticCollateralPrice,
-          isStaticEthPrice,
+          isStaticVlxPrice,
 
           collateralPricePercentageChange,
-          ethPricePercentageChange,
+          vlxPricePercentageChange,
         }),
     ),
     shareReplay(1),

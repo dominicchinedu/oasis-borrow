@@ -1,25 +1,33 @@
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![codecov](https://codecov.io/gh/OasisDEX/oasis-borrow/branch/main/graph/badge.svg?token=KMXTAUFL48)](https://app.codecov.io/gh/OasisDEX/oasis-borrow/branch/main)
+[comment]: <> ([![License]&#40;https://img.shields.io/badge/License-Apache%202.0-blue.svg&#41;]&#40;https://opensource.org/licenses/Apache-2.0&#41;)
+
+[comment]: <> ([![codecov]&#40;https://codecov.io/gh/OasisDEX/oasis-borrow/branch/main/graph/badge.svg?token=KMXTAUFL48&#41;]&#40;https://app.codecov.io/gh/OasisDEX/oasis-borrow/branch/main&#41;)
 
 <br> <br>
 
-<div align="center">
-  <img src="https://github.com/OasisDEX/oasis-borrow/blob/pm/readme-updates/public/static/img/logo.svg" width="500" height="500">
-</div>
-<br>
-<br>
+[comment]: <> (<div align="center">)
+
+[comment]: <> (  <img src="https://github.com/velasfinance/oasis-borrow/blob/pm/readme-updates/public/static/img/logo.svg" width="500" height="500">)
+
+[comment]: <> (</div>)
+
+[comment]: <> (<br>)
+
+[comment]: <> (<br>)
 
 | Environment | URL                                            | Branch |                                     Build Status                                     |
 | ----------- | ---------------------------------------------- | :----: | :----------------------------------------------------------------------------------: |
-| Production  | [oasis.app](https://oasis.app)                 | `main` | ![](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=main) |
-| Staging     | [staging.oasis.app](https://staging.oasis.app) | `dev`  | ![](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=dev)  |
+
+[comment]: <> (| Production  | [oasis.app]&#40;https://oasis.app&#41;                 | `main` | ![]&#40;https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=main&#41; |)
+
+[comment]: <> (| Staging     | [staging.oasis.app]&#40;https://staging.oasis.app&#41; | `dev`  | ![]&#40;https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=dev&#41;  |)
 
 <br>
 
 # Oasis Borrow
 
 [Oasis Borrow](https://oasis.app) is the most popular user-interface to interact with the
-[Maker protocol](https://docs.makerdao.com/). It enables users to generate Dai, the most used and
+
+[comment]: <> ([Velero protocol]&#40;https://docs.makerdao.com/&#41;. It enables users to generate USDV, the most used and)
 decentralized stablecoin, using a variety of crypto assets as collateral.
 
 <br>
@@ -29,7 +37,7 @@ decentralized stablecoin, using a variety of crypto assets as collateral.
 Clone the repository
 
 ```sh
-git clone https://github.com/OasisDEX/oasis-borrow.git
+git clone https://github.com/velerofinance/oasis-borrow.git
 ```
 
 Navigate to the project folder and install all dependencies

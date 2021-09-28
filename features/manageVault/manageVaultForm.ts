@@ -35,17 +35,17 @@ export function applyManageVaultForm(
     paybackAmount,
   } = state
   const isCollateralStage = stage === 'collateralEditing'
-  const isDaiStage = stage === 'daiEditing'
+  const isUsdvStage = stage === 'usdvEditing'
 
   const shouldClearGenerateAmount = showDepositAndGenerateOption && isCollateralStage
-  const shouldClearDepositAmount = showDepositAndGenerateOption && isDaiStage
+  const shouldClearDepositAmount = showDepositAndGenerateOption && isUsdvStage
   const shouldClearPaybackAmount = showPaybackAndWithdrawOption && isCollateralStage
-  const shouldClearWithdrawAmount = showPaybackAndWithdrawOption && isDaiStage
+  const shouldClearWithdrawAmount = showPaybackAndWithdrawOption && isUsdvStage
 
   const canToggleDepositAndGenerate =
-    (isCollateralStage && depositAmount) || (isDaiStage && generateAmount)
+    (isCollateralStage && depositAmount) || (isUsdvStage && generateAmount)
   const canTogglePaybackAndWithdraw =
-    (isCollateralStage && withdrawAmount) || (isDaiStage && paybackAmount)
+    (isCollateralStage && withdrawAmount) || (isUsdvStage && paybackAmount)
 
   if (kind === 'toggleDepositAndGenerateOption' && canToggleDepositAndGenerate) {
     return {

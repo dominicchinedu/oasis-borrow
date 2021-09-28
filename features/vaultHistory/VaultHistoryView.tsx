@@ -26,7 +26,7 @@ const columns: ColumnDef<VaultHistoryEvent, {}>[] = [
           'collateralAmount' in event && event.collateralAmount
             ? formatCryptoBalance(event.collateralAmount.abs())
             : 0,
-        daiAmount: 'daiAmount' in event ? formatCryptoBalance(event.daiAmount.abs()) : 0,
+        usdvAmount: 'usdvAmount' in event ? formatCryptoBalance(event.usdvAmount.abs()) : 0,
         remainingCollateral:
           'remainingCollateral' in event && event.remainingCollateral
             ? formatCryptoBalance(event.remainingCollateral)

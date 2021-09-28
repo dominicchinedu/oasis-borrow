@@ -19,7 +19,7 @@ const query = gql`
       nodes {
         kind
         collateralAmount
-        daiAmount
+        usdvAmount
         vaultCreator
         cdpId
         transferFrom
@@ -47,7 +47,7 @@ async function getVaultHistory(client: GraphQLClient, urn: string): Promise<Retu
 function parseBigNumbersFields(event: Partial<ReturnedEvent>): VaultEvent {
   const bigNumberFields = [
     'collateralAmount',
-    'daiAmount',
+    'usdvAmount',
     'collateralTaken',
     'coveredDebt',
     'remainingCollateral',

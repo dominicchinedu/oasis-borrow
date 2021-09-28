@@ -30,14 +30,14 @@ export function mockPriceInfo$({
   ethChangePercentage = defaultEthChangePercentage,
   token = defaultToken,
 }: MockPriceInfoProps = {}): Observable<PriceInfo> {
-  const nextEthPrice = ethPrice.plus(ethPrice.times(ethChangePercentage))
+  const nextVlxPrice = ethPrice.plus(ethPrice.times(ethChangePercentage))
   const nextCollateralPrice = collateralPrice.plus(
     collateralPrice.times(collateralChangePercentage),
   )
   const ethPriceInfo$ = of({
     currentPrice: ethPrice,
     isStaticPrice: false,
-    nextPrice: nextEthPrice || ethPrice,
+    nextPrice: nextVlxPrice || ethPrice,
     currentPriceUpdate: lastHour,
     nextPriceUpdate: nextHour,
     percentageChange: ethChangePercentage,
@@ -54,7 +54,7 @@ export function mockPriceInfo$({
   })
 
   function oraclePriceData$(_token: string) {
-    return _oraclePriceData$ || _token === 'ETH' ? ethPriceInfo$ : collateralPriceInfo$
+    return _oraclePriceData$ || _token === 'VLX' ? ethPriceInfo$ : collateralPriceInfo$
   }
   return createPriceInfo$(oraclePriceData$, token)
 }

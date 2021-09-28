@@ -26,7 +26,7 @@ export function manageVaultStory({
   ilkData,
   proxyAddress,
   collateralAllowance,
-  daiAllowance,
+  usdvAllowance,
 }: ManageVaultStory = {}) {
   return ({
     depositAmount,
@@ -44,7 +44,7 @@ export function manageVaultStory({
       ilkData,
       proxyAddress,
       collateralAllowance,
-      daiAllowance,
+      usdvAllowance,
     })
 
     useEffect(() => {
@@ -70,11 +70,11 @@ export function manageVaultStory({
                 paybackAmount,
               }),
               showDepositAndGenerateOption:
-                (stage === 'daiEditing' && !!depositAmount) ||
+                (stage === 'usdvEditing' && !!depositAmount) ||
                 (stage === 'collateralEditing' && !!generateAmount),
               showPaybackAndWithdrawOption:
                 accountIsController &&
-                ((stage === 'daiEditing' && !!withdrawAmount) ||
+                ((stage === 'usdvEditing' && !!withdrawAmount) ||
                   (stage === 'collateralEditing' && !!paybackAmount)),
             }
 

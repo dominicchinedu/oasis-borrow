@@ -11,31 +11,31 @@ import { Grid, Text } from 'theme-ui'
 
 import { ManageVaultState } from './manageVault'
 
-export function ManageVaultDaiAllowance({
+export function ManageVaultUsdvAllowance({
   stage,
-  daiAllowanceAmount,
+  usdvAllowanceAmount,
   paybackAmount,
-  updateDaiAllowanceAmount,
-  setDaiAllowanceAmountUnlimited,
-  setDaiAllowanceAmountToPaybackAmount,
-  resetDaiAllowanceAmount,
-  selectedDaiAllowanceRadio,
+  updateUsdvAllowanceAmount,
+  setUsdvAllowanceAmountUnlimited,
+  setUsdvAllowanceAmountToPaybackAmount,
+  resetUsdvAllowanceAmount,
+  selectedUsdvAllowanceRadio,
 }: ManageVaultState) {
-  const canSelectRadio = stage === 'daiAllowanceWaitingForConfirmation'
+  const canSelectRadio = stage === 'usdvAllowanceWaitingForConfirmation'
 
   const { t } = useTranslation()
 
-  const isUnlimited = selectedDaiAllowanceRadio === 'unlimited'
-  const isPayback = selectedDaiAllowanceRadio === 'paybackAmount'
-  const isCustom = selectedDaiAllowanceRadio === 'custom'
+  const isUnlimited = selectedUsdvAllowanceRadio === 'unlimited'
+  const isPayback = selectedUsdvAllowanceRadio === 'paybackAmount'
+  const isCustom = selectedUsdvAllowanceRadio === 'custom'
 
   return (
     <Grid>
       {canSelectRadio && (
         <>
           <Radio
-            onChange={setDaiAllowanceAmountUnlimited!}
-            name="manage-vault-dai-allowance"
+            onChange={setUsdvAllowanceAmountUnlimited!}
+            name="manage-vault-usdv-allowance"
             checked={isUnlimited}
           >
             <Text variant="paragraph3" sx={{ fontWeight: 'semiBold', my: '18px' }}>
@@ -43,15 +43,15 @@ export function ManageVaultDaiAllowance({
             </Text>
           </Radio>
           <Radio
-            onChange={setDaiAllowanceAmountToPaybackAmount!}
-            name="manage-vault-dai-allowance"
+            onChange={setUsdvAllowanceAmountToPaybackAmount!}
+            name="manage-vault-usdv-allowance"
             checked={isPayback}
           >
             <Text variant="paragraph3" sx={{ fontWeight: 'semiBold', my: '18px' }}>
-              {t('dai-paying-back', { amount: formatCryptoBalance(paybackAmount!) })}
+              {t('usdv-paying-back', { amount: formatCryptoBalance(paybackAmount!) })}
             </Text>
           </Radio>
-          <Radio onChange={resetDaiAllowanceAmount!} name="allowance-open-form" checked={isCustom}>
+          <Radio onChange={resetUsdvAllowanceAmount!} name="allowance-open-form" checked={isCustom}>
             <Grid columns="2fr 2fr 1fr" sx={{ alignItems: 'center', my: 2 }}>
               <Text variant="paragraph3" sx={{ fontWeight: 'semiBold' }}>
                 {t('custom')}
@@ -68,18 +68,18 @@ export function ManageVaultDaiAllowance({
                 }}
                 disabled={!isCustom}
                 value={
-                  daiAllowanceAmount && isCustom
-                    ? formatAmount(daiAllowanceAmount, getToken('DAI').symbol)
+                  usdvAllowanceAmount && isCustom
+                    ? formatAmount(usdvAllowanceAmount, getToken('USDV').symbol)
                     : null
-                }
+                } USDV
                 mask={createNumberMask({
                   allowDecimal: true,
-                  decimalLimit: getToken('DAI').digits,
+                  decimalLimit: getToken('USDV').digits,
                   prefix: '',
                 })}
-                onChange={handleNumericInput(updateDaiAllowanceAmount!)}
+                onChange={handleNumericInput(updateUsdvAllowanceAmount!)}
               />
-              <Text sx={{ fontSize: 1 }}>DAI</Text>
+              <Text sx={{ fontSize: 1 }}>USDV</Text>
             </Grid>
           </Radio>
         </>
@@ -88,28 +88,28 @@ export function ManageVaultDaiAllowance({
   )
 }
 
-export function ManageVaultDaiAllowanceStatus({
+export function ManageVaultUsdvAllowanceStatus({
   stage,
-  daiAllowanceTxHash,
+  usdvAllowanceTxHash,
   etherscan,
 }: ManageVaultState) {
   const { t } = useTranslation()
 
-  if (stage === 'daiAllowanceInProgress') {
+  if (stage === 'usdvAllowanceInProgress') {
     return (
       <TxStatusCardProgress
-        text={t('setting-allowance-for', { token: 'DAI' })}
+        text={t('setting-allowance-for', { token: 'USDV' })}
         etherscan={etherscan!}
-        txHash={daiAllowanceTxHash!}
+        txHash={usdvAllowanceTxHash!}
       />
     )
   }
-  if (stage === 'daiAllowanceSuccess') {
+  if (stage === 'usdvAllowanceSuccess') {
     return (
       <TxStatusCardSuccess
-        text={t('set-allowance-for', { token: 'DAI' })}
+        text={t('set-allowance-for', { token: 'USDV' })}
         etherscan={etherscan!}
-        txHash={daiAllowanceTxHash!}
+        txHash={usdvAllowanceTxHash!}
       />
     )
   }

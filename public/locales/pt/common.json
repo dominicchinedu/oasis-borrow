@@ -26,7 +26,7 @@
     "back": "Voltar",
     "back-to-editing": "Voltar a editar",
     "balance": "Saldo",
-    "balance-insufficient": "DAI insuficiente em seu saldo",
+    "balance-insufficient": "USDV insuficiente em seu saldo",
     "balances": "Saldos",
     "buy": "Comprar",
     "careers": {
@@ -47,7 +47,7 @@
     "confirmed-proxy-deployment": "O Proxy foi criado com sucesso",
     "connect-confirm": "Confirmar em {{ connectionKind }}",
     "connect-email": "Conecte-se com e-mail",
-    "connect-error": "Por favor, autorize o site acessar sua conta Ethereum.",
+    "connect-error": "Por favor, autorize o site acessar sua conta Velas.",
     "connect-wallet": "Conecte uma carteira",
     "connect-wallet-button": "Conectar carteira",
     "connect-with": "Conectar {{ connectionKind }}",
@@ -83,10 +83,10 @@
     "creating-vault": "Criando Cofre (Vault)",
     "currency": "Moeda",
     "custom": "Customizado",
-    "dai-being-generated": "Dai está sendo gerada",
-    "dai-paying-back": "Dai sendo paga ({{amount}})",
-    "dai-paying-back-label": "Dai sendo paga",
-    "dai-savings-rate": "Taxa de Poupança Dai (DSR)",
+    "usdv-being-generated": "USDV está sendo gerada",
+    "usdv-paying-back": "USDV sendo paga ({{amount}})",
+    "usdv-paying-back-label": "USDV sendo paga",
+    "usdv-savings-rate": "Taxa de Poupança USDV (DSR)",
     "deposit": "Depositar",
     "disconnect": "Desconectar",
     "disconnect-magic": "Sair",
@@ -112,14 +112,14 @@
     "set-proxy-owner-description-pending": "Configurando proprietário do proxy",
     "set-proxy-owner-description-recent": "Determinar proprietário do proxy",
     "set-proxy-owner-description-recent-failed": "Falha ao configurar o proprietário do proxy",
-    "open-vault-description-pending": "Abrindo {{ ilk }} Cofre, depositando {{ depositAmount }} {{ token }} e gerando {{ generateAmount }} DAI",
-    "open-vault-description-recent": "Cofre {{ ilk }} aberto, depositado {{ depositAmount }} {{ token }} e gerado {{ generateAmount }} DAI",
+    "open-vault-description-pending": "Abrindo {{ ilk }} Cofre, depositando {{ depositAmount }} {{ token }} e gerando {{ generateAmount }} USDV",
+    "open-vault-description-recent": "Cofre {{ ilk }} aberto, depositado {{ depositAmount }} {{ token }} e gerado {{ generateAmount }} USDV",
     "open-vault-description-recent-failed": "Falha ao abril o Cofre {{ ilk }}",
-    "deposit-generate-description-pending": "Depositando {{ depositAmount }} {{ token }} e gerando {{ generateAmount }} DAI do Cofre {{ id }}",
-    "deposit-generate-description-recent": "Depositado {{ depositAmount }} {{ token }} e gerado {{ generateAmount }} DAI do Cofre {{ id }}",
+    "deposit-generate-description-pending": "Depositando {{ depositAmount }} {{ token }} e gerando {{ generateAmount }} USDV do Cofre {{ id }}",
+    "deposit-generate-description-recent": "Depositado {{ depositAmount }} {{ token }} e gerado {{ generateAmount }} USDV do Cofre {{ id }}",
     "deposit-generate-description-recent-failed": "Falha ao depositar e gerar do Cofre {{ id }}",
-    "withdraw-payback-description-pending": "Retirando {{ withdrawAmount }} {{ token }} e pagando {{ paybackAmount }} DAI para o Cofre {{ id }}",
-    "withdraw-payback-description-recent": "Retirado {{ withdrawAmount }} {{ token }} e pago {{ paybackAmount }} DAI do Cofre {{ id }}",
+    "withdraw-payback-description-pending": "Retirando {{ withdrawAmount }} {{ token }} e pagando {{ paybackAmount }} USDV para o Cofre {{ id }}",
+    "withdraw-payback-description-recent": "Retirado {{ withdrawAmount }} {{ token }} e pago {{ paybackAmount }} USDV do Cofre {{ id }}",
     "withdraw-payback-description-recent-failed": "Falha ao retirar e pagar do Cofre {{ id }}",
     "reclaim-collateral-description-pending": "Recuperando {{ amount }} {{ token }} do Cofre {{ id }}",
     "reclaim-collateral-description-recent": "Recuperado {{ amount }} {{ token }} do Cofre {{ id }}",
@@ -144,21 +144,21 @@
         "popular": "Ativos populares"
     },
     "gas-estimation-error": "Erro",
-    "get-dai": "Obtenha Dai",
+    "get-usdv": "Obtenha USDV",
     "get-started": "Iniciar",
     "go-to-vault": "Vá para o Cofre #{{id}}",
     "here": "aqui",
     "history": {
         "auction_finished_v2": "Leilão <0>#{{auctionId}}</0> finalizado, <0>{{remainingCollateral}} {{token}}</0> restou",
-        "auction_started": "Leilão iniciado, <0>{{collateralAmount}} {{token}}</0> usado para cobrir <0>{{daiAmount}} Dai</0>",
-        "auction_started_v2": "Leilão <0>#{{auctionId}}</0> iniciado, <0>{{collateralAmount}} {{token}}</0> usado para cobrir <0>{{daiAmount}} Dai</0>",
+        "auction_started": "Leilão iniciado, <0>{{collateralAmount}} {{token}}</0> usado para cobrir <0>{{usdvAmount}} USDV</0>",
+        "auction_started_v2": "Leilão <0>#{{auctionId}}</0> iniciado, <0>{{collateralAmount}} {{token}}</0> usado para cobrir <0>{{usdvAmount}} USDV</0>",
         "deposit": "Depositado <0>{{collateralAmount}} {{token}}</0> no Cofre",
-        "generate": "Gerado <0>{{daiAmount}}</0> Dai do Cofre",
+        "generate": "Gerado <0>{{usdvAmount}}</0> USDV do Cofre",
         "migrate": "Cofre migrado",
-        "move_dest": "Movido <0>{{collateralAmount}} {{token}}</0> e <0>{{daiAmount}}</0> dívida Dai para o Cofre",
-        "move_src": "Movido <0>{{collateralAmount}} {{token}}</0> e <0>{{daiAmount}}</0> dívida Dai do Cofre",
+        "move_dest": "Movido <0>{{collateralAmount}} {{token}}</0> e <0>{{usdvAmount}}</0> dívida USDV para o Cofre",
+        "move_src": "Movido <0>{{collateralAmount}} {{token}}</0> e <0>{{usdvAmount}}</0> dívida USDV do Cofre",
         "open": "Aberto um novo Cofre com id <0>#{{cdpId}}</0>",
-        "payback": "Pago <0>{{daiAmount}}</0> Dai para o Cofre",
+        "payback": "Pago <0>{{usdvAmount}}</0> USDV para o Cofre",
         "transfer": "Cofre enviou para <0>{{transferTo}}</0> por <0>{{transferFrom}}</0>",
         "withdraw": "Retirou <0>{{collateralAmount}} {{token}}</0> do Cofre"
     },
@@ -170,17 +170,17 @@
     "keyWithCount_plural": "{{count}} itens",
     "landing": {
         "hero": {
-            "headline": "Dai é uma moeda digital inteligente feita para todos. Compre, envie e gerencie em um só lugar.",
-            "subheader": "Abrir um Cofre Maker, deposite seu colateral e crie Dai.<0/> Conectar uma carteira para começar."
+            "headline": "Usdv é uma moeda digital inteligente feita para todos. Compre, envie e gerencie em um só lugar.",
+            "subheader": "Abrir um Cofre Velero, deposite seu colateral e crie Usdv.<0/> Conectar uma carteira para começar."
         },
         "cards": {
-            "dai": {
-                "title": "Dai Wallet",
-                "description": "Compre, envie e faça gestão de Dai tudo em um único lugar. Potencialize sua Dai, acesse diversos provedores!"
+            "usdv": {
+                "title": "Usdv Wallet",
+                "description": "Compre, envie e faça gestão de Usdv tudo em um único lugar. Potencialize sua Usdv, acesse diversos provedores!"
             },
             "faq": {
                 "title": "Tem uma pergunta?",
-                "description": "Aprenda mais sobre Oasis, Dai e DeFi em nossa FAQ"
+                "description": "Aprenda mais sobre Oasis, Usdv e DeFi em nossa FAQ"
             }
         }
     },
@@ -192,7 +192,7 @@
     "ledger-select-title": "Selecione Ledger Live ou Legacy",
     "manage-vault": {
         "action-option": "{{action}} {{token}} com essa transação",
-        "dai-available": "Dai disponível",
+        "usdv-available": "Usdv disponível",
         "dust-limit": "Limite Mínimo (Dust)",
         "liquidation-fee": "Taxa de Liquidação",
         "min-collat-ratio": "Ratio Mínimo de Colateralização",
@@ -201,8 +201,8 @@
         "title": "Gerir Cofre",
         "action": "Gerir Cofre",
         "warnings": {
-            "potential-generate-amount-less-than-debt-floor": "O mínimo em Dai necessário para abrir um Cofre é {{debtFloor}}. Por favor, adicione mais colateral para gerar ao menos {{debtFloor}} Dai",
-            "debt-is-less-than-debt-floor": "Sua dívida em Dai está abaixo do mínimo de {{debtFloor}}. Você não pode gerar mais Dai a não ser que você atinja o mínimo.",
+            "potential-generate-amount-less-than-debt-floor": "O mínimo em Usdv necessário para abrir um Cofre é {{debtFloor}}. Por favor, adicione mais colateral para gerar ao menos {{debtFloor}} Usdv",
+            "debt-is-less-than-debt-floor": "Sua dívida em Usdv está abaixo do mínimo de {{debtFloor}}. Você não pode gerar mais Usdv a não ser que você atinja o mínimo.",
             "vault-will-be-at-risk-level-danger": "Com essa ação, seu Cofre estará em um Ratio de Colateralização muito próximo ao mínimo necessário",
             "vault-will-be-at-risk-level-danger-at-next-price": "Com essa ação, seu Cofre estará em um Ratio de Colateralização muito próximo ao mínimo necessário em relação à atualização do próximo preço",
             "vault-will-be-at-risk-level-warning": "Com essa ação, seu Cofre estará em um Ratio de Colateralização próximo ao mínimo necessário",
@@ -212,20 +212,20 @@
             "deposit-amount-exceeds-collateral-balance": "Você não pode depositar mais colateral do que possui em sua carteira",
             "withdraw-amount-exceeds-free-collateral": "Você não pode retirar mais do que {{maxWithdrawAmount}} {{token}}",
             "withdraw-amount-exceeds-free-collateral-at-next-price": "Você não pode retirar mais do que {{maxWithdrawAmount}} {{token}}",
-            "generate-amount-exceeds-dai-yield-from-total-collateral": "O Ratio de Colateralização para este Cofre está muito baixo. Por favor, gere menos Dai.",
-            "generate-amount-exceeds-dai-yield-from-total-collateral-at-next-price": "O Ratio de Colateralização para este Cofre está muito baixo em relação à próxima atualização de preço. Por favor, gere menos Dai.",
-            "generate-amount-exceeds-debt-ceiling": "Você está tentando gerar mais do que o teto de dívida global permite. A quantidade de Dai que pode ser gerada é {{maxGenerateAmount}} {{token}}",
-            "generate-amount-less-than-debt-floor": "Esse tipo de cofre requerer um mínimo de {{debtFloor}} Dai para ser gerado.Para ler mais sobre as Dívidas Mínimas dos Cofres, clique <0>aqui</0>.",
-            "payback-amount-exceeds-dai-balance": "Você não pode pagar mais Dai do que a quantia que você possui em sua carteira",
-            "payback-amount-exceeds-vault-debt": "Você está tentando pagar mais do que a sua dívida em Dai deste Cofre",
-            "debt-will-be-less-than-debt-floor": "A Dívida do Cofre deve ser ou 0 ou acima de {{debtFloor}} Dai. Por favor, altere a quantia a ser paga.",
+            "generate-amount-exceeds-usdv-yield-from-total-collateral": "O Ratio de Colateralização para este Cofre está muito baixo. Por favor, gere menos Usdv.",
+            "generate-amount-exceeds-usdv-yield-from-total-collateral-at-next-price": "O Ratio de Colateralização para este Cofre está muito baixo em relação à próxima atualização de preço. Por favor, gere menos Usdv.",
+            "generate-amount-exceeds-debt-ceiling": "Você está tentando gerar mais do que o teto de dívida global permite. A quantidade de Usdv que pode ser gerada é {{maxGenerateAmount}} {{token}}",
+            "generate-amount-less-than-debt-floor": "Esse tipo de cofre requerer um mínimo de {{debtFloor}} Usdv para ser gerado.Para ler mais sobre as Dívidas Mínimas dos Cofres, clique <0>aqui</0>.",
+            "payback-amount-exceeds-usdv-balance": "Você não pode pagar mais Usdv do que a quantia que você possui em sua carteira",
+            "payback-amount-exceeds-vault-debt": "Você está tentando pagar mais do que a sua dívida em Usdv deste Cofre",
+            "debt-will-be-less-than-debt-floor": "A Dívida do Cofre deve ser ou 0 ou acima de {{debtFloor}} Usdv. Por favor, altere a quantia a ser paga.",
             "custom-collateral-allowance-amount-exceeds-maxuint256": "Permissão (Allowance) muito grande. Por favor, diminua a quantia customizada de allowance.",
             "custom-collateral-allowance-amount-less-than-deposit-amount": "Você precisa ao menos da permissão (allowance) do seu depósito para continuar",
-            "custom-dai-allowance-amount-exceeds-maxuint256": "Permissão (Allowance) muito grande. Por favor, diminua a quantia customizada de allowance.",
-            "custom-dai-allowance-amount-less-than-payback-amount": "Você precisa ao menos da permissão (allowance) do seu pagamento para continuar",
-            "depositing-all-eth-balance": "Você precisa de ETH para pagar taxas com gás. Abaixe sua quantia de depósito",
-            "ledger-enable-contract-data": "Por favor, ative 'Contract Data' nas configurações do app Ethereum em sua Ledger",
-            "withdraw-collateral-on-vault-under-debt-floor": "Você não pode retirar do seu Cofre enquanto ele estiver abaixo do mínimo necessário de {{debtFloor}} Dai. Para retirar seu colateral, pague a totalidade de sua dívida. Para aprender mais sobre Dívida Mínima do Cofre, clique <0>aqui</0>."
+            "custom-usdv-allowance-amount-exceeds-maxuint256": "Permissão (Allowance) muito grande. Por favor, diminua a quantia customizada de allowance.",
+            "custom-usdv-allowance-amount-less-than-payback-amount": "Você precisa ao menos da permissão (allowance) do seu pagamento para continuar",
+            "depositing-all-vlx-balance": "Você precisa de VLX para pagar taxas com gás. Abaixe sua quantia de depósito",
+            "ledger-enable-contract-data": "Por favor, ative 'Contract Data' nas configurações do app Velas em sua Ledger",
+            "withdraw-collateral-on-vault-under-debt-floor": "Você não pode retirar do seu Cofre enquanto ele estiver abaixo do mínimo necessário de {{debtFloor}} Usdv. Para retirar seu colateral, pague a totalidade de sua dívida. Para aprender mais sobre Dívida Mínima do Cofre, clique <0>aqui</0>."
         }
     },
     "max": "Máximo",
@@ -245,12 +245,12 @@
         "faq": "FAQ",
         "knowledge-centre": "Centro de Conhecimento",
         "oracles": "Oráculos",
-        "dai-wallet": "Dai Wallet",
+        "usdv-wallet": "Usdv Wallet",
         "borrow": "Empreste"
     },
-    "new-to-ethereum": "Novo no Ethereum? ",
+    "new-to-velas": "Novo no Velas? ",
     "next": "Próximo",
-    "no-dai": "Sem Dai",
+    "no-usdv": "Sem Usdv",
     "no-activity": "Sem atividade a mostrar",
     "notice-privacy": "Ao utilizar nosso site, você concorda com nossa<0>Política de Cookie</0>.",
     "notification-status-complete": "Completo",
@@ -269,7 +269,7 @@
     "open-vault": {
         "title": "Abrir Cofre",
         "warnings": {
-            "potential-generate-amount-less-than-debt-floor": "O mínimo em Dai necessário para abrir um Cofre é {{debtFloor}}. Por favor, adicione mais colateral para gerar ao menos {{debtFloor}} Dai",
+            "potential-generate-amount-less-than-debt-floor": "O mínimo em Usdv necessário para abrir um Cofre é {{debtFloor}}. Por favor, adicione mais colateral para gerar ao menos {{debtFloor}} Usdv",
             "vault-will-be-at-risk-level-danger": "Com essa ação, seu Cofre estará em um Ratio de Colateralização muito próximo ao mínimo necessário",
             "vault-will-be-at-risk-level-danger-at-next-price": "Com essa ação, seu Cofre estará em um Ratio de Colateralização muito próximo ao mínimo necessário em relação à atualização do próximo preço",
             "vault-will-be-at-risk-level-warning": "Com essa ação, seu Cofre estará em um Ratio de Colateralização próximo ao mínimo necessário",
@@ -277,15 +277,15 @@
         },
         "errors": {
             "deposit-amount-exceeds-collateral-balance": "Você não pode depositar mais colateral do que possui em sua carteira",
-            "generate-amount-exceeds-dai-yield-from-depositing-collateral": "O Ratio de Colateralização para este Cofre está muito baixo. Por favor, gere menos Dai.i",
-            "generate-amount-exceeds-dai-yield-from-depositing-collateral-at-next-price": "O Ratio de Colateralização para este Cofre está muito baixo em relação à próxima atualização de preço. Por favor, gere menos Dai.",
-            "generate-amount-exceeds-debt-ceiling": "Você está tentando gerar mais do que o teto de dívida global permite. A quantidade de Dai que pode ser gerada é {{maxGenerateAmount}} {{token}}",
-            "generate-amount-less-than-debt-floor": "Esse tipo de cofre requerer um mínimo de {{debtFloor}} Dai para ser gerado.Para ler mais sobre as Dívidas Mínimas dos Cofres, clique <0>aqui</0>.",
-            "debt-will-be-less-than-debt-floor": "A Dívida do Cofre deve ser ou 0 ou acima de {{debtFloor}} Dai. Por favor, altere a quantia a ser paga.",
+            "generate-amount-exceeds-usdv-yield-from-depositing-collateral": "O Ratio de Colateralização para este Cofre está muito baixo. Por favor, gere menos Usdv.i",
+            "generate-amount-exceeds-usdv-yield-from-depositing-collateral-at-next-price": "O Ratio de Colateralização para este Cofre está muito baixo em relação à próxima atualização de preço. Por favor, gere menos Usdv.",
+            "generate-amount-exceeds-debt-ceiling": "Você está tentando gerar mais do que o teto de dívida global permite. A quantidade de Usdv que pode ser gerada é {{maxGenerateAmount}} {{token}}",
+            "generate-amount-less-than-debt-floor": "Esse tipo de cofre requerer um mínimo de {{debtFloor}} Usdv para ser gerado.Para ler mais sobre as Dívidas Mínimas dos Cofres, clique <0>aqui</0>.",
+            "debt-will-be-less-than-debt-floor": "A Dívida do Cofre deve ser ou 0 ou acima de {{debtFloor}} Usdv. Por favor, altere a quantia a ser paga.",
             "custom-allowance-amount-exceeds-maxuint256": "Permissão (Allowance) muito grande. Por favor, diminua a quantia customizada de allowance.",
             "custom-allowance-amount-less-than-deposit-amount": "Você precisa ao menos da permissão (allowance) do seu depósito para continuar",
-            "depositing-all-eth-balance": "Você precisa de ETH para pagar taxas com gás. Abaixe sua quantia de depósito",
-            "ledger-enable-contract-data": "Por favor, ative 'Contract Data' nas configurações do app Ethereum em sua Ledger"
+            "depositing-all-vlx-balance": "Você precisa de VLX para pagar taxas com gás. Abaixe sua quantia de depósito",
+            "ledger-enable-contract-data": "Por favor, ative 'Contract Data' nas configurações do app Velas em sua Ledger"
         }
     },
     "or": "ou",
@@ -293,7 +293,7 @@
     "pending-transactions": "Transações Pendentes",
     "permissions": "Conceder permissões",
     "permissions-btn": "Conceder permissões",
-    "permissions-desc": "Isto permitirá a Oasis interagir com o Dai na sua carteira.",
+    "permissions-desc": "Isto permitirá a Oasis interagir com o Usdv na sua carteira.",
     "powered-by": "Distribuído por",
     "proceed": "Continuar",
     "readonly-alert-message": "Você está vendo",
@@ -322,12 +322,12 @@
             "description": "Nos mande feedbacks, perguntas ou sugestões.",
             "title": "Contato"
         },
-        "dai": {
-            "description": "Uma breve introdução ao Dai, uma forma mais inteligente de moeda digital",
-            "title": "Dai"
+        "usdv": {
+            "description": "Uma breve introdução ao Usdv, uma forma mais inteligente de moeda digital",
+            "title": "Usdv"
         },
         "default": {
-            "description": "Generate Dai using crypto as your collateral",
+            "description": "Generate Usdv using crypto as your collateral",
             "title": "Oasis"
         },
         "support": {
@@ -360,9 +360,9 @@
         "collateral-locked": "Colateral Travado",
         "collateral-ratio": "Ratio de Colateral",
         "collateralization-ratio": "Ratio de Colateralização",
-        "dai": "Dai",
-        "dai-available": "Dai Disponível",
-        "dai-debt": "Dívida em Dai",
+        "usdv": "Usdv",
+        "usdv-available": "Usdv Disponível",
+        "usdv-debt": "Dívida em Usdv",
         "deposited": "Depositado",
         "in-my-wallet": "Em minha Carteira",
         "in-your-wallet": "Em sua Carteira",
@@ -372,7 +372,7 @@
         "min-coll-ratio": "Ratio Mínimo de Colateralização",
         "stability-fee": "Taxa de Estabilidade",
         "type": "Tipo",
-        "vault-dai-debt": "Dívida Dai do Cofre",
+        "vault-usdv-debt": "Dívida Usdv do Cofre",
         "vault-id": "Cofre ID"
     },
     "token-balance": "Saldo {{token}}",
@@ -382,7 +382,7 @@
     "tos-accept-message-updated": "Antes de continuar, você precisará ler e aceitar nossos termos de serviço atualizados.",
     "tos-acceptance-check-in-progress": "Verificação de aceitação em andamento...",
     "tos-desc": "Ao criar um cofrinho eu aceito os",
-    "tos-jwt-signature-message": "Assine uma mensagem com o seu endereço Ethereum para registrar sua aceitação dos termos de serviço",
+    "tos-jwt-signature-message": "Assine uma mensagem com o seu endereço Velas para registrar sua aceitação dos termos de serviço",
     "tos-read": "Eu li e aceito os Termos de Serviço.",
     "tos-view": "Ver os Termos de Serviço",
     "tos-wallet-connection-in-progress": "Conexão da carteira em andamento...",
@@ -390,7 +390,7 @@
     "tos-welcome-updated": "Nós atualizamos nossos termos",
     "transaction-failed": "A transação falhou",
     "transaction-fee": "Taxa da rede",
-    "transaction-fee-tooltip-desc": "As taxas da rede atualmente são pagas em ETH. No momento, o custo de realizar essa ação é aproximadamente",
+    "transaction-fee-tooltip-desc": "As taxas da rede atualmente são pagas em VLX. No momento, o custo de realizar essa ação é aproximadamente",
     "trezor-cancel": "Selecione outra carteira",
     "trezor-error": "Ocorreu um erro, por favor reinicie",
     "trezor-loading-accounts": "Carregando contas trezor...",
@@ -423,8 +423,8 @@
     },
     "ilks-list": {
         "headers": {
-            "noVaults": "Selecione um tipo de colateral para criar um Cofre Maker e gerar Dai",
-            "withVaults": "Abrir um novo Cofre Maker <0/> Gerar Dai"
+            "noVaults": "Selecione um tipo de colateral para criar um Cofre Velero e gerar Usdv",
+            "withVaults": "Abrir um novo Cofre Velero <0/> Gerar Usdv"
         }
     },
     "vaults-overview": {
@@ -433,13 +433,13 @@
         "headers": {
             "connected-owner-noVaults": "Você não tem Cofres abertos",
             "connected-owner-withVaults": "Seus Cofres",
-            "connected-viewer-noVaults": "{{address}} atualmente não possui Cofres Maker",
-            "connected-viewer-withVaults": "Visão geral de Cofres Maker de {{address}}",
-            "notConnected-noVaults": "{{address}} atualmente não possui Cofres Maker.<0/> Conecte sua carteira e abre um cofre.",
-            "notConnected-withVaults": "Visão geral de Cofres Maker de {{address}}.<0/> Conecte sua carteira."
+            "connected-viewer-noVaults": "{{address}} atualmente não possui Cofres Velero",
+            "connected-viewer-withVaults": "Visão geral de Cofres Velero de {{address}}",
+            "notConnected-noVaults": "{{address}} atualmente não possui Cofres Velero.<0/> Conecte sua carteira e abre um cofre.",
+            "notConnected-withVaults": "Visão geral de Cofres Velero de {{address}}.<0/> Conecte sua carteira."
         },
         "number-of-vaults": "Número de Cofres",
-        "subheader-no-vaults": "Abra um Cofre Maker, deposite seu colateral e gere Dai.",
+        "subheader-no-vaults": "Abra um Cofre Velero, deposite seu colateral e gere Usdv.",
         "total-debt": "Dívida Total",
         "total-locked": "Total Travado",
         "vaults": "Cofres",
@@ -453,16 +453,16 @@
             "subheader2": "Você pode ver seus Cofres"
         },
         "liquidating": {
-            "header1": "Seu {{ collateral }} Cofre Maker {{ id }} está prestar a ser liquidado",
-            "header2": "{{ collateral }} Cofre Maker {{ id }} está prestar a ser liquidado.",
-            "subheader1": "O próximo preço causará uma liquidação neste Cofre Maker.Você pode ainda salvar seu Cofre Maker da liquidação ao adicionar colateral ou pagar Dai.",
-            "subheader2": "Este é seu Cofre Maker? Conecte com o endereço: {{ address }} e salve seu Cofre Maker da liquidação.",
+            "header1": "Seu {{ collateral }} Cofre Velero {{ id }} está prestar a ser liquidado",
+            "header2": "{{ collateral }} Cofre Velero {{ id }} está prestar a ser liquidado.",
+            "subheader1": "O próximo preço causará uma liquidação neste Cofre Velero.Você pode ainda salvar seu Cofre Velero da liquidação ao adicionar colateral ou pagar Usdv.",
+            "subheader2": "Este é seu Cofre Velero? Conecte com o endereço: {{ address }} e salve seu Cofre Velero da liquidação.",
             "subheader3": "Esse Cofre está disponível para liquidação e pode ser liquidado a qualquer momento."
         },
         "liquidated": {
-            "header1": "Seu Cofre Maker foi liquidado.",
-            "header2": "Seu Cofre Maker foi liquidado.",
-            "subheader1": "Este Cofre Maker foi liquidado. Uma parte do seu colateral será leiloada para pagar sua dívida em Dai.",
+            "header1": "Seu Cofre Velero foi liquidado.",
+            "header2": "Seu Cofre Velero foi liquidado.",
+            "subheader1": "Este Cofre Velero foi liquidado. Uma parte do seu colateral será leiloada para pagar sua dívida em Usdv.",
             "subheader2": "Você pode recuperar {{ amount }} {{ collateral }}",
             "subheader3": "Se este for seu cofre, conecte com esse endereço: {{ address }} para recuperar o restante do seu colateral.",
             "subheader4": "Se este for seu cofre, conecte com esse endereço: {{ address }} para recuperar o restante do seu colateral."
@@ -491,17 +491,17 @@
             "edit": "Configura seu Cofre",
             "proxy": "Crie seu Proxy inteligente",
             "allowance": "Determine {{token}} a permissão",
-            "daiAllowance": "Determine a permissão em DAI",
+            "usdvAllowance": "Determine a permissão em USDV",
             "confirm": "Confirme a criação do Cofre",
             "confirm-manage": "Confirme as alterações no Cofre"
         },
         "subtext": {
             "collateral": "Deposite ou retire do seu cofre. Economize gás ao combinar as transações.",
-            "dai": "Gere Dai a partir do colateral em seu cofre ou pague Dai. Economize gás ao combinar as transações.",
-            "edit": "Simule seu cofre ao configurar a quantia de colateral a ser depositado e Dai gerado.",
+            "usdv": "Gere Usdv a partir do colateral em seu cofre ou pague Usdv. Economize gás ao combinar as transações.",
+            "edit": "Simule seu cofre ao configurar a quantia de colateral a ser depositado e Usdv gerado.",
             "proxy": "Com seu Proxy inteligente, nós podemos realizar múltiplas ações em apenas uma transação no seu Cofre. O Proxy precisa ser criado apenas uma vez.",
             "allowance": "Determine a permissão (allowance) para especificar a quantia máxima de tokens que o Cofre pode interagir.",
-            "daiAllowance": "Determine a permissão (allowance) para especificar a quantia máxima de tokens que o Cofre pode interagir.",
+            "usdvAllowance": "Determine a permissão (allowance) para especificar a quantia máxima de tokens que o Cofre pode interagir.",
             "confirm": "Revise e verifique detalhes de seu cofre."
         }
     },
@@ -514,7 +514,7 @@
     "visit-old-oasis": "Entre no Oasis legado",
     "oracles": {
         "header": "Oráculos",
-        "description": "Abaixo podem ser vistos os atuais e próximos preços dos tipos de colaterais aceitos pelos Cofres Maker. A maioria usa o Módulo de Segurança (OSM). Esse módulo atualiza o preço apenas uma vez a cada hora. Assim, se uma quedra bruca estiver acontecendo, os usuários ainda possuem até uma hora para reagir ao novo preço",
+        "description": "Abaixo podem ser vistos os atuais e próximos preços dos tipos de colaterais aceitos pelos Cofres Velero. A maioria usa o Módulo de Segurança (OSM). Esse módulo atualiza o preço apenas uma vez a cada hora. Assim, se uma quedra bruca estiver acontecendo, os usuários ainda possuem até uma hora para reagir ao novo preço",
         "token": "Token",
         "current-price": "Preço Atual",
         "next-price": "Próximo Preço",
@@ -527,48 +527,48 @@
     "Brasil": "Brasil",
     "Mexico": "México",
     "aave": "Aave",
-    "aave-product": "Empreste seus Dai a Aave e gere ganhos.",
+    "aave-product": "Empreste seus Usdv a Aave e gere ganhos.",
     "apy": "APY",
-    "buy-dai": "Compre Dai",
+    "buy-usdv": "Compre Usdv",
     "buy-with": "Comprar {{token}} com {{onramp}}",
     "change-locale": "Alterar localidade",
     "choose-provider": "Escolha um provedor",
-    "compound-product": "Empreste seus Dai a Compound e gere ganhos.",
-    "create-dai-savings": "Criar Poupança Dai",
+    "compound-product": "Empreste seus Usdv a Compound e gere ganhos.",
+    "create-usdv-savings": "Criar Poupança Usdv",
     "deposited": "Depositado",
     "dsr-available-withdraw": "Disponível para retirar",
     "dsr-deposit-depositing": "Você está depositando",
-    "dsr-deposit-depositing-to": "Não há taxa para Poupança Dai",
+    "dsr-deposit-depositing-to": "Não há taxa para Poupança Usdv",
     "dsr-deposit-error-allowance": "Falha ao definir permissões",
     "dsr-deposit-error-deposit": "O depósito para o DSR falhou",
-    "dsr-deposit-error-greater-than-balance": "DAI insuficiente",
-    "dsr-deposit-permissions": "Isto permitirá a Oasis interagir com o Dai na sua carteira.",
-    "dsr-product": "Trave seus Dai com a Maker e receba ganhos.",
+    "dsr-deposit-error-greater-than-balance": "USDV insuficiente",
+    "dsr-deposit-permissions": "Isto permitirá a Oasis interagir com o Usdv na sua carteira.",
+    "dsr-product": "Trave seus Usdv com a Velero e receba ganhos.",
     "dsr-proxy-create-description-pending": "Criando proxy",
     "dsr-proxy-create-description-recent": "Proxy Criado",
     "dsr-proxy-create-description-recent-failed": "Falha ao criar proxy",
     "dsr-proxy-create-notification": "Criando proxy",
     "dsr-proxy-create-notification-past": "Proxy criado",
-    "dsr-proxy-deposit-description-pending": "Depositando {{ amount }} DAI para DSR",
-    "dsr-proxy-deposit-description-recent": "{{ amount }} DAI depositado ao DSR",
-    "dsr-proxy-deposit-description-recent-failed": "Falha ao depositar {{ amount }} DAI ao DSR",
-    "dsr-proxy-deposit-notification": "Depositar {{ amount }} DAI",
-    "dsr-proxy-deposit-notification-past": "{{ amount }} DAI depositado",
+    "dsr-proxy-deposit-description-pending": "Depositando {{ amount }} USDV para DSR",
+    "dsr-proxy-deposit-description-recent": "{{ amount }} USDV depositado ao DSR",
+    "dsr-proxy-deposit-description-recent-failed": "Falha ao depositar {{ amount }} USDV ao DSR",
+    "dsr-proxy-deposit-notification": "Depositar {{ amount }} USDV",
+    "dsr-proxy-deposit-notification-past": "{{ amount }} USDV depositado",
     "dsr-proxy-set-owner-description-pending": "Configurando proprietário do proxy",
     "dsr-proxy-set-owner-description-recent": "Definir proprietário do proxy",
     "dsr-proxy-set-owner-description-recent-failed": "Falha ao definir proprietário do proxy",
     "dsr-proxy-set-owner-notification": "Configurando proprietário do proxy",
     "dsr-proxy-set-owner-notification-past": "Definir proprietário do proxy",
-    "dsr-proxy-withdraw-description-pending": "Retirando {{ amount }} DAI do DSR",
-    "dsr-proxy-withdraw-description-recent": "Retirado {{ amount }} DAI do DSR",
-    "dsr-proxy-withdraw-description-recent-failed": "Falha ao retirar {{ amount }} DAI do DSR",
-    "dsr-proxy-withdraw-notification": "Retirar {{ amount }} DAI",
-    "dsr-proxy-withdraw-notification-past": "{{ amount }} DAI retirado",
+    "dsr-proxy-withdraw-description-pending": "Retirando {{ amount }} USDV do DSR",
+    "dsr-proxy-withdraw-description-recent": "Retirado {{ amount }} USDV do DSR",
+    "dsr-proxy-withdraw-description-recent-failed": "Falha ao retirar {{ amount }} USDV do DSR",
+    "dsr-proxy-withdraw-notification": "Retirar {{ amount }} USDV",
+    "dsr-proxy-withdraw-notification-past": "{{ amount }} USDV retirado",
     "dsr-warning-continue": "Continuar mesmo assim",
-    "dsr-warning-message": "O APY (Rendimento Percentual Anual) atual neste produto é 0% e haverá um custo para configurar e adicionar Dai. É aconselhável não continuar até que o APY esteja acima de 0%.",
+    "dsr-warning-message": "O APY (Rendimento Percentual Anual) atual neste produto é 0% e haverá um custo para configurar e adicionar Usdv. É aconselhável não continuar até que o APY esteja acima de 0%.",
     "dsr-warning-setup": "Configurar mais tarde",
     "dsr-withdraw-error-empty-amount": "A quantidade não pode ser zero",
-    "dsr-withdraw-error-greater-than-deposit": "O valor da retirada é maior do que o DAI depositado",
+    "dsr-withdraw-error-greater-than-deposit": "O valor da retirada é maior do que o USDV depositado",
     "dsr-withdraw-error-withdrawal": "A retirada do DSR falhou",
     "dsrDeposit": "DSR depositado",
     "dsrWithdrawal": "DSR retirado",
@@ -577,11 +577,11 @@
     "erc20-send-description-recent-failed": "Falha ao enviar {{ amount }} {{ token }}",
     "erc20-send-notification": "Enviando {{ token }}",
     "erc20-send-notification-past": "{{ token }} enviado",
-    "eth-send-description-pending": "Enviando {{ amount }} ETH",
-    "eth-send-description-recent": "{{ amount }} ETH enviado",
-    "eth-send-description-recent-failed": "Falha ao enviar {{ amount }} ETH",
-    "eth-send-notification": "Enviando ETH",
-    "eth-send-notification-past": "ETH enviado",
+    "vlx-send-description-pending": "Enviando {{ amount }} VLX",
+    "vlx-send-description-recent": "{{ amount }} VLX enviado",
+    "vlx-send-description-recent-failed": "Falha ao enviar {{ amount }} VLX",
+    "vlx-send-notification": "Enviando VLX",
+    "vlx-send-notification-past": "VLX enviado",
     "guides": {
         "guide": {
             "choose-wallet": {
@@ -589,10 +589,10 @@
                 "summary": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.",
                 "title": "Escolhendo uma carteira"
             },
-            "introduction-to-dai": {
+            "introduction-to-usdv": {
                 "readTime": "4 minutos",
                 "summary": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.",
-                "title": "Introdução ao Dai"
+                "title": "Introdução ao Usdv"
             }
         },
         "sections": {
@@ -612,23 +612,23 @@
     },
     "introduction": {
         "step-1": "Faça o login com seu email",
-        "step-2": "Compre Dai",
+        "step-2": "Compre Usdv",
         "step-3": "Comece a enviar e poupar",
-        "title": "Como comprar Dai"
+        "title": "Como comprar Usdv"
     },
     "latamex-badge-fees": "Taxas 1.5%-1.7%",
     "latamex-calc-buy": "Quero comprar",
     "latamex-calc-spend": "Quero gastar",
-    "latamex-desc": "A maneira mais fácil e rápida de comprar Dai na Argentina, Brasil e México.",
-    "latamex-fees-included": "{{ fees }} taxas DAI incluídas",
-    "latamex-promotion": "Os primeiros 500 usuários que comprarem DAI por meio da Latamex receberão $10 em ETH por mês para cobrir as taxas de transação, durante 3 meses.",
+    "latamex-desc": "A maneira mais fácil e rápida de comprar Usdv na Argentina, Brasil e México.",
+    "latamex-fees-included": "{{ fees }} taxas USDV incluídas",
+    "latamex-promotion": "Os primeiros 500 usuários que comprarem USDV por meio da Latamex receberão $10 em VLX por mês para cobrir as taxas de transação, durante 3 meses.",
     "latamex-promotion-headline": "Oferta LatAM500",
     "latamex-purchase-description-pending": "Comprando {{ order }} com Latamex",
     "latamex-purchase-description-recent": "{{ order }} comprado com Latamex",
     "latamex-purchase-description-recent-failed": "Falha ao comprar {{ order }} com Latamex",
     "latamex-purchase-notification": "Latamex compra",
     "latamex-purchase-notification-past": "Latamex comprado",
-    "latamex-summary": "A maneira mais fácil e rápida de comprar Dai na Argentina, Brasil e México com sua moeda local",
+    "latamex-summary": "A maneira mais fácil e rápida de comprar Usdv na Argentina, Brasil e México com sua moeda local",
     "latamex-tos": "",
     "miner-fee": "Taxa do minerador",
     "moonpay-badge-country": "EUA & Europa",

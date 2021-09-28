@@ -153,12 +153,12 @@ describe('manageVault', () => {
       })
     })
 
-    describe('editing dai', () => {
-      it('should toggle to daiEditing stage', () => {
+    describe('editing usdv', () => {
+      it('should toggle to usdvEditing stage', () => {
         const state = getStateUnpacker(mockManageVault$())
         expect(state().stage).to.deep.equal('collateralEditing')
         state().toggle!()
-        expect(state().stage).to.deep.equal('daiEditing')
+        expect(state().stage).to.deep.equal('usdvEditing')
       })
 
       it('should update generateAmount', () => {
@@ -264,7 +264,7 @@ describe('manageVault', () => {
         expect(state().stage).to.deep.equal('manageWaitingForConfirmation')
       })
 
-      it('should progress from dai editing to manage vault confirmation', () => {
+      it('should progress from usdv editing to manage vault confirmation', () => {
         const depositAmount = new BigNumber('5')
         const generateAmount = new BigNumber('3000')
 
@@ -326,7 +326,7 @@ describe('manageVault', () => {
         expect(state().stage).to.deep.equal('collateralAllowanceWaitingForConfirmation')
       })
 
-      it('should progress from editing to daiAllowance flow if user has proxy but insufficent allowance for payback amount', () => {
+      it('should progress from editing to usdvAllowance flow if user has proxy but insufficent allowance for payback amount', () => {
         const paybackAmount = new BigNumber('5000')
 
         const state = getStateUnpacker(
@@ -336,13 +336,13 @@ describe('manageVault', () => {
               debt: new BigNumber('10000'),
             },
             proxyAddress: DEFAULT_PROXY_ADDRESS,
-            daiAllowance: zero,
+            usdvAllowance: zero,
           }),
         )
         state().toggle!()
         state().updatePayback!(paybackAmount)
         state().progress!()
-        expect(state().stage).to.deep.equal('daiAllowanceWaitingForConfirmation')
+        expect(state().stage).to.deep.equal('usdvAllowanceWaitingForConfirmation')
       })
     })
 
@@ -445,7 +445,7 @@ describe('manageVault', () => {
         expect(state().stage).to.deep.equal('collateralAllowanceWaitingForConfirmation')
       })
 
-      it('should handle proxy success case and progress to daiAllowanceWaitingForConfirmation', () => {
+      it('should handle proxy success case and progress to usdvAllowanceWaitingForConfirmation', () => {
         const _proxyAddress$ = new Subject<string>()
         const paybackAmount = new BigNumber('5')
         const state = getStateUnpacker(
@@ -474,7 +474,7 @@ describe('manageVault', () => {
         expect(state().stage).to.deep.equal('proxySuccess')
         expect(state().proxyAddress).to.deep.equal(DEFAULT_PROXY_ADDRESS)
         state().progress!()
-        expect(state().stage).to.deep.equal('daiAllowanceWaitingForConfirmation')
+        expect(state().stage).to.deep.equal('usdvAllowanceWaitingForConfirmation')
       })
     })
 
@@ -616,7 +616,7 @@ describe('manageVault', () => {
         expect(state().stage).to.deep.equal('collateralEditing')
       })
 
-      it('should handle dai allowance inputs, going back and forth and setting dai allowance', () => {
+      it('should handle usdv allowance inputs, going back and forth and setting usdv allowance', () => {
         const paybackAmount = new BigNumber('5')
         const customAllowanceAmount = new BigNumber(10)
 
@@ -627,36 +627,36 @@ describe('manageVault', () => {
               sendWithGasEstimation: <B extends TxMeta>(_proxy: any, meta: B) => mockTxState(meta),
             }),
             proxyAddress: DEFAULT_PROXY_ADDRESS,
-            daiAllowance: zero,
+            usdvAllowance: zero,
           }),
         )
 
         state().toggle!()
-        expect(state().stage).to.deep.equal('daiEditing')
+        expect(state().stage).to.deep.equal('usdvEditing')
         state().updatePayback!(paybackAmount)
         state().progress!()
 
-        expect(state().stage).to.deep.equal('daiAllowanceWaitingForConfirmation')
-        state().setDaiAllowanceAmountToPaybackAmount!()
-        expect(state().daiAllowanceAmount).to.deep.equal(
+        expect(state().stage).to.deep.equal('usdvAllowanceWaitingForConfirmation')
+        state().setUsdvAllowanceAmountToPaybackAmount!()
+        expect(state().usdvAllowanceAmount).to.deep.equal(
           paybackAmount.plus(state().vault.debtOffset),
         )
-        state().resetDaiAllowanceAmount!()
-        expect(state().daiAllowanceAmount).to.be.undefined
-        state().updateDaiAllowanceAmount!(customAllowanceAmount)
-        expect(state().daiAllowanceAmount).to.deep.equal(customAllowanceAmount)
+        state().resetUsdvAllowanceAmount!()
+        expect(state().usdvAllowanceAmount).to.be.undefined
+        state().updateUsdvAllowanceAmount!(customAllowanceAmount)
+        expect(state().usdvAllowanceAmount).to.deep.equal(customAllowanceAmount)
 
         state().regress!()
-        expect(state().stage).to.deep.equal('daiEditing')
+        expect(state().stage).to.deep.equal('usdvEditing')
         state().progress!()
-        state().setDaiAllowanceAmountUnlimited!()
-        expect(state().daiAllowanceAmount).to.deep.equal(maxUint256)
+        state().setUsdvAllowanceAmountUnlimited!()
+        expect(state().usdvAllowanceAmount).to.deep.equal(maxUint256)
 
         // triggering tx
         state().progress!()
-        expect(state().stage).to.deep.equal('daiAllowanceSuccess')
+        expect(state().stage).to.deep.equal('usdvAllowanceSuccess')
         state().progress!()
-        expect(state().stage).to.deep.equal('daiEditing')
+        expect(state().stage).to.deep.equal('usdvEditing')
       })
     })
   })
@@ -668,7 +668,7 @@ describe('manageVault', () => {
           ...protoTxHelpers,
           sendWithGasEstimation: <B extends TxMeta>(_proxy: any, meta: B) =>
             mockTxState(meta, TxStatus.Error).pipe(
-              map((txState) => ({ ...txState, error: { name: 'EthAppPleaseEnableContractData' } })),
+              map((txState) => ({ ...txState, error: { name: 'VlxAppPleaseEnableContractData' } })),
             ),
         }),
         vault: {
