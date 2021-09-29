@@ -36,7 +36,8 @@ export function Logo({ sx }: { sx?: SxStyleProp }) {
         ...sx,
       }}
     >
-      <Image src={staticFilesRuntimeUrl('/static/img/logo.svg')} />
+      VELERO
+      {/*<Image src={staticFilesRuntimeUrl('/static/img/logo.svg')} />*/}
     </AppLink>
   )
 }

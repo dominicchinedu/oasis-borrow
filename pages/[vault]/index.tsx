@@ -34,7 +34,7 @@ export default function Vault({ id }: { id: string }) {
             <>
               <VaultBannersView id={vaultId} />
               <ManageVaultView id={vaultId} />
-              <VaultHistoryView id={vaultId} />
+              {/*<VaultHistoryView id={vaultId} />*/}
             </>
           ) : (
             <Box sx={{ position: 'relative', zIndex: 1 }}>

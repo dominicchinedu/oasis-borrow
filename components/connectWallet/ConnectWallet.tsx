@@ -4,7 +4,6 @@ import { MewConnectConnector } from '@myetherwallet/mewconnect-connector'
 import { LedgerConnector, TrezorConnector } from '@oasisdex/connectors'
 import {
   ConnectionKind,
-  getNetworkId,
   Web3Context,
   Web3ContextNotConnected,
 } from '@oasisdex/web3-context'
@@ -14,7 +13,7 @@ import { NetworkConnector } from '@web3-react/network-connector'
 import { PortisConnector } from '@web3-react/portis-connector'
 import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
 import { WalletLinkConnector } from '@web3-react/walletlink-connector'
-import { dappName, networksById, pollingInterval } from 'blockchain/config'
+import { dappName, networksById, networksByName, pollingInterval } from 'blockchain/config'
 import browserDetect from 'browser-detect'
 import { useAppContext } from 'components/AppContextProvider'
 import { LedgerAccountSelection } from 'components/connectWallet/LedgerAccountSelection'
@@ -25,7 +24,7 @@ import { AppSpinner } from 'helpers/AppSpinner'
 import { useObservable } from 'helpers/observableHook'
 import { WithChildren } from 'helpers/types'
 import { useRedirect } from 'helpers/useRedirect'
-import { mapValues } from 'lodash'
+import { isNull, isUndefined, mapValues } from 'lodash'
 import { useTranslation } from 'next-i18next'
 import React, { useEffect } from 'react'
 import { identity, Observable } from 'rxjs'
@@ -44,6 +43,20 @@ const rpcUrls: { [chainId: number]: string } = mapValues(
   networksById,
   (network) => network.infuraUrl,
 )
+
+function getNetworkName(): string {
+  const name = 'network';
+  const defaultNetwork = 'velastestnet';
+  const matchesIfFound = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+  if (isNull(matchesIfFound)) {
+    return defaultNetwork;
+  }
+  const networkName = decodeURIComponent(matchesIfFound[1].replace(/\+/g, ' '));
+  if (isUndefined(networksByName[networkName])) {
+    throw new Error(`Unsupported network in URL param: ${networkName}`);
+  }
+  return networkName;
+}
 
 export async function getConnector(
   connectorKind: ConnectionKind,
@@ -326,7 +339,8 @@ export function ConnectWallet() {
             )
             .subscribe(identity)
         }}
-        chainId={getNetworkId()}
+        // chainId={getNetworkId()}
+        chainId={parseInt(networksByName[getNetworkName()].id)}
         web3Context={web3Context}
       />
     )
@@ -407,8 +421,8 @@ export function ConnectWallet() {
                     ? undefined
                     : connectionKind === 'ledger'
                     ? () => setConnectingLedger(true)
-                    : connect(web3Context, connectionKind, getNetworkId()),
-		    //: connect(web3Context, connectionKind, 111),
+                    // : connect(web3Context, connectionKind, getNetworkId()),
+                    : connect(web3Context, connectionKind, parseInt(networksByName[getNetworkName()].id)),
                 missingInjectedWallet,
               }}
             />
@@ -501,8 +515,8 @@ export function disconnect(web3Context: Web3Context | undefined) {
 }
 
 async function connectReadonly(web3Context: Web3ContextNotConnected) {
-  web3Context.connect(await getConnector('network', getNetworkId()), 'network')
-  // web3Context.connect(await getConnector('network', 111), 'network')
+  // web3Context.connect(await getConnector('network', getNetworkId()), 'network')
+  web3Context.connect(await getConnector('network', parseInt(networksByName[getNetworkName()].id)), 'network')
 }
 
 export function WithConnection({ children }: WithChildren) {
@@ -515,8 +529,8 @@ export function WithConnection({ children }: WithChildren) {
     }
   }, [web3Context?.status])
 
-  useEffect(() => autoConnect(web3Context$, getNetworkId(), connectReadonly), [])
-  // useEffect(() => autoConnect(web3Context$, 111, connectReadonly), [])
+  // useEffect(() => autoConnect(web3Context$, getNetworkId(), connectReadonly), [])
+  useEffect(() => autoConnect(web3Context$, parseInt(networksByName[getNetworkName()].id), connectReadonly), [])
 
   return children
 }
@@ -525,6 +539,7 @@ export function WithWalletConnection({ children }: WithChildren) {
   const { replace } = useRedirect()
   const { web3Context$ } = useAppContext()
   const web3Context = useObservable(web3Context$)
+  const networkId = parseInt(networksByName[getNetworkName()].id)
   useEffect(() => {
     if (web3Context?.status === 'connectedReadonly') {
       redirectState$.next(window.location.pathname)
@@ -532,7 +547,9 @@ export function WithWalletConnection({ children }: WithChildren) {
     }
     if (web3Context?.status === 'notConnected') {
       redirectState$.next(window.location.pathname)
-      autoConnect(web3Context$, getNetworkId(), () => replace(`/connect`))
+
+      // autoConnect(web3Context$, getNetworkId(), () => replace(`/connect`))
+      autoConnect(web3Context$, networkId, () => replace(`/connect`))
     }
   }, [web3Context?.status])
 

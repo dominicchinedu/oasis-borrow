@@ -137,9 +137,10 @@ function CallToAction({ ilk }: CallToActionProps) {
 export function FeaturedIlks({ ilks, sx }: { ilks: FeaturedIlk[]; sx?: SxStyleProp }) {
   return (
     <Grid sx={sx} columns={['1fr', '1fr 1fr 1fr']} gap={4}>
-      {ilks.map((ilk) => (
-        <CallToAction key={ilk.title} ilk={ilk} />
-      ))}
+      {/*{ilks.map((ilk) => (*/}
+      {/*  <CallToAction key={ilk.title} ilk={ilk} />*/}
+      {/*  ))}*/}
+      <CallToAction key={ilks[0].title} ilk={ilks[0]} />
     </Grid>
   )
 }
@@ -152,8 +153,8 @@ export function FeaturedIlksPlaceholder({ sx }: { sx: SxStyleProp }) {
       gap={4}
     >
       <CallToActionPlaceholder />
-      <CallToActionPlaceholder />
-      <CallToActionPlaceholder />
+      {/*<CallToActionPlaceholder />*/}
+      {/*<CallToActionPlaceholder />*/}
     </Grid>
   )
 }

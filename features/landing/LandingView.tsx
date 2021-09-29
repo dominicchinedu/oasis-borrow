@@ -11,15 +11,13 @@ import { AppSpinner, WithLoadingIndicator } from 'helpers/AppSpinner'
 import { WithErrorHandler } from 'helpers/errorHandlers/WithErrorHandler'
 import { formatCryptoBalance, formatPercent } from 'helpers/formatters/format'
 import { useObservable, useObservableWithError } from 'helpers/observableHook'
-import { staticFilesRuntimeUrl } from 'helpers/staticPaths'
 import { Trans, useTranslation } from 'next-i18next'
 import getConfig from 'next/config'
 import React, { ComponentProps, useCallback } from 'react'
-import { Box, Button, Card, Flex, Grid, Heading, Image, SxStyleProp, Text } from 'theme-ui'
+import { Box, Button, Card, Flex, Grid, Heading, SxStyleProp, Text } from 'theme-ui'
 import { fadeInAnimation, slideInAnimation } from 'theme/animations'
 
 import { FeaturedIlks, FeaturedIlksPlaceholder } from './FeaturedIlks'
-import { TypeformWidget } from './TypeformWidget'
 
 const {
   publicRuntimeConfig: { apiHost },
@@ -143,7 +141,7 @@ export function Hero({ sx, isConnected }: { sx?: SxStyleProp; isConnected: boole
       <Text variant="paragraph1" sx={{ mb: 4, color: 'lavender' }}>
         <Trans i18nKey="landing.hero.subheader" components={[<br />]} />
       </Text>
-      <Image sx={{ mb: 4 }} src={staticFilesRuntimeUrl('/static/img/icons_set.svg')} />
+      {/*<Image sx={{ mb: 4 }} src={staticFilesRuntimeUrl('/static/img/icons_set.svg')} />*/}
       {!isConnected && (
         <AppLink
           href="/connect"
@@ -209,7 +207,7 @@ function LandingCards() {
         py: 4,
       }}
     >
-      <LandingCard href={`${apiHost}/usdvwallet`} cardKey="usdv" />
+      {/*<LandingCard href={`${apiHost}/usdvwallet`} cardKey="usdv" />*/}
       <LandingCard href="/support" cardKey="faq" />
     </Grid>
   )
@@ -304,7 +302,7 @@ export function LandingView() {
         </WithLoadingIndicator>
       </WithErrorHandler>
       <LandingCards />
-      <TypeformWidget />
+      {/*<TypeformWidget />*/}
     </Grid>
   )
 }

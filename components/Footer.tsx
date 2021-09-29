@@ -12,41 +12,38 @@ import { Box, Card, Container, Flex, Grid, Image, Link, Text } from 'theme-ui'
 import { SelectComponents } from 'react-select/src/components'
 
 const {
-  publicRuntimeConfig: { buildHash, buildDate, showBuildInfo, apiHost },
+  publicRuntimeConfig: { buildHash, buildDate, showBuildInfo },
 } = getConfig()
 
 const FOOTER_SECTIONS = [
   {
     titleKey: 'nav.about',
     links: [
-      { labelKey: 'nav.team', url: '/about' },
-      { labelKey: 'nav.careers', url: '/careers' },
       { labelKey: 'nav.privacy', url: '/privacy' },
       { labelKey: 'nav.terms', url: '/terms' },
-      { labelKey: 'nav.contact', url: `${apiHost}/usdvwallet/contact` },
+      // { labelKey: 'nav.team', url: '/about' },
+      // { labelKey: 'nav.careers', url: '/careers' },
+      // { labelKey: 'nav.contact', url: `${apiHost}/usdvwallet/contact` },
     ],
   },
   {
     titleKey: 'nav.resources',
     links: [
-      { labelKey: 'nav.blog', url: 'https://blog.oasis.app', target: '_self' },
-      {
-        labelKey: 'nav.faq',
-        url: '/support',
-      },
+      { labelKey: 'nav.faq', url: '/support' },
+      { labelKey: 'nav.oracles', url: '/oracles' },
+      // { labelKey: 'nav.blog', url: 'https://blog.oasis.app', target: '_self' },
       // add link
       // { labelKey: 'nav.knowledge-centre', url: '/' },
-      { labelKey: 'nav.oracles', url: '/oracles' },
     ],
   },
   {
     titleKey: 'nav.products',
     links: [
-      {
-        labelKey: 'nav.usdv-wallet',
-        url: `${apiHost}/usdvwallet`,
-        target: '_self',
-      },
+      // {
+      //   labelKey: 'nav.usdv-wallet',
+      //   url: `${apiHost}/usdvwallet`,
+      //   target: '_self',
+      // },
       { labelKey: 'nav.borrow', url: '/' },
     ],
   },
@@ -127,7 +124,7 @@ export function TemporaryFooter() {
           <Text>
             Commit:{' '}
             <Link
-              href={`https://github.com/OasisDex/oasis-borrow/commit/${buildHash}`}
+              href={`https://github.com/velerofinance/oasis-borrow/commit/${buildHash}`}
               target="_blank"
             >
               {commit}
@@ -155,15 +152,15 @@ export function Footer() {
           gap={[4, null, 5]}
         >
           <Grid gap={3}>
-            <Image src={staticFilesRuntimeUrl('/static/img/logo_footer.svg')} />
+            {/*<Image src={staticFilesRuntimeUrl('/static/img/logo_footer.svg')} />*/}
             <Flex sx={{ alignItems: 'center', a: { fontSize: '0px' }, my: 2 }}>
-              <AppLink href="https://twitter.com/oasisdotapp">
-                <Icon name="twitter" size="auto" width="18px" height="16px" />
-              </AppLink>
-              <AppLink href="https://discord.gg/Kc2bBB59GC" sx={{ mx: 3 }}>
-                <Icon name="discord" size="auto" width="20px" height="23px" />
-              </AppLink>
-              <AppLink href="https://github.com/OasisDEX/oasis-borrow/">
+              {/*<AppLink href="https://twitter.com/oasisdotapp">*/}
+              {/*  <Icon name="twitter" size="auto" width="18px" height="16px" />*/}
+              {/*</AppLink>*/}
+              {/*<AppLink href="https://discord.gg/Kc2bBB59GC" sx={{ mx: 3 }}>*/}
+              {/*  <Icon name="discord" size="auto" width="20px" height="23px" />*/}
+              {/*</AppLink>*/}
+              <AppLink href="https://github.com/velerofinance/oasis-borrow/">
                 <Icon name="github" size="auto" width="21px" />
               </AppLink>
             </Flex>
@@ -172,9 +169,9 @@ export function Footer() {
           {FOOTER_SECTIONS.map(({ titleKey, links }) => (
             <Grid key={titleKey} as="ul" pl={0}>
               <Text sx={{ fontSize: 4, fontWeight: 'semiBold' }}>{t(titleKey)}</Text>
-              {links.map(({ labelKey, url, target }) => (
+              {links.map(({ labelKey, url }) => (
                 <Box key={labelKey} as="li" sx={{ listStyle: 'none' }}>
-                  <AppLink variant="navFooter" href={url} target={target}>
+                  <AppLink variant="navFooter" href={url} >
                     {t(labelKey)}
                   </AppLink>
                 </Box>
