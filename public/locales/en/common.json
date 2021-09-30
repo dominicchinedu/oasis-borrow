@@ -483,7 +483,7 @@
   },
   "view": "View",
   "view-more": "View more",
-  "view-on-etherscan": "View on Etherscan",
+  "view-on-etherscan": "View on VelasExplorer",
   "waiting-approval": "Waiting for approval",
   "waiting-confirmation": "Waiting for transaction confirmation",
   "waiting-proxy-deployment": "Proxy deployment confirming",

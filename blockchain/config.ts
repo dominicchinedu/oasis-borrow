@@ -125,7 +125,7 @@ const protoVelas = {
   dsProxyFactory: contractDesc(dsProxyFactory, velasAddresses.PROXY_FACTORY),
   dssProxyActions: contractDesc(dssProxyActions, velasAddresses.PROXY_ACTIONS),
   etherscan: {
-    url: 'https://evmexplorer.velas.com/',
+    url: 'https://explorer.velas.com',
     apiUrl: 'https://api.etherscan.io/api',
     apiKey: etherscanAPIKey || '',
   },
@@ -175,7 +175,7 @@ const protoVelasTestnet = {
   dsProxyFactory: contractDesc(dsProxyFactory, velastestnetAddresses.PROXY_FACTORY),
   dssProxyActions: contractDesc(dssProxyActions, velastestnetAddresses.PROXY_ACTIONS),
   etherscan: {
-    url: 'https://evmexplorer.testnet.velas.com/',
+    url: 'https://explorer.testnet.velas.com',
     apiUrl: 'https://api.etherscan.io/api',
     apiKey: etherscanAPIKey || '',
   },

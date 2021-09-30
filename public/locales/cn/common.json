@@ -445,7 +445,7 @@
   },
   "view": "查看",
   "view-more": "查看更多",
-  "view-on-etherscan": "在 Etherscan 上查看",
+  "view-on-etherscan": "在 VelasExplorer 上查看",
   "waiting-approval": "等待许可",
   "waiting-confirmation": "等待交易确认",
   "waiting-proxy-deployment": "代理部署确认中",
