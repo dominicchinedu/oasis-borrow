@@ -139,18 +139,18 @@ interface SupportedWallet {
 
 const SUPPORTED_WALLETS: SupportedWallet[] = [
   { iconName: 'metamask_color', connectionKind: 'injected' },
-  { iconName: 'wallet_connect_color', connectionKind: 'walletConnect' },
-  { iconName: 'coinbase_color', connectionKind: 'walletLink' },
-  { iconName: 'portis', connectionKind: 'portis' },
-  { iconName: 'myetherwallet', connectionKind: 'myetherwallet' },
-  { iconName: 'trezor', connectionKind: 'trezor' },
-  { iconName: 'gnosis_safe', connectionKind: 'gnosisSafe' },
+  // { iconName: 'wallet_connect_color', connectionKind: 'walletConnect' },
+  // { iconName: 'coinbase_color', connectionKind: 'walletLink' },
+  // { iconName: 'portis', connectionKind: 'portis' },
+  // { iconName: 'myetherwallet', connectionKind: 'myetherwallet' },
+  // { iconName: 'trezor', connectionKind: 'trezor' },
+  // { iconName: 'gnosis_safe', connectionKind: 'gnosisSafe' },
 ]
 
-const isFirefox = browserDetect().name === 'firefox'
-if (!isFirefox) {
-  SUPPORTED_WALLETS.push({ iconName: 'ledger', connectionKind: 'ledger' })
-}
+// const isFirefox = browserDetect().name === 'firefox'
+// if (!isFirefox) {
+//   SUPPORTED_WALLETS.push({ iconName: 'ledger', connectionKind: 'ledger' })
+// }
 
 function ConnectWalletButtonWrapper({
   children,
