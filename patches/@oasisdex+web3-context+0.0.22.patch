@@ -1,0 +1,44 @@
+diff --git a/node_modules/@oasisdex/web3-context/lib/src/network.js b/node_modules/@oasisdex/web3-context/lib/src/network.js
+index 106a437..c229c57 100644
+--- a/node_modules/@oasisdex/web3-context/lib/src/network.js
++++ b/node_modules/@oasisdex/web3-context/lib/src/network.js
+@@ -6,6 +6,8 @@ exports.networkNameToId = {
+     main: 1,
+     kovan: 42,
+     hardhat: 2137,
++    velas: 106,
++    velastestnet: 111
+ };
+ const web3s = [];
+ exports.contract = lodash_1.memoize((web3, { abi, address }) => new web3.eth.Contract(abi.default, address), (web3, { address }) => {
+@@ -16,7 +18,7 @@ exports.contract = lodash_1.memoize((web3, { abi, address }) => new web3.eth.Con
+ });
+ function getNetworkName() {
+     const name = 'network';
+-    const defaultNetwork = 'main';
++    const defaultNetwork = 'velastestnet';
+     const matchesIfFound = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+     if (lodash_1.isNull(matchesIfFound)) {
+         return defaultNetwork;
+diff --git a/node_modules/@oasisdex/web3-context/src/network.ts b/node_modules/@oasisdex/web3-context/src/network.ts
+index 96c854e..cdd4cd2 100644
+--- a/node_modules/@oasisdex/web3-context/src/network.ts
++++ b/node_modules/@oasisdex/web3-context/src/network.ts
+@@ -5,6 +5,8 @@ export const networkNameToId = {
+   main: 1,
+   kovan: 42,
+   hardhat: 2137,
++  velas: 106,
++  velastestnet: 111
+ } as { [key: string]: number };
+ 
+ export interface ContractDesc {
+@@ -25,7 +27,7 @@ export const contract: any = memoize(
+ 
+ export function getNetworkName(): string {
+   const name = 'network';
+-  const defaultNetwork = 'main';
++  const defaultNetwork = 'velastestnet';
+   const matchesIfFound = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+   if (isNull(matchesIfFound)) {
+     return defaultNetwork;
