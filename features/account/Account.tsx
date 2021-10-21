@@ -28,7 +28,7 @@ function UsdvIndicator({ usdvBalance }: { usdvBalance: BigNumber | undefined }) 
         p: 1,
       }}
     >
-      <Icon sx={{ zIndex: 1 }} name="dai_circle_color" size={30} />
+      <Icon sx={{ zIndex: 1 }} name="usdv_circle_color" size={30} />
       <Box sx={{ mx: 2, color: 'onWarning' }}>
         {usdvBalance ? formatCryptoBalance(usdvBalance) : '0.00'}
       </Box>

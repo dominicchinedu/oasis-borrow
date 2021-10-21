@@ -243,27 +243,27 @@ export function LandingView() {
         isConnected={context?.status === 'connected'}
         sx={{ ...slideInAnimation, position: 'relative' }}
       />
-      <Box
-        sx={{
-          ...slideInAnimation,
-          position: 'relative',
-          my: 4,
-          mb: [2, 3, 5],
-        }}
-      >
-        <FeaturedIlksPlaceholder
-          sx={
-            landing !== undefined
-              ? {
-                  ...fadeInAnimation,
-                  animationDirection: 'backwards',
-                  animationFillMode: 'backwards',
-                }
-              : {}
-          }
-        />
-        {landing !== undefined && <FeaturedIlks sx={fadeInAnimation} ilks={landing.featuredIlks} />}
-      </Box>
+      {/*<Box*/}
+      {/*  sx={{*/}
+      {/*    ...slideInAnimation,*/}
+      {/*    position: 'relative',*/}
+      {/*    my: 4,*/}
+      {/*    mb: [2, 3, 5],*/}
+      {/*  }}*/}
+      {/*>*/}
+      {/*  <FeaturedIlksPlaceholder*/}
+      {/*    sx={*/}
+      {/*      landing !== undefined*/}
+      {/*        ? {*/}
+      {/*            ...fadeInAnimation,*/}
+      {/*            animationDirection: 'backwards',*/}
+      {/*            animationFillMode: 'backwards',*/}
+      {/*          }*/}
+      {/*        : {}*/}
+      {/*    }*/}
+      {/*  />*/}
+      {/*  {landing !== undefined && <FeaturedIlks sx={fadeInAnimation} ilks={landing.featuredIlks} />}*/}
+      {/*</Box>*/}
       <WithErrorHandler error={landingError}>
         <WithLoadingIndicator
           value={landing}
