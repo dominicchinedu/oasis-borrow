@@ -164,7 +164,7 @@ export function Footer() {
                 <Icon name="github" size="auto" width="21px" />
               </AppLink>
             </Flex>
-            <LanguageSelect components={LangSelectComponents} />
+            {/*<LanguageSelect components={LangSelectComponents} />*/}
           </Grid>
           {FOOTER_SECTIONS.map(({ titleKey, links }) => (
             <Grid key={titleKey} as="ul" pl={0}>
