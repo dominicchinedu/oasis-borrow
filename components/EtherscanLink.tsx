@@ -10,9 +10,9 @@ interface IEtherscanLink {
 export const EtherscanLink = ({ children, transactionHash, network }: IEtherscanLink) => {
   let url = ''
   if (network === 'velas') {
-    url = `https://explorer.velas.com/tx/${transactionHash}`
+    url = `https://evmexplorer.velas.com/tx/${transactionHash}`
   } else if (network === 'velastestnet') {
-    url = `https://explorer.testnet.velas.com/tx/${transactionHash}`
+    url = `https://evmexplorer.testnet.velas.com/tx/${transactionHash}`
   } else {
     const pathPrefix = network === 'main' ? '' : `${network}.`
     url = `https://${pathPrefix}etherscan.io/tx/${transactionHash}`

@@ -180,7 +180,7 @@ export function Footer() {
           ))}
         </Grid>
       </Container>
-      <TemporaryFooter />
+      {/*<TemporaryFooter />*/}
     </Box>
   )
 }

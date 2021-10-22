@@ -46,7 +46,7 @@ const rpcUrls: { [chainId: number]: string } = mapValues(
 
 function getNetworkName(): string {
   const name = 'network';
-  const defaultNetwork = 'velastestnet';
+  const defaultNetwork = 'velas';
   const matchesIfFound = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
   if (isNull(matchesIfFound)) {
     return defaultNetwork;

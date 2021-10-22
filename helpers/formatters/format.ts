@@ -79,7 +79,7 @@ export function formatFiatBalance(amount: BigNumber): string {
 }
 
 export function formatAmount(amount: BigNumber, token: string): string {
-  const digits = token === 'USD' ? 2 : getToken(token).digits
+  const digits = token === 'USD' ? 4 : getToken(token).digits
   return amount.toFormat(digits, BigNumber.ROUND_DOWN)
 }
 

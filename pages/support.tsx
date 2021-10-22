@@ -150,15 +150,15 @@ function SupportPage() {
           ))}
         </Box>
       ))}
-      <Box mt={6} mb={5} sx={{ textAlign: 'center' }}>
-        {cantFind}
-        <AppLink
-          href={`${apiHost}/usdvwallet/contact`}
-          sx={{ color: 'primary', textDecoration: 'underline', ml: 1 }}
-        >
-          {contactLink}
-        </AppLink>
-      </Box>
+      {/*<Box mt={6} mb={5} sx={{ textAlign: 'center' }}>*/}
+      {/*  {cantFind}*/}
+      {/*  <AppLink*/}
+      {/*    href={`${apiHost}/usdvwallet/contact`}*/}
+      {/*    sx={{ color: 'primary', textDecoration: 'underline', ml: 1 }}*/}
+      {/*  >*/}
+      {/*    {contactLink}*/}
+      {/*  </AppLink>*/}
+      {/*</Box>*/}
     </Box>
   )
 }
