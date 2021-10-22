@@ -1,5 +1,5 @@
 diff --git a/node_modules/@oasisdex/web3-context/lib/src/network.js b/node_modules/@oasisdex/web3-context/lib/src/network.js
-index 106a437..c229c57 100644
+index 106a437..9d6a7fa 100644
 --- a/node_modules/@oasisdex/web3-context/lib/src/network.js
 +++ b/node_modules/@oasisdex/web3-context/lib/src/network.js
 @@ -6,6 +6,8 @@ exports.networkNameToId = {
@@ -16,12 +16,12 @@ index 106a437..c229c57 100644
  function getNetworkName() {
      const name = 'network';
 -    const defaultNetwork = 'main';
-+    const defaultNetwork = 'velastestnet';
++    const defaultNetwork = 'velas';
      const matchesIfFound = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
      if (lodash_1.isNull(matchesIfFound)) {
          return defaultNetwork;
 diff --git a/node_modules/@oasisdex/web3-context/src/network.ts b/node_modules/@oasisdex/web3-context/src/network.ts
-index 96c854e..cdd4cd2 100644
+index 96c854e..fe399a7 100644
 --- a/node_modules/@oasisdex/web3-context/src/network.ts
 +++ b/node_modules/@oasisdex/web3-context/src/network.ts
 @@ -5,6 +5,8 @@ export const networkNameToId = {
@@ -38,7 +38,7 @@ index 96c854e..cdd4cd2 100644
  export function getNetworkName(): string {
    const name = 'network';
 -  const defaultNetwork = 'main';
-+  const defaultNetwork = 'velastestnet';
++  const defaultNetwork = 'velas';
    const matchesIfFound = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
    if (isNull(matchesIfFound)) {
      return defaultNetwork;
