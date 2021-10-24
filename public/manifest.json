@@ -1,6 +1,6 @@
 {
   "name": "Velero",
-  "description": "Generate Usdv on Velero using crypto as your collateral",
+  "description": "Borrow USDV, a USD pegged first stablecoin in the Velas blockchain",
   "iconPath": "static/img/logo.svg",
   "short_name": "Velero",
   "display": "standalone",
