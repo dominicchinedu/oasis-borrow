@@ -3,34 +3,34 @@ import { ContentTypeSupport } from './support'
 export const content: ContentTypeSupport = {
   title: 'FAQ',
   navigation: [
-    { title: 'Using Oasis.app', id: 'using-oasis' },
-    { title: 'Using Usdv Wallet', id: 'using-usdvwallet' },
+    { title: 'vaults.velero.finance', id: 'using-oasis' },
+    // { title: 'Using Usdv Wallet', id: 'using-usdvwallet' },
     { title: 'Security', id: 'security' },
     { title: 'Buying Usdv', id: 'buying-usdv' },
   ],
   sections: [
     {
-      title: 'Using Oasis.app',
+      title: 'Using vaults.velero.finance',
       id: 'using-oasis',
       questions: [
         {
           question: 'What assets can I use as collateral?',
-          answer: `You can use many different collateral types which are voted in by Velero Governance to the Velero Protocol, including VLX and wrapped BTC. You can see each one by visiting oasis.app with the corresponding Stability Fees and Minimum Collateralization Ratios.`,
+          answer: `You can use many different collateral types which are voted in by Velero Governance to the Velero Protocol, including VLX and wrapped BTC. You can see each one by visiting vaults.velero.finance with the corresponding Stability Fees and Minimum Collateralization Ratios.`,
         },
 
         {
           question: 'How much does it cost?',
-          answer: `Opening and managing a Vault is free on Oasis.app except for gas costs and Stability Fees. The Stability Fee is charged on the amount of Usdv you have generated and goes directly to the Velero Protocol.`,
+          answer: `Opening and managing a Vault is free on vaults.velero.finance except for gas costs and Stability Fees. The Stability Fee is charged on the amount of Usdv you have generated and goes directly to the Velero Protocol.`,
         },
 
         {
           question: 'How do I open a Vault?',
-          answer: `To open a Vault, select the relevant Collateral and sub-type (e.g. VLX-A) from the homepage (Oasis.app) and connect your preferred wallet and follow the on screen instructions that will guide you through.`,
+          answer: `To open a Vault, select the relevant Collateral and sub-type (e.g. VLX-A) from the homepage (vaults.velero.finance) and connect your preferred wallet and follow the on screen instructions that will guide you through.`,
         },
 
         {
           question: 'What is the Stability Fee?',
-          answer: `The Stability Fee is the variable annual rate (shown as a percentage) added to your debt that you will need to pay back. This can be seen as the cost to generate USDV, which is paid directly to the Velero Protocol. To read more about the Stability Fee check the [Knowledge Base](https://kb.oasis.app/help/the-stability-fee).`,
+          answer: `The Stability Fee is the variable annual rate (shown as a percentage) added to your debt that you will need to pay back. This can be seen as the cost to generate USDV, which is paid directly to the Velero Protocol.`,
         },
 
         {
@@ -45,37 +45,37 @@ export const content: ContentTypeSupport = {
 
         {
           question: 'Why do I need to approve tokens? What is allowance?',
-          answer: `Token allowances let you control how much the proxy contract can do with the token balance in your wallet. To allow the Proxy contract to pay back USDV, or interact with the collaterals in your wallet, you will need to authorize it by setting an allowance with each token that you want to use with Oasis.app. You can set the allowance to the amount you want to use each time or you can set a higher allowance for future interactions with Oasis.app. This will all be presented to you within the flows inside Oasis.app, and you won’t have to do anything extra if you don’t see any prompts.`,
+          answer: `Token allowances let you control how much the proxy contract can do with the token balance in your wallet. To allow the Proxy contract to pay back USDV, or interact with the collaterals in your wallet, you will need to authorize it by setting an allowance with each token that you want to use with vaults.velero.finance. You can set the allowance to the amount you want to use each time or you can set a higher allowance for future interactions with vaults.velero.finance. This will all be presented to you within the flows inside vaults.velero.finance, and you won’t have to do anything extra if you don’t see any prompts.`,
         },
 
         {
           question: 'What is the Liquidation Ratio?',
-          answer: `The Liquidation Ratio is the Minimum Collateralization Ratio which you must keep your Vault at to not put it at risk of being liquidated. If your Vault goes below this Minimum Collateralization Ratio, your Vault could be liquidated and your collateral sold off to cover your debt. To understand more about [collateralization ratio](https://kb.oasis.app/help/collateralization-ratio) and [liquidations](https://kb.oasis.app/help/liquidations) follow the links to the Knowledge Base.`,
+          answer: `The Liquidation Ratio is the Minimum Collateralization Ratio which you must keep your Vault at to not put it at risk of being liquidated. If your Vault goes below this Minimum Collateralization Ratio, your Vault could be liquidated and your collateral sold off to cover your debt.`,
         },
 
         {
           question: 'What is the Liquidation Price?',
-          answer: `The Liquidation Price is the price that your Vault will be at risk of liquidation based on the ‘Current Price’ from the Oracle Security Module of the Velero Procol. It is a helpful indicator to allow you to know when you could get liquidated. Please note however that if your Vault has a positive Stability Fee (i.e. >0) then your liquidation price will continually increase as more debt is added to your Vault. You can read more about Liquidation [here](https://kb.oasis.app/help/liquidations).`,
+          answer: `The Liquidation Price is the price that your Vault will be at risk of liquidation based on the ‘Current Price’ from the Oracle Security Module of the Velero Procol. It is a helpful indicator to allow you to know when you could get liquidated. Please note however that if your Vault has a positive Stability Fee (i.e. >0) then your liquidation price will continually increase as more debt is added to your Vault.`,
         },
 
         {
           question: 'What is the Liquidation Penalty?',
-          answer: `The Liquidation Penalty is the amount added to your debt once your Vault is liquidated. Each collateral and sub-type (e.g. VLX-A and VLX-B) can have their own liquidation penalties set by Velero Governance. This penalty is also paid directly to the Velero Protocol, and Oasis.app does not charge you any additional fees for being liquidated.`,
+          answer: `The Liquidation Penalty is the amount added to your debt once your Vault is liquidated. Each collateral and sub-type (e.g. VLX-A and VLX-B) can have their own liquidation penalties set by Velero Governance. This penalty is also paid directly to the Velero Protocol, and vaults.velero.finance does not charge you any additional fees for being liquidated.`,
         },
 
         {
           question: 'What is the minimum Vault Debt?',
-          answer: `The minimum Vault Debt, also called Dust, is the minimum amount of Usdv you must generate to open a new Vault, and maintain. This minimum Vault Debt value is set and can be adjusted at any time by Velero Governance. If the minimum is increased to a value above your current Debt, then you will experience reduced functionality of your Vault until you increase it to above the minimum again. Read more about minimum Vaul Debt [here](https://kb.oasis.app/help/minimum-vault-debt-dust).`,
+          answer: `The minimum Vault Debt, also called Dust, is the minimum amount of Usdv you must generate to open a new Vault, and maintain. This minimum Vault Debt value is set and can be adjusted at any time by Velero Governance. If the minimum is increased to a value above your current Debt, then you will experience reduced functionality of your Vault until you increase it to above the minimum again.`,
         },
 
         {
           question: 'What is the next price and how do you know?',
-          answer: `Within the Velero Protocol, there are always two prices for the collateral, the current price and the next price. To protect the system and users from ‘bad actors’ and flash crashes, the Velero Protocol uses an ‘Oracle Security Module’. This means that all prices that go into the system are delayed by one hour, and only updated once per hour - roughly on the hour. The next price is the price that will come into the system as the ‘Current Price’. It is the Current Price that your Vault is always measured against, so you can only be liquidated once the ‘Current Price’ goes below your  ‘Liquidation Price’. This also means you have up to one hour to react if there is a big price drop and the next price is below your Liquidation Price. You can read more about the Oracle Security Module [here](https://kb.oasis.app/help/the-oracle-security-module).`,
+          answer: `Within the Velero Protocol, there are always two prices for the collateral, the current price and the next price. To protect the system and users from ‘bad actors’ and flash crashes, the Velero Protocol uses an ‘Oracle Security Module’. This means that all prices that go into the system are delayed by one hour, and only updated once per hour - roughly on the hour. The next price is the price that will come into the system as the ‘Current Price’. It is the Current Price that your Vault is always measured against, so you can only be liquidated once the ‘Current Price’ goes below your  ‘Liquidation Price’. This also means you have up to one hour to react if there is a big price drop and the next price is below your Liquidation Price.`,
         },
 
         {
           question: 'What is gas?',
-          answer: `Gas is the unit of measure for paying for transactions on the Velas Blockchain. Gas prices are charged in VLX and you will always need to have VLX in your wallet to be able to interact with Oasis.app. This Gas fee goes directly to Velas Miners who keep Velas running. Oasis.app does not charge any fees for basic Vault management.`,
+          answer: `Gas is the unit of measure for paying for transactions on the Velas Blockchain. Gas prices are charged in VLX and you will always need to have VLX in your wallet to be able to interact with vaults.velero.finance. This Gas fee goes directly to Velas Miners who keep Velas running. vaults.velero.finance does not charge any fees for basic Vault management.`,
         },
 
         {
@@ -157,7 +157,7 @@ export const content: ContentTypeSupport = {
         },
         {
           question: 'Who are the fees going to?',
-          answer: `Oasis.app doesn't take any of the fees when you buy Usdv or VLX through one of our partner providers. The fee you pay goes solely and directly to the third-party provider.`,
+          answer: `vaults.velero.finance doesn't take any of the fees when you buy Usdv or VLX through one of our partner providers. The fee you pay goes solely and directly to the third-party provider.`,
         },
         {
           question: 'Can I buy VLX on Usdv Wallet to pay for my transaction fees?',

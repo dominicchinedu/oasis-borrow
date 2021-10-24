@@ -3,18 +3,18 @@ import { ContentTypeSupport } from './support'
 export const content: ContentTypeSupport = {
   title: 'FAQ',
   navigation: [
-    { title: 'Using Oasis.app', id: 'using-oasis' },
+    { title: 'Using vaults.velero.finance', id: 'using-oasis' },
     { title: 'Security', id: 'security' },
     { title: 'Buying Usdv', id: 'buying-usdv' },
   ],
   sections: [
     {
-      title: 'Using Oasis.app',
+      title: 'Using vaults.velero.finance',
       id: 'using-oasis',
       questions: [
         {
-          question: 'What is Oasis.app?',
-          answer: `Oasis.app is the home for everything you want to accomplish with Usdv. A decentralized application that runs on the Velas blockchain, Oasis enables you to Buy, Send, and Manage your Usdv all in one place.`,
+          question: 'What is vaults.velero.finance?',
+          answer: `vaults.velero.finance is the home for everything you want to accomplish with Usdv. A decentralized application that runs on the Velas blockchain, Oasis enables you to Buy, Send, and Manage your Usdv all in one place.`,
         },
         {
           question: 'What is Usdv?',
@@ -22,7 +22,7 @@ export const content: ContentTypeSupport = {
         },
         {
           question: 'Do I need an account?',
-          answer: `No. You do not need to create a new account to use oasis.app. You can get started with almost any Velas wallet, including Metamask or Coinbase Wallet, or you can use our new Magic.Link feature -- where you provide an email address, click a link in the email we send you in response, and you're logged in.`,
+          answer: `No. You do not need to create a new account to use vaults.velero.finance. You can get started with almost any Velas wallet, including Metamask or Coinbase Wallet, or you can use our new Magic.Link feature -- where you provide an email address, click a link in the email we send you in response, and you're logged in.`,
         },
         {
           question: 'Will I be charged fees?',
@@ -61,7 +61,7 @@ export const content: ContentTypeSupport = {
       id: 'buying-usdv',
       questions: [
         {
-          question: 'Can I buy Usdv while using Oasis.app?',
+          question: 'Can I buy Usdv while using vaults.velero.finance?',
           answer: `Yes! Through connections with our partners, you can buy Usdv in over 100 countries around the world, including Europe, the US, parts of Latin America. We have partnered with three registered third-party providers - Latamex, Wyre and Moonpay - to facilitate user purchases of  Usdv using a range of debit or credit cards or bank transfers. Just connect to the app and hit the 'Buy Usdv' button to see applicable providers for you.`,
         },
         {
@@ -75,7 +75,7 @@ export const content: ContentTypeSupport = {
         },
         {
           question: 'Who are the fees going to?',
-          answer: `Oasis.app doesn't take any of the fees when you buy Usdv or VLX through one of our partner providers. The fee you pay goes solely and directly to the third-party provider.`,
+          answer: `vaults.velero.finance doesn't take any of the fees when you buy Usdv or VLX through one of our partner providers. The fee you pay goes solely and directly to the third-party provider.`,
         },
         {
           question: 'Can I buy VLX on Oasis to pay for my transaction fees?',

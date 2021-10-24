@@ -3,7 +3,7 @@
   "404-message": "抱歉，页面不存在。",
   "about": {
     "heading": "About us",
-    "description": "Oasis mission is to provide the best and most trusted entry point to deploy your capital. We are building Oasis.app to let our users benefit from all of the potential in DeFi.\n\n Our team is made of passionate thinkers and builders.",
+    "description": "Oasis mission is to provide the best and most trusted entry point to deploy your capital. We are building vaults.velero.finance to let our users benefit from all of the potential in DeFi.\n\n Our team is made of passionate thinkers and builders.",
     "careers-link": "Join Us",
     "pics-title": "Meet the team"
   },
@@ -301,11 +301,11 @@
       "title": "Usdv"
     },
     "default": {
-      "description": "Borrow Usdv, a USD pegged Stablecoin, using crypto as your collateral",
-      "title": "Oasis.app"
+      "description": "Borrow USDV, a USD pegged first stablecoin in the Velas blockchain",
+      "title": "vaults.velero.finance"
     },
     "latam500": {
-      "description": "通过 Oasis.app 上的 Latamex 购买 Usdv。每月可获得价值 10 美元的 VLX，为期三个月。",
+      "description": "通过 vaults.velero.finance 上的 Latamex 购买 Usdv。每月可获得价值 10 美元的 VLX，为期三个月。",
       "title": "LATAM500"
     },
     "support": {
@@ -360,7 +360,7 @@
   "tos-accept-message-updated": "在继续之前，你需要阅读并接受我们更新后的服务条款。",
   "tos-acceptance-check-in-progress": "许可检查进行中…",
   "tos-desc": "通过创建一个储蓄金库，我接受 Oasis",
-  "tos-jwt-signature-message": "你似乎第一次使用 Oasis.app 或正在通过新设备连接。为了安全起见，请用你的钱包签名以继续。",
+  "tos-jwt-signature-message": "你似乎第一次使用 vaults.velero.finance 或正在通过新设备连接。为了安全起见，请用你的钱包签名以继续。",
   "tos-read": "我已阅读并接受服务条款。",
   "tos-view": "查看服务条款",
   "tos-wallet-connection-in-progress": "正在连接钱包…",

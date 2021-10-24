@@ -3,7 +3,7 @@
   "404-message": "Lo siento, página no encontrada.",
   "about": {
     "heading": "Sobre nosotros",
-    "description": "La misión de Oasis es proveer el mejor y más confiable punto de entrada para deplegar tu capital. Estamos construyendo Oasis.app para permitir a nuestros usuarios beneficiarse de todo el potencial en DeFi.\n\n Nuestro equipo está compuesto de pensadores y desarrolladores apasionados.",
+    "description": "La misión de Oasis es proveer el mejor y más confiable punto de entrada para deplegar tu capital. Estamos construyendo vaults.velero.finance para permitir a nuestros usuarios beneficiarse de todo el potencial en DeFi.\n\n Nuestro equipo está compuesto de pensadores y desarrolladores apasionados.",
     "careers-link": "Únete a nosotros",
     "pics-title": "Conoce al equipo"
   },
@@ -487,7 +487,7 @@
   "vault-created": "¡Vault #{{id}} creado!",
   "changing-vault": "Cambiando Vault",
   "your-wallet": "Tu cartera",
-  "welcome": "Bienvenido al nuevo Oasis.app.",
+  "welcome": "Bienvenido al nuevo vaults.velero.finance.",
   "read-blog-post": "Lee el blog post",
   "visit-old-oasis": "Visitar el viejo Oasis",
   "oracles": {
@@ -630,7 +630,7 @@
   "moonpay-purchase-notification": "Compra con Moonpay",
   "moonpay-purchase-notification-past": "Comprado con Moonpay",
   "no-camera": "La Cámara no está disponible",
-  "notice-app-homescreen": "Añadir Oasis.app a mi pantalla de inicio",
+  "notice-app-homescreen": "Añadir vaults.velero.finance a mi pantalla de inicio",
   "wyre-badge-country": "EEUU. y Europa",
   "wyre-badge-fees": "Comisiones de 2.9%",
   "wyre-desc": "Wyre es un puente seguro entre las monedas fiduciarias y las criptomonedas.",

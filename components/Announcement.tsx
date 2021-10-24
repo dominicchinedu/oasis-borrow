@@ -73,26 +73,26 @@ export function WelcomeAnnouncement() {
         <Text variant="paragraph3" sx={{ fontWeight: 'semiBold', fontSize: [1, 2], mr: 3 }}>
           {t('welcome')}
         </Text>
-        <Flex sx={{ flexDirection: ['column', 'row'] }}>
-          <AppLink href="https://blog.oasis.app/introducing-the-redesigned-oasis-borrow/">
-            <WithArrow>{t('read-blog-post')}</WithArrow>
-          </AppLink>
-          <Text
-            variant="paragraph3"
-            sx={{
-              fontWeight: 'semiBold',
-              color: 'muted',
-              mx: 3,
-              ml: 4,
-              display: ['none', 'block'],
-            }}
-          >
-            |
-          </Text>
-          <AppLink href={`${window.location.origin}/borrow-old`}>
-            <WithArrow>{t('visit-old-oasis')}</WithArrow>
-          </AppLink>
-        </Flex>
+        {/*<Flex sx={{ flexDirection: ['column', 'row'] }}>*/}
+        {/*  /!*<AppLink href="https://blog.oasis.app/introducing-the-redesigned-oasis-borrow/">*!/*/}
+        {/*  /!*  <WithArrow>{t('read-blog-post')}</WithArrow>*!/*/}
+        {/*  /!*</AppLink>*!/*/}
+        {/*  <Text*/}
+        {/*    variant="paragraph3"*/}
+        {/*    sx={{*/}
+        {/*      fontWeight: 'semiBold',*/}
+        {/*      color: 'muted',*/}
+        {/*      mx: 3,*/}
+        {/*      ml: 4,*/}
+        {/*      display: ['none', 'block'],*/}
+        {/*    }}*/}
+        {/*  >*/}
+        {/*    |*/}
+        {/*  </Text>*/}
+        {/*  <AppLink href={`${window.location.origin}/borrow-old`}>*/}
+        {/*    <WithArrow>{t('visit-old-oasis')}</WithArrow>*/}
+        {/*  </AppLink>*/}
+        {/*</Flex>*/}
       </Flex>
     </Announcement>
   )

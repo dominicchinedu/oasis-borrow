@@ -3,27 +3,27 @@ import { ContentTypeSupport } from './support'
 export const content: ContentTypeSupport = {
   title: 'FAQ',
   navigation: [
-    { title: 'Usar Oasis.app', id: 'using-oasis' },
+    { title: 'Usar vaults.velero.finance', id: 'using-oasis' },
     { title: 'Usar Usdv Wallet', id: 'using-usdvwallet' },
     { title: 'Seguridad', id: 'security' },
     { title: 'Comprar Usdv', id: 'buying-usdv' },
   ],
   sections: [
     {
-      title: 'Usar Oasis.app',
+      title: 'Usar vaults.velero.finance',
       id: 'using-oasis',
       questions: [
         {
           question: '¿Qué activos puedo utilizar como colateral?',
-          answer: `Puedes utilizar muchos tipos diferentes de colateral incluyendo VLX y WBTC. Los colaterales son incorporados por el gobierno de Velero en el protocolo. Puedes ver cada uno visitando oasis.app con su correspondiente tasa de estabilidad y su ratio de colateralización mínimo.`,
+          answer: `Puedes utilizar muchos tipos diferentes de colateral incluyendo VLX y WBTC. Los colaterales son incorporados por el gobierno de Velero en el protocolo. Puedes ver cada uno visitando vaults.velero.finance con su correspondiente tasa de estabilidad y su ratio de colateralización mínimo.`,
         },
         {
           question: '¿Cuanto cuesta?',
-          answer: `Abrir y administrar un Vault es gratis en Oasis.app. Pagarás el gas para las transacciones y la tasa de estabilidad. La tasa de estabilidad es cobrada sobre el Usdv que has generado y va directamente al protocolo Velero.`,
+          answer: `Abrir y administrar un Vault es gratis en vaults.velero.finance. Pagarás el gas para las transacciones y la tasa de estabilidad. La tasa de estabilidad es cobrada sobre el Usdv que has generado y va directamente al protocolo Velero.`,
         },
         {
           question: '¿Cómo abro un Vault? ',
-          answer: `Para abrir un Vault, selecciona el colateral y el subtipo (ej. VLX-A) en la página principal (Oasis.app), conecta tu cartera preferida y sigue las instrucciones que te guiarán en el proceso.`,
+          answer: `Para abrir un Vault, selecciona el colateral y el subtipo (ej. VLX-A) en la página principal (vaults.velero.finance), conecta tu cartera preferida y sigue las instrucciones que te guiarán en el proceso.`,
         },
         {
           question: '¿Qué es la tasa de estabilidad?',
@@ -39,7 +39,7 @@ export const content: ContentTypeSupport = {
         },
         {
           question: '¿Por qué necesito aprobar los tokens? ¿Qué es el permiso?',
-          answer: `Los permisos de los tokens te permiten controlar cuánto puede utilizar el contrato Proxy en relación al saldo de tu cartera. Para permitir al contrato Proxy pagar tu deuda o interactuar con los colaterales en tu cartera necesitarás autorizarlo configurando un permiso hasta el monto que quieras utilizar en cada ocasión. También puedes configurar un permiso más elevado para futuras interacciones con Oasis.app. Todo esto lo verás de modo interactivo al utilizar Oasis.app y no deberás tomar ninguna acción extra en caso de que no veas indicaciones al respecto.`,
+          answer: `Los permisos de los tokens te permiten controlar cuánto puede utilizar el contrato Proxy en relación al saldo de tu cartera. Para permitir al contrato Proxy pagar tu deuda o interactuar con los colaterales en tu cartera necesitarás autorizarlo configurando un permiso hasta el monto que quieras utilizar en cada ocasión. También puedes configurar un permiso más elevado para futuras interacciones con vaults.velero.finance. Todo esto lo verás de modo interactivo al utilizar vaults.velero.finance y no deberás tomar ninguna acción extra en caso de que no veas indicaciones al respecto.`,
         },
         {
           question: '¿Qué es el ratio de liquidación?',
@@ -51,7 +51,7 @@ export const content: ContentTypeSupport = {
         },
         {
           question: '¿Qué es la penalidad por liquidación?',
-          answer: `La penalidad por liquidación es el monto añadido a tu deuda una vez que tu Vault es liquidado. Cada colateral y subtipo (e.j. VLX-A y VLX-B) puede tener su propia penalidad por liquidación configurada por el gobierno de Velero. Esta penalidad es pagada directamente al protocolo Velero y Oasis.app no cobra ninguna tarifa adicional por ser liquidado.`,
+          answer: `La penalidad por liquidación es el monto añadido a tu deuda una vez que tu Vault es liquidado. Cada colateral y subtipo (e.j. VLX-A y VLX-B) puede tener su propia penalidad por liquidación configurada por el gobierno de Velero. Esta penalidad es pagada directamente al protocolo Velero y vaults.velero.finance no cobra ninguna tarifa adicional por ser liquidado.`,
         },
         {
           question: '¿Qué es la deuda mínima del Vault?',
@@ -63,7 +63,7 @@ export const content: ContentTypeSupport = {
         },
         {
           question: 'Qué es el gas? ',
-          answer: `El gas es la unidad de medidas para pagar por las transacciones en la blockchain de Velas. Los precios del Gas se cobran en VLX y siempre necesitarás tener VLX en tu cartera para poder interactuar con Oasis.app. Esta tarifa de gas va directamente a los mineros de Velas que mantienen Velas corriendo. Oasis.app no cobra ninguna tarifa por el manejo básico de los Vaults.`,
+          answer: `El gas es la unidad de medidas para pagar por las transacciones en la blockchain de Velas. Los precios del Gas se cobran en VLX y siempre necesitarás tener VLX en tu cartera para poder interactuar con vaults.velero.finance. Esta tarifa de gas va directamente a los mineros de Velas que mantienen Velas corriendo. vaults.velero.finance no cobra ninguna tarifa por el manejo básico de los Vaults.`,
         },
         {
           question: '¿Por qué cambiaría la velocidad de la transacción?',
@@ -93,7 +93,7 @@ export const content: ContentTypeSupport = {
         {
           question: '¿Necesito crear una cuenta?',
           answer:
-            'No. No necesitas creas una cuenta nueva para usar Oasis.app Puedes comenzar con casi cualquier cartera de Velas como Metamask o Coinbase Wallet. También puedes utilizar la funcionalidad de Magic.link, con la cual ingresas una dirección de email, y con un solo click en el link que enviaremos a tu bandeja de entrada ya puedes ingresar.',
+            'No. No necesitas creas una cuenta nueva para usar vaults.velero.finance Puedes comenzar con casi cualquier cartera de Velas como Metamask o Coinbase Wallet. También puedes utilizar la funcionalidad de Magic.link, con la cual ingresas una dirección de email, y con un solo click en el link que enviaremos a tu bandeja de entrada ya puedes ingresar.',
         },
         {
           question: '¿Oasis cobra comisión por su uso?',
