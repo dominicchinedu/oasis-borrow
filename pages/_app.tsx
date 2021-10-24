@@ -6,7 +6,7 @@ import { Web3ReactProvider } from '@web3-react/core'
 import { readOnlyEnhanceProvider } from 'blockchain/readOnlyEnhancedProviderProxy'
 import { SetupWeb3Context } from 'blockchain/web3Context'
 import { AppContextProvider } from 'components/AppContextProvider'
-import { HeadTags, PageSEOTags } from 'components/HeadTags'
+import { HeadTags } from 'components/HeadTags'
 import { AppLayout, MarketingLayoutProps } from 'components/Layouts'
 import { CustomMDXLink } from 'components/Links'
 // @ts-ignore
@@ -24,7 +24,6 @@ import { components, ThemeProvider } from 'theme-ui'
 import Web3 from 'web3'
 
 import { trackingEvents } from '../analytics/analytics'
-import { mixpanelInit } from '../analytics/mixpanel'
 import nextI18NextConfig from '../next-i18next.config.js'
 
 function getLibrary(provider: any, connector: AbstractConnector | undefined): Web3 {
@@ -94,7 +93,7 @@ interface CustomAppProps {
     theme?: string
     layoutProps?: MarketingLayoutProps
     layout?: (props: MarketingLayoutProps) => JSX.Element
-    seoTags?: JSX.Element
+    // seoTags?: JSX.Element
   }
 }
 
@@ -114,9 +113,9 @@ const noOverlayWorkaroundScript = `
 function App({ Component, pageProps }: AppProps & CustomAppProps) {
   const Layout = Component.layout || AppLayout
   const layoutProps = Component.layoutProps
-  const seoTags = Component.seoTags || (
-    <PageSEOTags title="seo.default.title" description="seo.default.description" />
-  )
+  // const seoTags = Component.seoTags || (
+  //   <PageSEOTags title="seo.default.title" description="seo.default.description" />
+  // )
 
   const router = useRouter()
 
@@ -151,7 +150,7 @@ function App({ Component, pageProps }: AppProps & CustomAppProps) {
               <AppContextProvider>
                 <ModalProvider>
                   <HeadTags />
-                  {seoTags}
+                  {/*{seoTags}*/}
                   <SetupWeb3Context>
                     <Layout {...layoutProps}>
                       <Component {...pageProps} />

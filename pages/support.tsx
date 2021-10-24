@@ -2,7 +2,7 @@
 import { Icon } from '@makerdao/dai-ui-icons'
 // @ts-ignore
 import MDX from '@mdx-js/runtime'
-import { PageSEOTags } from 'components/HeadTags'
+// import { PageSEOTags } from 'components/HeadTags'
 import { MarketingLayout } from 'components/Layouts'
 import { AppLink } from 'components/Links'
 import { currentContent } from 'features/content'
@@ -170,6 +170,6 @@ SupportPage.layoutProps = {
   variant: 'termsContainer',
   topBackground: 'none',
 }
-SupportPage.seoTags = (
-  <PageSEOTags title="seo.support.title" description="seo.support.description" url="/support" />
-)
+// SupportPage.seoTags = (
+//   <PageSEOTags title="seo.support.title" description="seo.support.description" url="/support" />
+// )

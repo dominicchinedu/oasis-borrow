@@ -1,8 +1,8 @@
 // @ts-ignore
 import { Icon } from '@makerdao/dai-ui-icons'
-import { LanguageSelect } from 'components/LanguageSelect'
+// import { LanguageSelect } from 'components/LanguageSelect'
 import { AppLink } from 'components/Links'
-import { staticFilesRuntimeUrl } from 'helpers/staticPaths'
+// import { staticFilesRuntimeUrl } from 'helpers/staticPaths'
 import moment from 'moment'
 import { useTranslation } from 'next-i18next'
 import getConfig from 'next/config'
@@ -152,15 +152,16 @@ export function Footer() {
           gap={[4, null, 5]}
         >
           <Grid gap={3}>
+            <Text sx={{ fontSize: 4, fontWeight: 'semiBold' }}>Social Links</Text>
             {/*<Image src={staticFilesRuntimeUrl('/static/img/logo_footer.svg')} />*/}
             <Flex sx={{ alignItems: 'center', a: { fontSize: '0px' }, my: 2 }}>
-              {/*<AppLink href="https://twitter.com/oasisdotapp">*/}
-              {/*  <Icon name="twitter" size="auto" width="18px" height="16px" />*/}
-              {/*</AppLink>*/}
-              {/*<AppLink href="https://discord.gg/Kc2bBB59GC" sx={{ mx: 3 }}>*/}
-              {/*  <Icon name="discord" size="auto" width="20px" height="23px" />*/}
-              {/*</AppLink>*/}
-              <AppLink href="https://github.com/velerofinance/oasis-borrow/">
+              <AppLink href="https://twitter.com/VeleroDAO">
+                <Icon name="twitter" size="auto" width="18px" height="16px" />
+              </AppLink>
+              <AppLink href="https://t.me/joinchat/" sx={{ mx: 3 }}>
+                <Icon name="telegram" size="auto" width="20px" height="23px" />
+              </AppLink>
+              <AppLink href="https://github.com/velerofinance/">
                 <Icon name="github" size="auto" width="21px" />
               </AppLink>
             </Flex>

@@ -1,8 +1,8 @@
 {
-  "name": "Oasis",
-  "description": "Generate Usdv on Oasis using crypto as your collateral",
+  "name": "Velero",
+  "description": "Generate Usdv on Velero using crypto as your collateral",
   "iconPath": "static/img/logo.svg",
-  "short_name": "Oasis",
+  "short_name": "Velero",
   "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#FFFFFF",

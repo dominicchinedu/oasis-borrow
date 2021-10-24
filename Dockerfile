@@ -1,4 +1,4 @@
-FROM node:12.20.0
+FROM node:12.22.6
 
 EXPOSE 3000
 
@@ -24,8 +24,8 @@ WORKDIR /usr/src/app
 
 COPY . .
 RUN apt update && apt-get install -y libudev-dev && apt-get install libusb-1.0-0
-RUN yarn --no-progress --non-interactive --frozen-lockfile
+RUN yarn --non-interactive --frozen-lockfile
 
-RUN npm run build
+RUN yarn build
 
-CMD [ "npm", "run", "start:prod" ]
+CMD [ "yarn", "start:prod" ]

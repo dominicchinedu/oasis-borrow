@@ -3,7 +3,7 @@
   "404-message": "Sorry, page not found.",
   "about": {
     "heading": "About us",
-    "description": "Oasis mission is to provide the best and most trusted entry point to deploy your capital. We are building Oasis.app to let our users benefit from all of the potential in DeFi.\n\n Our team is made of passionate thinkers and builders.",
+    "description": "Velero mission is to provide the best and most trusted entry point to deploy your capital. We are building Velero.finance to let our users benefit from all of the potential in DeFi.\n\n Our team is made of passionate thinkers and builders.",
     "careers-link": "Join Us",
     "pics-title": "Meet the team"
   },
@@ -182,7 +182,7 @@
       },
       "faq": {
         "title": "Have a question?",
-        "description": "Learn more about Oasis, USDV and DeFi at our FAQ’s page"
+        "description": "Learn more about Velero, USDV and DeFi at our FAQ’s page"
       }
     }
   },
@@ -258,7 +258,7 @@
     "oracles": "Oracles",
     "usdv-wallet": "USDV Wallet",
     "borrow": "Borrow",
-    "oasis-borrow": "Oasis Borrow"
+    "oasis-borrow": "Velero Borrow"
   },
   "new-to-velas": "New to Velas? ",
   "next": "Next",
@@ -276,7 +276,7 @@
   "notification-status-sign": "Sign Tx",
   "of": "of",
   "one-of-some": "{{one}} of {{some}}",
-  "onramp-leave-message": "By clicking buy, you will leave Oasis and be redirected to a third party website where you will complete the buy process.",
+  "onramp-leave-message": "By clicking buy, you will leave Velero and be redirected to a third party website where you will complete the buy process.",
   "open-new-vault": "Open new Vault",
   "open-vault": {
     "title": "Open Vault",
@@ -305,7 +305,7 @@
   "pending-transactions": "Pending Transactions",
   "permissions": "Set permissions",
   "permissions-btn": "Set permissions",
-  "permissions-desc": "This permission allows Oasis to interact with the USDV in your wallet.",
+  "permissions-desc": "This permission allows Velero to interact with the USDV in your wallet.",
   "powered-by": "Powered by",
   "proceed": "Proceed",
   "readonly-alert-message": "You’re currently viewing",
@@ -339,8 +339,8 @@
       "title": "USDV"
     },
     "default": {
-      "description": "Borrow USDV, a USD pegged Stablecoin, using crypto as your collateral",
-      "title": "Oasis.app"
+      "description": "Borrow USDV, a USD pegged first stablecoin in the Velas blockchain",
+      "title": "Velero.finance"
     },
 
     "support": {
@@ -353,7 +353,7 @@
     },
     "about": {
       "title": "About Us",
-      "description": "Oasis mission is to provide the best and most trusted entry point to deploy your capital."
+      "description": "Velero mission is to provide the best and most trusted entry point to deploy your capital."
     }
   },
   "set-allowance-for": "Set Allowance for {{token}}",
@@ -394,8 +394,8 @@
   "tos-accept-message": "Before you can get started, you’ll need to read and accept our terms of service.",
   "tos-accept-message-updated": "Before you can continue, you’ll need to read and accept our updated terms of service.",
   "tos-acceptance-check-in-progress": "Acceptance check in progress...",
-  "tos-desc": "By creating a Savings pot, I accept Oasis",
-  "tos-jwt-signature-message": "It looks like you're new to Oasis.app or are using a new device to connect. For added security, please sign a message with your wallet to continue.",
+  "tos-desc": "By creating a Savings pot, I accept Velero",
+  "tos-jwt-signature-message": "It looks like you're new to Velero.finance or are using a new device to connect. For added security, please sign a message with your wallet to continue.",
   "tos-read": "I have read and accept the Terms of Service.",
   "tos-view": "View Terms of Service",
   "tos-wallet-connection-in-progress": "Wallet connection in progress...",
@@ -522,9 +522,9 @@
   "vault-created": "Vault #{{id}} created!",
   "changing-vault": "Changing Vault",
   "your-wallet": "Your wallet",
-  "welcome": "Welcome to the new Oasis.app.",
+  "welcome": "Welcome to the new Velero.finance.",
   "read-blog-post": "Read the blog post",
-  "visit-old-oasis": "Visit the old Oasis",
+  "visit-old-oasis": "Visit the old Velero",
   "oracles": {
     "header": "Oracles",
     "description": "Below the current and next prices of the collateral types that are accepted for Velero vaults can be viewed. Most use the Oracle Stability Module (OSM). This module updates the price just once every hour. Therefore, when a crash is happening, users still have an hour to react to the new price.",

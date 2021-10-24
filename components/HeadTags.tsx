@@ -1,5 +1,5 @@
 import { staticFilesRuntimeUrl } from 'helpers/staticPaths'
-import { useTranslation } from 'next-i18next'
+// import { useTranslation } from 'next-i18next'
 import Head from 'next/head'
 import React from 'react'
 import { useThemeUI } from 'theme-ui'
@@ -17,12 +17,12 @@ export function HeadTags() {
   )
 }
 
-interface SEOTagsType {
-  title: string
-  description: string
-  url?: string
-  ogImage?: string
-}
+// interface SEOTagsType {
+//   title: string
+//   description: string
+//   url?: string
+//   ogImage?: string
+// }
 
 export function PageSEONoFollow() {
   return (
@@ -32,46 +32,46 @@ export function PageSEONoFollow() {
   )
 }
 
-const APP_URL = 'https://oasis.app'
+// const APP_URL = 'https://vaults.velero.finance'
 
-export function PageSEOTags({ title, description, url = '/', ogImage = 'og.png' }: SEOTagsType) {
-  const { t } = useTranslation()
+// export function PageSEOTags({ title, description, url = '/', ogImage = 'og.png' }: SEOTagsType) {
+//   const { t } = useTranslation()
+//
+//   return (
+//     <Head>
+//       <title>{t(title)}</title>
+//       <meta property="og:title" content={t(title)} />
+//       <meta property="twitter:title" content={t(title)} />
+//
+//       <meta name="description" content={t(description)} />
+//       <meta property="og:description" content={t(description)} />
+//       <meta property="twitter:description" content={t(description)} />
+//
+//       <meta name="robots" content="index, follow" />
+//       <meta
+//         name="googlebot"
+//         content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+//       />
+//       <meta
+//         name="bingbot"
+//         content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+//       />
+//
+//       <meta property="og:url" content={`${APP_URL}${url}`} />
+//       <link rel="canonical" href={`${APP_URL}${url}`} />
+//
+//       <meta property="og:image" content={`${APP_URL}/static/${ogImage}`} />
+//       <meta property="og:image:secure_url" content={`${APP_URL}/static/${ogImage}`} />
+//       <meta name="twitter:image" content={`${APP_URL}/static/${ogImage}`} />
+//       <meta name="twitter:card" content="summary_large_image" />
+//
+//       <meta property="og:type" content="website" />
+//       <meta property="og:site_name" content="Oasis" />
+//     </Head>
+//   )
+// }
 
-  return (
-    <Head>
-      <title>{t(title)}</title>
-      <meta property="og:title" content={t(title)} />
-      <meta property="twitter:title" content={t(title)} />
-
-      <meta name="description" content={t(description)} />
-      <meta property="og:description" content={t(description)} />
-      <meta property="twitter:description" content={t(description)} />
-
-      <meta name="robots" content="index, follow" />
-      <meta
-        name="googlebot"
-        content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-      />
-      <meta
-        name="bingbot"
-        content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-      />
-
-      <meta property="og:url" content={`${APP_URL}${url}`} />
-      <link rel="canonical" href={`${APP_URL}${url}`} />
-
-      <meta property="og:image" content={`${APP_URL}/static/${ogImage}`} />
-      <meta property="og:image:secure_url" content={`${APP_URL}/static/${ogImage}`} />
-      <meta name="twitter:image" content={`${APP_URL}/static/${ogImage}`} />
-      <meta name="twitter:card" content="summary_large_image" />
-
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Oasis" />
-    </Head>
-  )
-}
-
-const APP_NAME = 'Oasis'
+const APP_NAME = 'Velero'
 
 export function PWATags() {
   return (

@@ -3,7 +3,7 @@ const sitemap = require('nextjs-sitemap-generator')
 
 try {
   sitemap({
-    baseUrl: 'https://oasis.app',
+    baseUrl: 'https://vaults.velero.finance',
     pagesDirectory: `.next/server/pages`,
     targetDirectory: 'public/',
     ignoredPaths: ['/api', '404', '/[address]', '/terms', '/privacy', '/save'],

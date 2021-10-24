@@ -23,9 +23,9 @@
 
 <br>
 
-# Oasis Borrow
+# Velero Borrow
 
-[Oasis Borrow](https://oasis.app) is the most popular user-interface to interact with the
+[Velero Borrow](https://vaults.velero.finance) is the most popular user-interface to interact with the
 
 [comment]: <> ([Velero protocol]&#40;https://docs.makerdao.com/&#41;. It enables users to generate USDV, the most used and)
 decentralized stablecoin, using a variety of crypto assets as collateral.
@@ -83,12 +83,15 @@ easier for UI work as next.js is very compute heavy when re-rendering changes in
 yarn storybook
 ```
 
-Stories should be viewable at http://localhost:6006 A live version of storybook on parity with the
-staging environment can be found by navigating to https://storybook.oasis.app.
+[comment]: <> (Stories should be viewable at http://localhost:6006 A live version of storybook on parity with the)
 
-For specific deployments, users can navigate to
-[https://storybook.oasis.app/<COMMIT_HASH>/index.html](https://storybook.oasis.app/<COMMIT_HASH>/index.html])
-where the `<COMMIT_HASH>` is the shortened commit hash of the branch/commit that has been pushed.
+[comment]: <> (staging environment can be found by navigating to https://storybook.oasis.app.)
+
+[comment]: <> (For specific deployments, users can navigate to)
+
+[comment]: <> ([https://storybook.oasis.app/<COMMIT_HASH>/index.html]&#40;https://storybook.oasis.app/<COMMIT_HASH>/index.html]&#41;)
+
+[comment]: <> (where the `<COMMIT_HASH>` is the shortened commit hash of the branch/commit that has been pushed.)
 
 <br>
 
@@ -167,7 +170,7 @@ environment. More details can be found [here](./HARDHAT.md)
 
 ## Contributing
 
-Contributions are welcome. Feel free to open issues or PR's to improve Oasis Borrow. We are always
+Contributions are welcome. Feel free to open issues or PR's to improve Velero Borrow. We are always
 open to suggestions on how best to improve the application to give the optimal user experience.
 
 Please ensure that the tests pass, typechecks and conforms to the linting rules. The most convenient
@@ -181,7 +184,7 @@ yarn test:fix
 
 ## License
 
-Copyright (C) 2021 Oazo Apps Limited, Licensed under the Apache License, Version 2.0 (the
+Copyright (C) 2021 Velero Apps, Licensed under the Apache License, Version 2.0 (the
 "License"); you may not use this file except in compliance with the License. You may obtain a copy
 of the License at
 

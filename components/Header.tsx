@@ -2,11 +2,11 @@
 import { Global } from '@emotion/core'
 import { Icon } from '@makerdao/dai-ui-icons'
 import { trackingEvents } from 'analytics/analytics'
-import { LanguageSelect } from 'components/LanguageSelect'
+// import { LanguageSelect } from 'components/LanguageSelect'
 import { AppLink } from 'components/Links'
 import { AccountButton } from 'features/account/Account'
 import { useObservable } from 'helpers/observableHook'
-import { staticFilesRuntimeUrl } from 'helpers/staticPaths'
+// import { staticFilesRuntimeUrl } from 'helpers/staticPaths'
 import { WithChildren } from 'helpers/types'
 import { useTranslation } from 'next-i18next'
 import getConfig from 'next/config'
@@ -188,101 +188,101 @@ function HeaderDropdown({
   )
 }
 
-function LanguageDropdown({ sx }: { sx?: SxStyleProp }) {
-  const { t, i18n } = useTranslation()
-  const router = useRouter()
-  // @ts-ignore
-  const { locales }: { locales: string[] } = i18n.options
-
-  return (
-    <HeaderDropdown title={t(`lang-dropdown.${i18n.language}`)} sx={sx}>
-      {locales
-        .filter((lang) => lang !== i18n.language)
-        .map((lang) => (
-          <Text
-            variant="links.nav"
-            sx={{ fontWeight: 'body' }}
-            onClick={() => router.push(router.asPath, router.asPath, { locale: lang })}
-          >
-            {t(`lang-dropdown.${lang}`)}
-          </Text>
-        ))}
-    </HeaderDropdown>
-  )
-}
-
-const LangSelectMobileComponents: Partial<SelectComponents<{
-  value: string
-  label: string
-}>> = {
-  IndicatorsContainer: () => null,
-  ValueContainer: ({ children }) => (
-    <Flex sx={{ color: 'primary', fontWeight: 'body' }}>{children}</Flex>
-  ),
-  SingleValue: ({ children }) => <Box>{children}</Box>,
-  Option: ({ children, innerProps }) => (
-    <Box
-      {...innerProps}
-      sx={{
-        py: 2,
-        px: 3,
-        cursor: 'pointer',
-        '&:hover': {
-          bg: 'background',
-        },
-      }}
-    >
-      {children}
-    </Box>
-  ),
-  Menu: ({ innerProps, children }) => (
-    <Card
-      {...innerProps}
-      sx={{
-        boxShadow: 'table',
-        borderRadius: 'medium',
-        border: 'none',
-        p: 0,
-        position: 'relative',
-        top: '8px',
-      }}
-    >
-      {children}
-    </Card>
-  ),
-  Control: ({ innerProps, children, selectProps: { menuIsOpen } }) => (
-    <Box
-      {...innerProps}
-      sx={{
-        cursor: 'pointer',
-        variant: 'links.nav',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        fontSize: 3,
-        boxShadow: 'table',
-        borderRadius: 'medium',
-        py: '8px',
-        px: '16px',
-      }}
-    >
-      {children}
-      <Icon
-        name={menuIsOpen ? 'chevron_up' : 'chevron_down'}
-        size="auto"
-        width="13.3px"
-        sx={{ ml: 1, position: 'relative', top: '1px' }}
-      />
-    </Box>
-  ),
-}
+// function LanguageDropdown({ sx }: { sx?: SxStyleProp }) {
+//   const { t, i18n } = useTranslation()
+//   const router = useRouter()
+//   // @ts-ignore
+//   const { locales }: { locales: string[] } = i18n.options
+//
+//   return (
+//     <HeaderDropdown title={t(`lang-dropdown.${i18n.language}`)} sx={sx}>
+//       {locales
+//         .filter((lang) => lang !== i18n.language)
+//         .map((lang) => (
+//           <Text
+//             variant="links.nav"
+//             sx={{ fontWeight: 'body' }}
+//             onClick={() => router.push(router.asPath, router.asPath, { locale: lang })}
+//           >
+//             {t(`lang-dropdown.${lang}`)}
+//           </Text>
+//         ))}
+//     </HeaderDropdown>
+//   )
+// }
+//
+// const LangSelectMobileComponents: Partial<SelectComponents<{
+//   value: string
+//   label: string
+// }>> = {
+//   IndicatorsContainer: () => null,
+//   ValueContainer: ({ children }) => (
+//     <Flex sx={{ color: 'primary', fontWeight: 'body' }}>{children}</Flex>
+//   ),
+//   SingleValue: ({ children }) => <Box>{children}</Box>,
+//   Option: ({ children, innerProps }) => (
+//     <Box
+//       {...innerProps}
+//       sx={{
+//         py: 2,
+//         px: 3,
+//         cursor: 'pointer',
+//         '&:hover': {
+//           bg: 'background',
+//         },
+//       }}
+//     >
+//       {children}
+//     </Box>
+//   ),
+//   Menu: ({ innerProps, children }) => (
+//     <Card
+//       {...innerProps}
+//       sx={{
+//         boxShadow: 'table',
+//         borderRadius: 'medium',
+//         border: 'none',
+//         p: 0,
+//         position: 'relative',
+//         top: '8px',
+//       }}
+//     >
+//       {children}
+//     </Card>
+//   ),
+//   Control: ({ innerProps, children, selectProps: { menuIsOpen } }) => (
+//     <Box
+//       {...innerProps}
+//       sx={{
+//         cursor: 'pointer',
+//         variant: 'links.nav',
+//         display: 'flex',
+//         justifyContent: 'space-between',
+//         alignItems: 'center',
+//         fontSize: 3,
+//         boxShadow: 'table',
+//         borderRadius: 'medium',
+//         py: '8px',
+//         px: '16px',
+//       }}
+//     >
+//       {children}
+//       <Icon
+//         name={menuIsOpen ? 'chevron_up' : 'chevron_down'}
+//         size="auto"
+//         width="13.3px"
+//         sx={{ ml: 1, position: 'relative', top: '1px' }}
+//       />
+//     </Box>
+//   ),
+// }
 
 const MOBILE_MENU_SECTIONS = [
   {
     titleKey: 'nav.products',
     links: [
-      { labelKey: 'nav.usdv-wallet', url: HEADER_LINKS['usdv-wallet'] },
       { labelKey: 'nav.oasis-borrow' },
+      { labelKey: 'nav.usdv-wallet', url: HEADER_LINKS['usdv-wallet'] },
     ],
   },
   {
@@ -355,7 +355,7 @@ function MobileMenu() {
           ))}
           <Grid>
             <Text variant="links.navHeader">{t('languages')}</Text>
-            <LanguageSelect components={LangSelectMobileComponents} />
+            {/*<LanguageSelect components={LangSelectMobileComponents} />*/}
           </Grid>
         </Grid>
       </Box>
@@ -392,12 +392,12 @@ function DisconnectedHeader() {
                 {t('nav.borrow')}
               </Text>
             </HeaderDropdown>
-            <AppLink variant="links.navHeader" href={HEADER_LINKS['learn']}>
-              {t('nav.learn')}
-            </AppLink>
-            <AppLink variant="links.navHeader" href={HEADER_LINKS['blog']}>
-              {t('nav.blog')}
-            </AppLink>
+            {/*<AppLink variant="links.navHeader" href={HEADER_LINKS['learn']}>*/}
+            {/*  {t('nav.learn')}*/}
+            {/*</AppLink>*/}
+            {/*<AppLink variant="links.navHeader" href={HEADER_LINKS['blog']}>*/}
+            {/*  {t('nav.blog')}*/}
+            {/*</AppLink>*/}
           </Grid>
           <Grid sx={{ alignItems: 'center', columnGap: 3, gridAutoFlow: 'column' }}>
             <AppLink
@@ -422,15 +422,15 @@ function DisconnectedHeader() {
                 sx={{ position: 'relative', left: '6px', transition: '0.2s' }}
               />
             </AppLink>
-            <LanguageDropdown
-              sx={{ '@media (max-width: 1330px)': { '.menu': { right: '-6px' } } }}
-            />
+            {/*<LanguageDropdown*/}
+            {/*  sx={{ '@media (max-width: 1330px)': { '.menu': { right: '-6px' } } }}*/}
+            {/*/>*/}
           </Grid>
         </BasicHeader>
       </Box>
       <Box sx={{ display: ['block', 'none'], mb: 5 }}>
         <Logo sx={{ position: 'absolute', left: '7px', top: '-4px', transform: 'scale(80%)' }} />
-        <MobileMenu />
+        {/*<MobileMenu />*/}
       </Box>
     </>
   )
