@@ -158,7 +158,7 @@ export function Footer() {
               <AppLink href="https://twitter.com/VeleroDAO">
                 <Icon name="twitter" size="auto" width="18px" height="16px" />
               </AppLink>
-              <AppLink href="https://t.me/joinchat/" sx={{ mx: 3 }}>
+              <AppLink href="https://t.me/velerodao" sx={{ mx: 3 }}>
                 <Icon name="telegram" size="auto" width="20px" height="23px" />
               </AppLink>
               <AppLink href="https://github.com/velerofinance/">
