@@ -90,38 +90,38 @@ export const content: ContentTypeSupport = {
         },
       ],
     },
-    {
-      title: 'Using Usdv Wallet',
-      id: 'using-usdvwallet',
-      questions: [
-        {
-          question: 'What is Usdv Wallet?',
-          answer: `Usdv Wallet is the home for everything you want to accomplish with Usdv. A decentralized application that runs on the Velas blockchain, Oasis Usdv Wallet enables you to Buy, Send, and Manage your Usdv all in one place.`,
-        },
-        {
-          question: 'What is Usdv?',
-          answer: `Usdv is a better, smarter digital currency for everyone. It is the world’s first unbiased currency and its value consistently tracks the US Dollar, which means it doesn't suffer from the volatility associated with many other digital currencies. To learn more about Usdv, read our [short primer](/usdvwallet/usdv).`,
-        },
-        {
-          question: 'Do I need an account?',
-          answer: `No. You do not need to create a new account to use Usdv Wallet. You can get started with almost any Velas wallet, including Metamask or Coinbase Wallet, or you can use our new Magic.Link feature -- where you provide an email address, click a link in the email we send you in response, and you're logged in.`,
-        },
-        {
-          question: 'Will I be charged fees?',
-          answer:
-            'Our Usdv Wallet is currently free to use. However, you will have to pay transaction fees and, depending on the features you use, fees associated with Velero and other protocols, such as Stability or exchange fees.',
-        },
-        {
-          question: 'Why do I need VLX to send or save my Usdv?',
-          answer: `To complete any transaction on the Velas blockchain, you need to pay a transaction fee using VLX, its default token. This fee is referred to as 'gas', and much like the gas that powers your car, this gas fee powers your transaction.`,
-        },
-        {
-          question: 'How can I contact the Oasis team?',
-          answer:
-            'If you have any questions, reach out to us through our [Contact page](/usdvwallet/contact) or on [Twitter](https://twitter.com/oasisdotapp).',
-        },
-      ],
-    },
+    // {
+    //   title: 'Using Usdv Wallet',
+    //   id: 'using-usdvwallet',
+    //   questions: [
+    //     {
+    //       question: 'What is Usdv Wallet?',
+    //       answer: `Usdv Wallet is the home for everything you want to accomplish with Usdv. A decentralized application that runs on the Velas blockchain, Oasis Usdv Wallet enables you to Buy, Send, and Manage your Usdv all in one place.`,
+    //     },
+    //     {
+    //       question: 'What is Usdv?',
+    //       answer: `Usdv is a better, smarter digital currency for everyone. It is the world’s first unbiased currency and its value consistently tracks the US Dollar, which means it doesn't suffer from the volatility associated with many other digital currencies. To learn more about Usdv, read our [short primer](/usdvwallet/usdv).`,
+    //     },
+    //     {
+    //       question: 'Do I need an account?',
+    //       answer: `No. You do not need to create a new account to use Usdv Wallet. You can get started with almost any Velas wallet, including Metamask or Coinbase Wallet, or you can use our new Magic.Link feature -- where you provide an email address, click a link in the email we send you in response, and you're logged in.`,
+    //     },
+    //     {
+    //       question: 'Will I be charged fees?',
+    //       answer:
+    //         'Our Usdv Wallet is currently free to use. However, you will have to pay transaction fees and, depending on the features you use, fees associated with Velero and other protocols, such as Stability or exchange fees.',
+    //     },
+    //     {
+    //       question: 'Why do I need VLX to send or save my Usdv?',
+    //       answer: `To complete any transaction on the Velas blockchain, you need to pay a transaction fee using VLX, its default token. This fee is referred to as 'gas', and much like the gas that powers your car, this gas fee powers your transaction.`,
+    //     },
+    //     {
+    //       question: 'How can I contact the Oasis team?',
+    //       answer:
+    //         'If you have any questions, reach out to us through our [Contact page](/usdvwallet/contact) or on [Twitter](https://twitter.com/oasisdotapp).',
+    //     },
+    //   ],
+    // },
     {
       title: 'Security',
       id: 'security',
