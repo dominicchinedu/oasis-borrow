@@ -84,9 +84,9 @@ export const content: ContentTypeSupport = {
         },
 
         {
-          question: 'Como eu contato o time do Oasis?',
+          question: 'Como eu contato o time do Velero?',
           answer:
-            'Se tiver alguma pergunta, nos [contate usando esta página](/usdvwallet/contact) ou nos mande uma mensagem no [Twitter](https://twitter.com/oasisdotapp).',
+            'Se tiver alguma pergunta, nos [contate usando esta página](/usdvwallet/contact) ou nos mande uma mensagem no [Twitter](https://twitter.com/VeleroDAO).',
         },
       ],
     },
@@ -116,9 +116,9 @@ export const content: ContentTypeSupport = {
           answer: `Para realizar qualquer transação no blockchain do Velas, você precisa pagar a taxa com VLX, a moeda virtual nativa da rede do Velas. Essa taxa é conhecida como 'gás', e de forma semelhante ao que acontece com o combustível que impulsiona seu carro, o gás na rede é necessário para sua transação ser realizada com sucesso. Em breve, nós desejamos adicionar uma funcionalidade que permite pagar as taxas do gás com a própria Usdv.`,
         },
         {
-          question: 'Como posso contatar o time do Oasis?',
+          question: 'Como posso contatar o time do Velero?',
           answer:
-            'Se tiver alguma pergunta, nos [contate usando esta página](/usdvwallet/contact) ou nos mande uma mensagem no [Twitter](https://twitter.com/oasisdotapp).',
+            'Se tiver alguma pergunta, nos [contate usando esta página](/usdvwallet/contact) ou nos mande uma mensagem no [Twitter](https://twitter.com/VeleroDAO).',
         },
       ],
     },
@@ -127,14 +127,14 @@ export const content: ContentTypeSupport = {
       id: 'security',
       questions: [
         {
-          question: 'Oasis é seguro?',
+          question: 'Velero é seguro?',
           answer:
-            'A segurança é nossa prioridade número um. Nós seguimos rigidamente as melhores práticas de segurança e realizamos de forma constante auditorias em nosso código e contratos inteligentes. Além disso, o código do Oasis é aberto, possibilitando que todos testem e auditem a tecnologia utilizada.',
+            'A segurança é nossa prioridade número um. Nós seguimos rigidamente as melhores práticas de segurança e realizamos de forma constante auditorias em nosso código e contratos inteligentes. Além disso, o código do Velero é aberto, possibilitando que todos testem e auditem a tecnologia utilizada.',
         },
         {
-          question: 'O Oasis pode acessar meus fundos em minha conta ou carteira?',
+          question: 'O Velero pode acessar meus fundos em minha conta ou carteira?',
           answer:
-            'Não. Com Usdv, você - e apenas você - possui acesso e controle sobre seu Usdv. Usdv utiliza tecnologia blockchain para prover o nível máximo de confiança e transparência. Em razão dos mecanismos de funcionamento do blockchain, você decide seu próprio nível de segurança. Isso significa que você, em última instância, é responsável por sua própria segurança. Por isso, é muito importante que você mantenha seguro o acesso ao Usdv e à conta do Oasis.',
+            'Não. Com Usdv, você - e apenas você - possui acesso e controle sobre seu Usdv. Usdv utiliza tecnologia blockchain para prover o nível máximo de confiança e transparência. Em razão dos mecanismos de funcionamento do blockchain, você decide seu próprio nível de segurança. Isso significa que você, em última instância, é responsável por sua própria segurança. Por isso, é muito importante que você mantenha seguro o acesso ao Usdv e à conta do Velero.',
         },
       ],
     },

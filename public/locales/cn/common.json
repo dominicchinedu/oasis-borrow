@@ -3,7 +3,7 @@
   "404-message": "抱歉，页面不存在。",
   "about": {
     "heading": "About us",
-    "description": "Oasis mission is to provide the best and most trusted entry point to deploy your capital. We are building vaults.velero.finance to let our users benefit from all of the potential in DeFi.\n\n Our team is made of passionate thinkers and builders.",
+    "description": "Velero mission is to provide the best and most trusted entry point to deploy your capital. We are building vaults.velero.finance to let our users benefit from all of the potential in DeFi.\n\n Our team is made of passionate thinkers and builders.",
     "careers-link": "Join Us",
     "pics-title": "Meet the team"
   },
@@ -168,7 +168,7 @@
       },
       "faq": {
         "title": "Have a question?",
-        "description": "Learn more about Oasis, Usdv and DeFi at our FAQ’s page"
+        "description": "Learn more about Velero, Usdv and DeFi at our FAQ’s page"
       }
     }
   },
@@ -240,7 +240,7 @@
   "notification-status-sign": "签名交易",
   "of": "of",
   "one-of-some": "{{one}} of {{some}}",
-  "onramp-leave-message": "点击购买将离开 Oasis，并访问第三方网站完成购买过程。",
+  "onramp-leave-message": "点击购买将离开 Velero，并访问第三方网站完成购买过程。",
   "open-new-vault": "开启新金库",
   "open-vault": {
     "title": "开启金库",
@@ -268,7 +268,7 @@
   "pending-transactions": "确认中交易",
   "permissions": "设置许可",
   "permissions-btn": "设置许可",
-  "permissions-desc": "这将授权 Oasis 与你钱包中的 Usdv 进行交互。",
+  "permissions-desc": "这将授权 Velero 与你钱包中的 Usdv 进行交互。",
   "proceed": "继续",
   "readonly-alert-message": "你正在查看",
   "readonly-user-connecting": "可读模式下浏览...",
@@ -318,7 +318,7 @@
     },
     "about": {
       "title": "About Us",
-      "description": "Oasis mission is to provide the best and most trusted entry point to deploy your capital."
+      "description": "Velero mission is to provide the best and most trusted entry point to deploy your capital."
     }
   },
   "set-allowance-for": "设置 {{token}} 许可额度",
@@ -359,7 +359,7 @@
   "tos-accept-message": "在开始之前，你需要阅读并接受我们的服务条款。",
   "tos-accept-message-updated": "在继续之前，你需要阅读并接受我们更新后的服务条款。",
   "tos-acceptance-check-in-progress": "许可检查进行中…",
-  "tos-desc": "通过创建一个储蓄金库，我接受 Oasis",
+  "tos-desc": "通过创建一个储蓄金库，我接受 Velero",
   "tos-jwt-signature-message": "你似乎第一次使用 vaults.velero.finance 或正在通过新设备连接。为了安全起见，请用你的钱包签名以继续。",
   "tos-read": "我已阅读并接受服务条款。",
   "tos-view": "查看服务条款",

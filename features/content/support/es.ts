@@ -70,9 +70,9 @@ export const content: ContentTypeSupport = {
           answer: `La velocidad de la transacción te permite pagar más gas para que tu transacción sea minada más rápidamente. En caso de que estés apurado, por ejemplo para incrementar tu ratio de colateralización para evitar la liquidación, puedes seleccionar velocidad rápida para tus transacciones.`,
         },
         {
-          question: '¿Cómo puedo contactar al equipo de Oasis?',
+          question: '¿Cómo puedo contactar al equipo de Velero?',
           answer:
-            'Si tienes preguntas, puedes comunicarte con nosotros a través de la [página de contacto](/usdvwallet/contact) o en [Twitter](https://twitter.com/oasisdotapp).',
+            'Si tienes preguntas, puedes comunicarte con nosotros a través de la [página de contacto](/usdvwallet/contact) o en [Twitter](https://twitter.com/VeleroDAO).',
         },
       ],
     },
@@ -83,7 +83,7 @@ export const content: ContentTypeSupport = {
         {
           question: '¿Qué es Usdv Wallet?',
           answer:
-            'Usdv Wallet es el sitio para todo lo que quieras lograr con Usdv. Una aplicación descentralizada que corre sobre la blockchain de Velas, Oasis Usdv Wallet te permite comprar, enviar y administrar tu Usdv, todo en un único lugar.',
+            'Usdv Wallet es el sitio para todo lo que quieras lograr con Usdv. Una aplicación descentralizada que corre sobre la blockchain de Velas, Velero Usdv Wallet te permite comprar, enviar y administrar tu Usdv, todo en un único lugar.',
         },
         {
           question: '¿Qué es Usdv?',
@@ -96,7 +96,7 @@ export const content: ContentTypeSupport = {
             'No. No necesitas creas una cuenta nueva para usar vaults.velero.finance Puedes comenzar con casi cualquier cartera de Velas como Metamask o Coinbase Wallet. También puedes utilizar la funcionalidad de Magic.link, con la cual ingresas una dirección de email, y con un solo click en el link que enviaremos a tu bandeja de entrada ya puedes ingresar.',
         },
         {
-          question: '¿Oasis cobra comisión por su uso?',
+          question: '¿Velero cobra comisión por su uso?',
           answer:
             'Usdv Wallet es gratis actualmente. Sin embargo, tendrás que pagar los costos de las transacciones y dependiendo las funcionalidades que utilices, tendrás que pagar las comisiones asociadas con Velero y otros protocolos, tales cómo la tasa de estabilidad o bien las comisiones de los servicios de cambio de criptomonedas.',
         },
@@ -106,9 +106,9 @@ export const content: ContentTypeSupport = {
             'Para completar cualquier transacción en la blockchain de Velas, necesitas pagar una tarifa de transacción utilizando VLX, la criptomoneda por defecto de la red. Está tarifa se conoce como "gas", y es similar al combustible que da energía a tu automóvil, el gas impulsa tu transacción.',
         },
         {
-          question: '¿Cómo puedo contactar al equipo de Oasis?',
+          question: '¿Cómo puedo contactar al equipo de Velero?',
           answer:
-            'Si tienes alguna pregunta contáctanos a través de nuestra [página de contacto](/usdvwallet/contact) o en [Twitter](https://twitter.com/oasisdotapp).',
+            'Si tienes alguna pregunta contáctanos a través de nuestra [página de contacto](/usdvwallet/contact) o en [Twitter](https://twitter.com/VeleroDAO).',
         },
       ],
     },
@@ -117,14 +117,14 @@ export const content: ContentTypeSupport = {
       id: 'security',
       questions: [
         {
-          question: '¿Es Oasis seguro?',
+          question: '¿Es Velero seguro?',
           answer:
-            'La seguridad es nuestra prioridad número uno. Seguimos las mejores prácticas de seguridad estrictamente y regularmente realizamos auditorias de nuestro código y los contratos inteligentes. Además, Oasis es de código abierto, de este modo, todos en la comunidad tienen la posibilidad de auditar la tecnología empleada.',
+            'La seguridad es nuestra prioridad número uno. Seguimos las mejores prácticas de seguridad estrictamente y regularmente realizamos auditorias de nuestro código y los contratos inteligentes. Además, Velero es de código abierto, de este modo, todos en la comunidad tienen la posibilidad de auditar la tecnología empleada.',
         },
         {
-          question: '¿Puede Oasis acceder a los fondos en mi cuenta o cartera?',
+          question: '¿Puede Velero acceder a los fondos en mi cuenta o cartera?',
           answer:
-            'No. Con Usdv, tu y solo tu, puedes acceder y controlar tus fondos. Usdv usa tecnología de blockchain para asegurar el mayor nivel de confianza y transparencia. Por la forma en funciona la tecnología de blockchain, tú decides sobre el nivel de seguridad de tus fondos. Esto significa que eres tu propia seguridad en última instancia y es muy importante que mantengas el acceso a tu Usdv y cuenta de Oasis seguros.',
+            'No. Con Usdv, tu y solo tu, puedes acceder y controlar tus fondos. Usdv usa tecnología de blockchain para asegurar el mayor nivel de confianza y transparencia. Por la forma en funciona la tecnología de blockchain, tú decides sobre el nivel de seguridad de tus fondos. Esto significa que eres tu propia seguridad en última instancia y es muy importante que mantengas el acceso a tu Usdv y cuenta de Velero seguros.',
         },
       ],
     },
@@ -152,7 +152,7 @@ export const content: ContentTypeSupport = {
             'Nuestra Usdv Wallet no recibe ninguna comisión cuando compras Usdv o VLX a través de uno de nuestros proveedores asociados. La comisión que pagas va directamente al proveedor de terceros.',
         },
         {
-          question: '¿Puedo comprar VLX en Oasis para pagar por las tarifas de la red?',
+          question: '¿Puedo comprar VLX en Velero para pagar por las tarifas de la red?',
           answer:
             'Sí. Para comprar VLX puedes iniciar el mismo proceso que para comprar Usdv. Luego de elegir el proveedor de terceros cada uno ofrece la opción de cambiar de Usdv a VLX al inicio del proceso.',
         },

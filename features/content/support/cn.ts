@@ -14,7 +14,7 @@ export const content: ContentTypeSupport = {
       questions: [
         {
           question: 'What is vaults.velero.finance?',
-          answer: `vaults.velero.finance is the home for everything you want to accomplish with Usdv. A decentralized application that runs on the Velas blockchain, Oasis enables you to Buy, Send, and Manage your Usdv all in one place.`,
+          answer: `vaults.velero.finance is the home for everything you want to accomplish with Usdv. A decentralized application that runs on the Velas blockchain, Velero enables you to Buy, Send, and Manage your Usdv all in one place.`,
         },
         {
           question: 'What is Usdv?',
@@ -27,16 +27,16 @@ export const content: ContentTypeSupport = {
         {
           question: 'Will I be charged fees?',
           answer:
-            'Oasis is currently free to use. However, you will have to pay transaction fees and, depending on the features you use, fees associated with Velero and other protocols, such as Stability or exchange fees.',
+            'Velero is currently free to use. However, you will have to pay transaction fees and, depending on the features you use, fees associated with Velero and other protocols, such as Stability or exchange fees.',
         },
         {
           question: 'Why do I need VLX to send or save my Usdv?',
           answer: `To complete any transaction on the Velas blockchain, you need to pay a transaction fee using VLX, its default token. This fee is referred to as 'gas', and much like the gas that powers your car, this gas fee powers your transaction.`,
         },
         {
-          question: 'How can I contact the Oasis team?',
+          question: 'How can I contact the Velero team?',
           answer:
-            'If you have any questions, reach out to us through our [Contact page](/contact) or on [Twitter](https://twitter.com/oasisdotapp).',
+            'If you have any questions, reach out to us through our [Contact page](/contact) or on [Twitter](https://twitter.com/VeleroDAO).',
         },
       ],
     },
@@ -45,14 +45,14 @@ export const content: ContentTypeSupport = {
       id: 'security',
       questions: [
         {
-          question: 'Is Oasis Secure?',
+          question: 'Is Velero Secure?',
           answer:
-            'Security is our top priority. We stringently follow the best security practices, and regularly conduct smart contract and code audits. In addition, Oasis code is open-source, giving everyone in the community the ability to pressure test and audit the core technology.',
+            'Security is our top priority. We stringently follow the best security practices, and regularly conduct smart contract and code audits. In addition, Velero code is open-source, giving everyone in the community the ability to pressure test and audit the core technology.',
         },
         {
-          question: 'Can Oasis access the funds in my account or wallet?',
+          question: 'Can Velero access the funds in my account or wallet?',
           answer:
-            'No. With Usdv, you - and only you - have access and control over your Usdv. Usdv uses blockchain technology to ensure the highest level of trust and transparency, and because of the way blockchain technology works, you ultimately get to decide just how secure you want it to be. This does mean you are your own security ultimately, so it is very important you keep access to your Usdv and Oasis account secure.',
+            'No. With Usdv, you - and only you - have access and control over your Usdv. Usdv uses blockchain technology to ensure the highest level of trust and transparency, and because of the way blockchain technology works, you ultimately get to decide just how secure you want it to be. This does mean you are your own security ultimately, so it is very important you keep access to your Usdv and Velero account secure.',
         },
       ],
     },
@@ -78,7 +78,7 @@ export const content: ContentTypeSupport = {
           answer: `vaults.velero.finance doesn't take any of the fees when you buy Usdv or VLX through one of our partner providers. The fee you pay goes solely and directly to the third-party provider.`,
         },
         {
-          question: 'Can I buy VLX on Oasis to pay for my transaction fees?',
+          question: 'Can I buy VLX on Velero to pay for my transaction fees?',
           answer:
             'Yes. Just like buying Usdv, you can start the same process as you would to buy Usdv, choose your third-party provider, and each offers an option to change Usdv for VLX when you start the process.',
         },

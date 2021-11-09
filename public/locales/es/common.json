@@ -3,7 +3,7 @@
   "404-message": "Lo siento, página no encontrada.",
   "about": {
     "heading": "Sobre nosotros",
-    "description": "La misión de Oasis es proveer el mejor y más confiable punto de entrada para deplegar tu capital. Estamos construyendo vaults.velero.finance para permitir a nuestros usuarios beneficiarse de todo el potencial en DeFi.\n\n Nuestro equipo está compuesto de pensadores y desarrolladores apasionados.",
+    "description": "La misión de Velero es proveer el mejor y más confiable punto de entrada para deplegar tu capital. Estamos construyendo vaults.velero.finance para permitir a nuestros usuarios beneficiarse de todo el potencial en DeFi.\n\n Nuestro equipo está compuesto de pensadores y desarrolladores apasionados.",
     "careers-link": "Únete a nosotros",
     "pics-title": "Conoce al equipo"
   },
@@ -180,7 +180,7 @@
       },
       "faq": {
         "title": "¿Tienes una pregunta?",
-        "description": "Conoce más sobre Oasis, Usdv y DeFI en nuestras preguntas frecuentes"
+        "description": "Conoce más sobre Velero, Usdv y DeFI en nuestras preguntas frecuentes"
       }
     }
   },

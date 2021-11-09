@@ -84,9 +84,9 @@ export const content: ContentTypeSupport = {
         },
 
         {
-          question: 'How can I contact the Oasis team?',
+          question: 'How can I contact the Velero team?',
           answer:
-            'If you have any questions, reach out to us through our [Contact page](/usdvwallet/contact) or on [Twitter](https://twitter.com/oasisdotapp).',
+            'If you have any questions, reach out to us through our [Contact page](/usdvwallet/contact) or on [Twitter](https://twitter.com/VeleroDAO).',
         },
       ],
     },
@@ -96,7 +96,7 @@ export const content: ContentTypeSupport = {
     //   questions: [
     //     {
     //       question: 'What is Usdv Wallet?',
-    //       answer: `Usdv Wallet is the home for everything you want to accomplish with Usdv. A decentralized application that runs on the Velas blockchain, Oasis Usdv Wallet enables you to Buy, Send, and Manage your Usdv all in one place.`,
+    //       answer: `Usdv Wallet is the home for everything you want to accomplish with Usdv. A decentralized application that runs on the Velas blockchain, Velero Usdv Wallet enables you to Buy, Send, and Manage your Usdv all in one place.`,
     //     },
     //     {
     //       question: 'What is Usdv?',
@@ -116,9 +116,9 @@ export const content: ContentTypeSupport = {
     //       answer: `To complete any transaction on the Velas blockchain, you need to pay a transaction fee using VLX, its default token. This fee is referred to as 'gas', and much like the gas that powers your car, this gas fee powers your transaction.`,
     //     },
     //     {
-    //       question: 'How can I contact the Oasis team?',
+    //       question: 'How can I contact the Velero team?',
     //       answer:
-    //         'If you have any questions, reach out to us through our [Contact page](/usdvwallet/contact) or on [Twitter](https://twitter.com/oasisdotapp).',
+    //         'If you have any questions, reach out to us through our [Contact page](/usdvwallet/contact) or on [Twitter](https://twitter.com/VeleroDAO).',
     //     },
     //   ],
     // },
@@ -127,14 +127,14 @@ export const content: ContentTypeSupport = {
       id: 'security',
       questions: [
         {
-          question: 'Is Oasis Secure?',
+          question: 'Is Velero Secure?',
           answer:
-            'Security is our top priority. We stringently follow the best security practices, and regularly conduct smart contract and code audits. In addition, Oasis code is open-source, giving everyone in the community the ability to pressure test and audit the core technology.',
+            'Security is our top priority. We stringently follow the best security practices, and regularly conduct smart contract and code audits. In addition, Velero code is open-source, giving everyone in the community the ability to pressure test and audit the core technology.',
         },
         {
-          question: 'Can Oasis access the funds in my account or wallet?',
+          question: 'Can Velero access the funds in my account or wallet?',
           answer:
-            'No. With Usdv, you - and only you - have access and control over your Usdv. Usdv uses blockchain technology to ensure the highest level of trust and transparency, and because of the way blockchain technology works, you ultimately get to decide just how secure you want it to be. This does mean you are your own security ultimately, so it is very important you keep access to your Usdv and Oasis account secure.',
+            'No. With Usdv, you - and only you - have access and control over your Usdv. Usdv uses blockchain technology to ensure the highest level of trust and transparency, and because of the way blockchain technology works, you ultimately get to decide just how secure you want it to be. This does mean you are your own security ultimately, so it is very important you keep access to your Usdv and Velero account secure.',
         },
       ],
     },
