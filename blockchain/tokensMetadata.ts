@@ -56,6 +56,23 @@ const tokens = [
     tags: [],
   },
   {
+    symbol: 'WAG',
+    precision: 18,
+    digits: 5,
+    maxSell: '10000000',
+    name: 'Wagyu',
+    icon: 'ether',
+    iconCircle: 'wag_circle_color',
+    iconColor: 'ether_color',
+    ticker: 'eth-ethereum',
+    coinbaseTicker: 'eth-usdc',
+    color: '#667FE3',
+    background:
+      'linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.05) 100%), linear-gradient(284.73deg, #C993FF 3.42%, #4962E1 97.28%), linear-gradient(284.73deg, #9658D3 3.42%, #415FFF 97.28%)',
+    bannerIcon: staticFilesRuntimeUrl('/static/img/banner_icons/eth.svg'),
+    tags: [],
+  },
+  {
     symbol: 'BAT',
     precision: 18,
     digits: 5,
