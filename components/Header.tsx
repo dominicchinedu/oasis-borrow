@@ -282,7 +282,7 @@ const MOBILE_MENU_SECTIONS = [
     titleKey: 'nav.products',
     links: [
       { labelKey: 'nav.oasis-borrow' },
-      { labelKey: 'nav.usdv-wallet', url: HEADER_LINKS['usdv-wallet'] },
+      // { labelKey: 'nav.usdv-wallet', url: HEADER_LINKS['usdv-wallet'] },
     ],
   },
   {
@@ -327,37 +327,37 @@ function MobileMenu() {
           p: 5,
         }}
       >
-        <Grid sx={{ rowGap: 5, mt: 3, mx: 'auto', maxWidth: 7 }}>
-          {MOBILE_MENU_SECTIONS.map((section) => (
-            <Grid key={section.titleKey}>
-              <Text variant="links.navHeader">{t(section.titleKey)}</Text>
-              {section.links.map((link) =>
-                link.url ? (
-                  <AppLink
-                    key={link.labelKey}
-                    variant="text.paragraph1"
-                    sx={{ textDecoration: 'none' }}
-                    href={link.url}
-                  >
-                    {t(link.labelKey)}
-                  </AppLink>
-                ) : (
-                  <Text
-                    key={link.labelKey}
-                    variant="text.paragraph1"
-                    sx={{ fontWeight: 'semiBold' }}
-                  >
-                    {t(link.labelKey)}
-                  </Text>
-                ),
-              )}
-            </Grid>
-          ))}
-          <Grid>
-            <Text variant="links.navHeader">{t('languages')}</Text>
-            {/*<LanguageSelect components={LangSelectMobileComponents} />*/}
-          </Grid>
-        </Grid>
+        {/*<Grid sx={{ rowGap: 5, mt: 3, mx: 'auto', maxWidth: 7 }}>*/}
+        {/*  {MOBILE_MENU_SECTIONS.map((section) => (*/}
+        {/*    <Grid key={section.titleKey}>*/}
+        {/*      <Text variant="links.navHeader">{t(section.titleKey)}</Text>*/}
+        {/*      {section.links.map((link) =>*/}
+        {/*        link.url ? (*/}
+        {/*          <AppLink*/}
+        {/*            key={link.labelKey}*/}
+        {/*            variant="text.paragraph1"*/}
+        {/*            sx={{ textDecoration: 'none' }}*/}
+        {/*            href={link.url}*/}
+        {/*          >*/}
+        {/*            {t(link.labelKey)}*/}
+        {/*          </AppLink>*/}
+        {/*        ) : (*/}
+        {/*          <Text*/}
+        {/*            key={link.labelKey}*/}
+        {/*            variant="text.paragraph1"*/}
+        {/*            sx={{ fontWeight: 'semiBold' }}*/}
+        {/*          >*/}
+        {/*            {t(link.labelKey)}*/}
+        {/*          </Text>*/}
+        {/*        ),*/}
+        {/*      )}*/}
+        {/*    </Grid>*/}
+        {/*  ))}*/}
+        {/*  <Grid>*/}
+        {/*    <Text variant="links.navHeader">{t('languages')}</Text>*/}
+        {/*    /!*<LanguageSelect components={LangSelectMobileComponents} />*!/*/}
+        {/*  </Grid>*/}
+        {/*</Grid>*/}
       </Box>
       <Icon
         name={isOpen ? 'close' : 'menu'}
@@ -380,18 +380,18 @@ function DisconnectedHeader() {
             <Logo
               sx={{ transform: 'scale(85%)', display: 'inline-flex', '& *': { flexShrink: 0 } }}
             />
-            <HeaderDropdown title={t('nav.products')}>
-              <AppLink
-                variant="links.nav"
-                sx={{ fontWeight: 'body' }}
-                href={HEADER_LINKS['usdv-wallet']}
-              >
-                {t('nav.usdv-wallet')}
-              </AppLink>
-              <Text variant="links.nav" sx={{ cursor: 'default', ':hover': { color: 'primary' } }}>
-                {t('nav.borrow')}
-              </Text>
-            </HeaderDropdown>
+            {/*<HeaderDropdown title={t('nav.products')}>*/}
+            {/*  /!*<AppLink*!/*/}
+            {/*  /!*  variant="links.nav"*!/*/}
+            {/*  /!*  sx={{ fontWeight: 'body' }}*!/*/}
+            {/*  /!*  href={HEADER_LINKS['usdv-wallet']}*!/*/}
+            {/*  /!*>*!/*/}
+            {/*  /!*  {t('nav.usdv-wallet')}*!/*/}
+            {/*  /!*</AppLink>*!/*/}
+            {/*  <Text variant="links.nav" sx={{ cursor: 'default', ':hover': { color: 'primary' } }}>*/}
+            {/*    {t('nav.borrow')}*/}
+            {/*  </Text>*/}
+            {/*</HeaderDropdown>*/}
             {/*<AppLink variant="links.navHeader" href={HEADER_LINKS['learn']}>*/}
             {/*  {t('nav.learn')}*/}
             {/*</AppLink>*/}
