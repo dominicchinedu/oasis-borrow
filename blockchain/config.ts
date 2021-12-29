@@ -94,8 +94,8 @@ const protoVelas = {
   id: '106',
   name: 'velas',
   label: 'Velas',
-  infuraUrl: `https://explorer.velas.com/rpc`,
-  infuraUrlWS: `wss://explorer.velas.com/rpc`,
+  infuraUrl: `https://evmexplorer.velas.com/rpc`,
+  infuraUrlWS: `wss://api.velas.com`,
   safeConfirmations: 10,
   otc: contractDesc(otc, '0x794e6e91555438aFc3ccF1c5076A74F42133d08D'),
   collaterals: getCollaterals(velasAddresses),
@@ -137,15 +137,15 @@ const protoVelas = {
   magicLink: {
     apiKey: '',
   },
-  cacheApi: 'https://oazo-bcache.new.oasis.app/api/v1',
+  cacheApi: '',
 }
 
 const protoVelasTestnet = {
   id: '111',
   name: 'velastestnet',
   label: 'VelasTestnet',
-  infuraUrl: `https://testnet.velas.com/rpc`,
-  infuraUrlWS: `wss://testnet.velas.com/rpc`,
+  infuraUrl: `https://evmexplorer.testnet.velas.com`,
+  infuraUrlWS: `wss://api.testnet.velas.com/`,
   safeConfirmations: 10,
   otc: contractDesc(otc, '0x794e6e91555438aFc3ccF1c5076A74F42133d08D'),
   collaterals: getCollaterals(velastestnetAddresses),
@@ -187,7 +187,7 @@ const protoVelasTestnet = {
   magicLink: {
     apiKey: '',
   },
-  cacheApi: 'https://oazo-bcache.new.oasis.app/api/v1',
+  cacheApi: '',
 }
 
 export type NetworkConfig = typeof protoMain

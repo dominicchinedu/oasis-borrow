@@ -1,7 +1,7 @@
 import { createSend, SendFunction } from '@oasisdex/transactions'
 import { createWeb3Context$ } from '@oasisdex/web3-context'
 import { trackingEvents } from 'analytics/analytics'
-import { mixpanelIdentify } from 'analytics/mixpanel'
+// import { mixpanelIdentify } from 'analytics/mixpanel'
 import { BigNumber } from 'bignumber.js'
 import {
   createSendTransaction,
