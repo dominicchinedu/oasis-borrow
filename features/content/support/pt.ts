@@ -139,30 +139,12 @@ export const content: ContentTypeSupport = {
       ],
     },
     {
-      title: 'Comprando Usdv',
+      title: 'Buying Usdv',
       id: 'buying-usdv',
       questions: [
         {
-          question: 'Posso comprar Usdv com a Usdv Wallet?',
-          answer: `Sim! Através de integrações com nossos parceiros, você pode comprar Usdv em mais de 100 países, incluindo Europa, Estados Unidos e algumas regiões da América Latina. Nós fizemos parcerias com três empresas registradas - Latamex, Wyre e Moonpay - para facilitar compras de Usdv pelos usuários por meio de transferências bancárias ou cartões de crédito e débito. Você deve apenas se conectar no app e clicar em 'Comprar Usdv' para escolher os parceiros adequados para você.`,
-        },
-        {
-          question: 'Há limites para compra de Usdv?',
-          answer:
-            'Sim. O limite varia de acordo com o parceiro utilizado e o país em que você se encontra. Para mais detalhes, por favor acesse os links abaixo: [Latamex Limits](https://latamex.zendesk.com/hc/es/articles/360037752631--Cu%C3%A1les-son-los-l%C3%ADmites-de-operaci%C3%B3n-), [Moonpay](https://support.moonpay.io/hc/en-gb/articles/360011931637-What-are-your-purchase-limits-) e [Wyre](https://support.sendwyre.com/en/articles/4457158-card-processing-faqs).',
-        },
-        {
-          question: 'Qual o mínimo para compra?',
-          answer: `Assim como o valor máximo permitido, o valor mínimo também depende do parceiro escolhido e da localização. Latamex: Na Argentina, o valor mínimo é ARS2000. No Brasil, é BRL80.00. No Mexico, é MXN270.00 Moonpay: Valor mínimo é 20 Usdv Wyre: Valor mínimo é 20 Usdv.`,
-        },
-        {
-          question: 'Para onde estão indo essas taxas?',
-          answer: `A Usdv Wallet não recebe nenhuma taxa quando você compra Usdv ou VLX através de nossos parceiros. A taxa é paga única e diretamente para o parceiro.`,
-        },
-        {
-          question: 'Posso comprar VLX na Usdv Wallet para pagar minhas taxas?',
-          answer:
-            'Sim. Para comprar VLX, você pode iniciar o mesmo processo que você usaria para comprar Usdv. Escolha o parceiro desejado e altere a moeda desejada para compra no início do processo, de Usdv para VLX.',
+          question: 'Where can I buy USDV?',
+          answer: `You can buy USDV at [wagyuswap](https://www.wagyuswap.app/)`,
         },
       ],
     },

@@ -129,32 +129,12 @@ export const content: ContentTypeSupport = {
       ],
     },
     {
-      title: 'Comprar Usdv',
+      title: 'Buying Usdv',
       id: 'buying-usdv',
       questions: [
         {
-          question: '¿Puedo comprar Usdv utilizando Usdv Wallet?',
-          answer:
-            '¡Sí! Por medio de la integración con nuestros proveedores asociados puedes comprar Usdv en más de 100 países alrededor del mundo, incluyendo Europa, EE. UU. y partes de Latinoamérica. Nos hemos asociado con tres proveedores registrados - Latamex,Wyre y Moonpay- para facilitar a los usuarios la compra de Usdv por medio de tarjeta de débito, crédito o transferencia bancaria. Con solo conectarte a la app y hacer click en "comprar Usdv" podrás ver los proveedores disponibles en tu región.',
-        },
-        {
-          question: '¿Hay algún limite para comprar Usdv?',
-          answer:
-            'Sí. El límite varía dependiendo que proveedor de terceros utilices y en qué país te encuentres. Para más información puedes visitar los siguientes links: [Límites Latamex](https://latamex.zendesk.com/hc/es/articles/360037752631--Cu%C3%A1les-son-los-l%C3%ADmites-de-operaci%C3%B3n-), [Límites Moonpay](https://support.moonpay.io/hc/en-gb/articles/360011931637-What-are-your-purchase-limits-) and [Límites Wyre](https://support.sendwyre.com/en/articles/4457158-card-processing-faqs)',
-        },
-        {
-          question: '¿Cuál es el monto mínimo para comprar?',
-          answer: `Del mismo modo que existen montos máximos existen mínimos que dependen del proveedor de terceros y de la ubicación. Latamex: Argentina: ARS $ 2000, Brazil: 80.00 BRL, Mexico: 270.00 MXN Moonpay: El monto mínimo es 20 Usdv Wyre: El monto mínimo es 20 Usdv`,
-        },
-        {
-          question: '¿A dónde van los gastos de las comisiones?',
-          answer:
-            'Nuestra Usdv Wallet no recibe ninguna comisión cuando compras Usdv o VLX a través de uno de nuestros proveedores asociados. La comisión que pagas va directamente al proveedor de terceros.',
-        },
-        {
-          question: '¿Puedo comprar VLX en Velero para pagar por las tarifas de la red?',
-          answer:
-            'Sí. Para comprar VLX puedes iniciar el mismo proceso que para comprar Usdv. Luego de elegir el proveedor de terceros cada uno ofrece la opción de cambiar de Usdv a VLX al inicio del proceso.',
+          question: 'Where can I buy USDV?',
+          answer: `You can buy USDV at [wagyuswap](https://www.wagyuswap.app/)`,
         },
       ],
     },
