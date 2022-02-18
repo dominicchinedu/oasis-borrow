@@ -144,7 +144,7 @@ const protoVelasTestnet = {
   id: '111',
   name: 'velastestnet',
   label: 'VelasTestnet',
-  infuraUrl: `https://evmexplorer.testnet.velas.com`,
+  infuraUrl: `https://evmexplorer.testnet.velas.com/rpc`,
   infuraUrlWS: `wss://api.testnet.velas.com/`,
   safeConfirmations: 10,
   otc: contractDesc(otc, '0x794e6e91555438aFc3ccF1c5076A74F42133d08D'),
