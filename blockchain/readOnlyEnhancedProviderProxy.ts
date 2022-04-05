@@ -1,4 +1,5 @@
 import { JsonRpcProvider } from '@ethersproject/providers'
+import { ConnectionInfo } from '@ethersproject/web'
 import { JSONRPCRequestPayload } from 'ethereum-protocol'
 import { providers } from 'ethers'
 import _ from 'lodash'
@@ -20,7 +21,15 @@ function getHandler(chainIdPromise: Promise<number | string>): ProxyHandler<any>
     return async function (chainIdPromise: Promise<number | string>) {
       if (!provider) {
         const chainId = fixChainId(await chainIdPromise)
-        provider = new JsonRpcBatchProvider(networksById[chainId].infuraUrl, chainId)
+        // Content-Type: application/json
+        let connectionInfo: ConnectionInfo | undefined = undefined;
+        connectionInfo = {
+          "url": networksById[chainId].infuraUrl,
+          "headers": {
+            "Content-Type": "application/json"
+          }
+        };
+        provider = new JsonRpcBatchProvider(connectionInfo, chainId)
       }
       return provider
     }

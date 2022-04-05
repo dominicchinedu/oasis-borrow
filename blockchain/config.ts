@@ -105,7 +105,8 @@ const protoVelas = {
     USDV: contractDesc(erc20, velasAddresses['MCD_USDV']),
     VDGT: contractDesc(erc20, velasAddresses.MCD_GOV),
     CHAI: contractDesc(erc20, '0x06af07097c9eeb7fd685c692751d5c66db49c215'),
-    // WBTC: contractDesc(erc20, '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599'),
+    // WBTC: contractDesc(erc20, velasAddresses.WBTC),
+    // WAG_VLXVDGT: contractDesc(erc20, velasAddresses.WAG_VLXVDGT),
   } as Dictionary<ContractDesc>,
   joins: {
     ...getCollateralJoinContracts(velasAddresses),
@@ -155,7 +156,7 @@ const protoVelasTestnet = {
     USDV: contractDesc(erc20, velastestnetAddresses['MCD_USDV']),
     VDGT: contractDesc(erc20, velastestnetAddresses.MCD_GOV),
     CHAI: contractDesc(erc20, '0x06af07097c9eeb7fd685c692751d5c66db49c215'),
-    // WBTC: contractDesc(erc20, '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599'),
+    // WBTC: contractDesc(erc20, velastestnetAddresses.WBTC),
   } as Dictionary<ContractDesc>,
   joins: {
     ...getCollateralJoinContracts(velastestnetAddresses),
