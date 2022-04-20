@@ -19,6 +19,11 @@ const FOOTER_SECTIONS = [
   {
     titleKey: 'nav.about',
     links: [
+      {
+        labelKey: 'nav.site',
+        url: 'https://www.velero.finance/',
+        target: '_blank',
+      },
       { labelKey: 'nav.privacy', url: '/privacy' },
       { labelKey: 'nav.terms', url: '/terms' },
       // { labelKey: 'nav.team', url: '/about' },
@@ -44,11 +49,6 @@ const FOOTER_SECTIONS = [
   {
     titleKey: 'nav.products',
     links: [
-      {
-        labelKey: 'nav.site',
-        url: 'https://www.velero.finance/',
-        target: '_blank',
-      },
       {
         labelKey: 'nav.gov',
         url: 'https://governance.velero.finance/?network=velas',
