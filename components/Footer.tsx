@@ -31,6 +31,11 @@ const FOOTER_SECTIONS = [
     links: [
       { labelKey: 'nav.faq', url: '/support' },
       { labelKey: 'nav.oracles', url: '/oracles' },
+      {
+        labelKey: 'nav.chat',
+        url: 'https://t.me/velero_chat',
+        target: '_blank',
+      },
       // { labelKey: 'nav.blog', url: 'https://blog.oasis.app', target: '_self' },
       // add link
       // { labelKey: 'nav.knowledge-centre', url: '/' },
@@ -39,11 +44,21 @@ const FOOTER_SECTIONS = [
   {
     titleKey: 'nav.products',
     links: [
-      // {
-      //   labelKey: 'nav.usdv-wallet',
-      //   url: `${apiHost}/usdvwallet`,
-      //   target: '_self',
-      // },
+      {
+        labelKey: 'nav.site',
+        url: 'https://www.velero.finance/',
+        target: '_blank',
+      },
+      {
+        labelKey: 'nav.gov',
+        url: 'https://governance.velero.finance/?network=velas',
+        target: '_blank',
+      },
+      {
+        labelKey: 'nav.liquidations',
+        url: 'https://liquidation.velero.finance/?network=velas',
+        target: '_blank',
+      },
       { labelKey: 'nav.borrow', url: '/' },
     ],
   },
