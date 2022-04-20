@@ -227,7 +227,8 @@
     "chat": "Chat",
     "gov": "Governance",
     "liquidations": "Liquidations",
-    "site": "Velero"
+    "site": "Velero",
+    "save": "Velero Save"
   },
   "new-to-velas": "刚接触以太坊？",
   "next": "下一步",

@@ -262,7 +262,8 @@
     "oracles": "Oracles",
     "usdv-wallet": "USDV Wallet",
     "borrow": "Borrow",
-    "oasis-borrow": "Velero Borrow"
+    "oasis-borrow": "Velero Borrow",
+    "save": "Velero Save"
   },
   "new-to-velas": "New to Velas? ",
   "next": "Next",

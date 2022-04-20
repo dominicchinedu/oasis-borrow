@@ -250,7 +250,8 @@
         "chat": "Chat",
         "gov": "Governance",
         "liquidations": "Liquidations",
-        "site": "Velero"
+        "site": "Velero",
+      "save": "Velero Save"
     },
     "new-to-velas": "Novo no Velas? ",
     "next": "Próximo",

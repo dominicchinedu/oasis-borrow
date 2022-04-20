@@ -59,6 +59,11 @@ const FOOTER_SECTIONS = [
         url: 'https://liquidation.velero.finance/?network=velas',
         target: '_blank',
       },
+      {
+        labelKey: 'nav.save',
+        url: 'https://save.velero.finance/save?network=velas',
+        target: '_blank',
+      },
       { labelKey: 'nav.borrow', url: '/' },
     ],
   },
