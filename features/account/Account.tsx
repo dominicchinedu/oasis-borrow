@@ -14,6 +14,7 @@ import React, { useRef } from 'react'
 import Jazzicon, { jsNumberForAddress } from 'react-jazzicon'
 import { TRANSITIONS } from 'theme'
 import { Box, Button, Card, Flex, Grid, Heading, Text, Textarea } from 'theme-ui'
+import Web3 from "web3";
 
 import { PendingTransactions, RecentTransactions } from './TransactionManagerView'
 
@@ -129,8 +130,105 @@ export function AccountButton() {
         <AccountIndicator address={context.account} />
         <UsdvIndicator usdvBalance={accountData.usdvBalance} />
       </Button>
+      <Button
+        variant="secondary"
+        sx={{
+          boxSizing: 'border-box',
+          minWidth: buttonMinWidth,
+          zIndex: 1,
+          background: 'white',
+          boxShadow: 'table_hovered',
+          p: 1,
+          display: 'flex',
+          alignItems: 'center',
+          transition: 'border-color ease-in 0.2s',
+          borderWidth: '1px',
+          borderStyle: 'solid',
+          borderColor: '#D8E0E300',
+          '&:hover, &:focus-visible': {
+            borderColor: '#D8E0E3FF',
+          },
+          ':focus': {
+            outline: 'none',
+          },
+        }}
+        onClick={() => openModal(BuyUsdvOnUtorgModal)}
+      >
+        {t('buy-usdv-utorg')}
+      </Button>
     </Flex>
   )
+}
+
+async function signMessageForUtorg(message: string, web3: Web3, account: string): Promise<string> {
+  // @ts-ignore
+  return web3.eth.personal.sign(message, account)
+}
+
+async function createUtorgUrl(web3: Web3, account: string, chainId: number): Promise<string> {
+  const currency = 'USDV'
+  const alg = 'WEB3'
+  const sid = chainId === 106 ? 'veleroTESTfinance' : 'veleroTESTfinance'
+  const domain = chainId === 106 ? 'app-stage.utorg.pro' : 'app-stage.utorg.pro'
+
+  const ts = Date.now()
+  try {
+    const sign = await signMessageForUtorg(`Access to UTORG. Timestamp: ${ts}`, web3, account)
+    return `https://${domain}/direct/${sid}?currency=${currency}&timestamp=${ts}&alg=${alg}&publicKey=${account}&signature=${sign}`
+  } catch (e) {
+      console.error(e)
+      return '/'
+  }
+}
+
+function getUtorgUrl(web3: Web3, account: string, chainId: number): string {
+  if (sessionStorage.getItem(`utorgUrl/${account}`) === null) {
+    void createUtorgUrl(web3, account, chainId).then(result => { sessionStorage.setItem(`utorgUrl/${account}`, result) })
+  }
+
+  const url = sessionStorage.getItem(`utorgUrl/${account}`) as string
+  sessionStorage.removeItem(`utorgUrl/${account}`)
+  return url
+}
+
+export function BuyUsdvOnUtorgModal({ close }: ModalProps) {
+  const { web3Context$ } = useAppContext()
+  const web3Context = useObservable(web3Context$)
+  const { t } = useTranslation()
+
+  if (web3Context?.status !== 'connected') return null
+  const { account, web3, chainId } = web3Context
+
+  return (
+    <Modal close={close} sx={{ maxWidth: '530px', margin: '0px auto' }}>
+      <ModalCloseIcon {...{ close }} />
+      <Grid gap={2} pt={3} mt={1}>
+        <Box
+          px={3}
+          mx={1}
+          sx={{
+            '&:last-child': {
+              pb: 3,
+              mb: 1,
+            },
+          }}
+        >
+          <Heading mb={3}>{t('your-wallet')}</Heading>
+          <Card variant="secondary">
+            <AppLink
+              sx={{ color: 'primary', mr: 3 }}
+              withAccountPrefix={false}
+              href={ getUtorgUrl(web3, account, chainId) }
+              onClick={close}
+            >
+              {t('buy-usdv-utorg')}
+            </AppLink>
+          </Card>
+        </Box>
+      </Grid>
+    </Modal>
+  )
+
 }
 
 export function AccountModal({ close }: ModalProps) {
